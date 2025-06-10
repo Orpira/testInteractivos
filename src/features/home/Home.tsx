@@ -52,7 +52,7 @@ export default function Home() {
         </main>
         <div className="hidden md:flex flex-1 items-center justify-center h-full">
           <img
-            src="/body.png"
+            src="/logo.png"
             alt="Fondo"
             className="max-h-[400px] w-auto object-contain"
           />
