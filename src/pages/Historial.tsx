@@ -25,6 +25,9 @@ export default function Historial() {
   const [envios, setEnvios] = useState<Envio[]>([]);
   const [tests, setTests] = useState<Test[]>([]);
   const [tipo, setTipo] = useState<"test" | "codigo" | null>(null);
+  const [testPage, setTestPage] = useState(1);
+  const testsPerPage = 5;
+  const testTotalPages = Math.ceil(tests.length / testsPerPage);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -139,22 +142,48 @@ export default function Historial() {
           <p className="text-center">Aún no has guardado ningún test.</p>
         ) : (
           <ul className="space-y-4">
-            {tests.map((t, i) => (
-              <li key={i} className="border p-4 rounded bg-gray-50">
-                <p className="text-sm text-gray-500 mb-1">
-                  {new Date(t.timestamp).toLocaleString()}
-                </p>
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-                  <span className="font-semibold">
-                    Categoría: {t.category || "N/A"}
-                  </span>
-                  <span className="font-semibold">
-                    Puntaje: {t.score ?? "-"} / {t.total ?? "-"}
-                  </span>
-                </div>
-              </li>
-            ))}
+            {tests
+              .slice((testPage - 1) * testsPerPage, testPage * testsPerPage)
+              .map((t, i) => (
+                <li key={i} className="border p-4 rounded bg-gray-50">
+                  <p className="text-sm text-gray-500 mb-1">
+                    {new Date(t.timestamp).toLocaleString()}
+                  </p>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                    <span className="font-semibold">
+                      Categoría: {t.category || "N/A"}
+                    </span>
+                    <span className="font-semibold">
+                      Puntaje: {t.score ?? "-"} / {t.total ?? "-"}
+                    </span>
+                  </div>
+                </li>
+              ))}
           </ul>
+        )}
+        {/* Paginación para historial de tests */}
+        {tipo === "test" && testTotalPages > 1 && (
+          <div className="flex justify-center gap-2 mt-4">
+            <button
+              className="px-3 py-1 rounded bg-gray-200 text-gray-700 font-bold disabled:opacity-50"
+              onClick={() => setTestPage((p) => Math.max(1, p - 1))}
+              disabled={testPage === 1}
+            >
+              Anterior
+            </button>
+            <span className="px-2 py-1 font-semibold">
+              Página {testPage} de {testTotalPages}
+            </span>
+            <button
+              className="px-3 py-1 rounded bg-gray-200 text-gray-700 font-bold disabled:opacity-50"
+              onClick={() =>
+                setTestPage((p) => Math.min(testTotalPages, p + 1))
+              }
+              disabled={testPage === testTotalPages}
+            >
+              Siguiente
+            </button>
+          </div>
         )}
       </section>
       <div className="flex justify-center mt-6">

@@ -18,14 +18,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col" style={{ minHeight: "100vh" }}>
-      <div
-        className="flex-1 bg-no-repeat bg-center bg-contain"
-        style={{
-          backgroundImage: "url(/logo2.png)",
-          backgroundSize: "25% auto",
-        }}
-      >
-        <main className="flex flex-col items-center justify-center p-6 text-center bg-gray-50 bg-opacity-80 min-h-full h-full">
+      <div className="flex-1 flex items-center justify-center bg-gray-50 bg-opacity-80">
+        <main className="flex-1 flex flex-col items-start justify-center p-12 text-left">
           <h6 className="text-lg mb-6 max-w-xl">
             Plataforma de cuestionarios y práctica interactiva en HTML, CSS y
             JavaScript.
@@ -56,6 +50,13 @@ export default function Home() {
             )}
           </div>
         </main>
+        <div className="hidden md:flex flex-1 items-center justify-center h-full">
+          <img
+            src="/body.png"
+            alt="Fondo"
+            className="max-h-[400px] w-auto object-contain"
+          />
+        </div>
       </div>
     </div>
   );
