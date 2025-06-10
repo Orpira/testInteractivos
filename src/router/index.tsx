@@ -1,0 +1,75 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import QuizRunner from "@/features/quiz/QuizRunner";
+import Home from "@/features/home/Home";
+import Quiz from "@/pages/Quiz";
+import Result from "@/features/quiz/Result";
+import Editor from "@/features/editor/Editor";
+import Ranking from "@/features/ranking/Ranking";
+import Historial from "@/pages/Historial";
+import PrivateRoute from "@/features/auth/PrivateRoute";
+import ContactForm from "@/components/ContactForm";
+import Gracias from "@/pages/Gracias";
+import Summary from "@/features/quiz/pages/Summary";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Dashboard from "@/features/dashboard/Dashboard";
+import Achievements from "@/components/Achievements";
+
+export default function AppRouter() {
+  return (
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/quiz/:category" element={<QuizRunner />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/summary" element={<Summary />} />
+          <Route
+            path="/editor"
+            element={
+              <PrivateRoute>
+                <Editor />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/ranking" element={<Ranking />} />
+          <Route
+            path="/historial"
+            element={
+              <PrivateRoute>
+                <Historial />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/contacto" element={<ContactForm />} />
+          <Route path="/gracias" element={<Gracias />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/logros"
+            element={
+              <PrivateRoute>
+                <Achievements
+                  achievements={[
+                    { icon: "🏆", title: "Logro 1", unlocked: true },
+                    { icon: "🎉", title: "Logro 2", unlocked: false },
+                    { icon: "🥇", title: "Logro 3", unlocked: true },
+                  ]}
+                />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
+  );
+}

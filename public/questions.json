@@ -1,0 +1,4386 @@
+[
+  {
+    "question": "¿Qué es el viewport en diseño web responsive?",
+    "options": [
+      "El área visible de una página web en un dispositivo",
+      "Un tipo de layout en CSS",
+      "Una propiedad de color en CSS",
+      "Un framework de javascript"
+    ],
+    "correctAnswer": "El área visible de una página web en un dispositivo",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Para qué sirve la etiqueta <meta name=viewport>?",
+    "options": [
+      "Para definir el título de la página",
+      "Para ajustar la escala y el tamaño de la página en dispositivos móviles",
+      "Para incluir archivos CSS",
+      "Para agregar scripts externos"
+    ],
+    "correctAnswer": "Para ajustar la escala y el tamaño de la página en dispositivos móviles",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es el valor recomendado para el atributo 'width' en la meta viewport?",
+    "options": ["device-width", "100px", "screen-width", "auto"],
+    "correctAnswer": "device-width",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace el atributo 'initial-scale=1.0' en la meta viewport?",
+    "options": [
+      "Establece el zoom inicial al cargar la página",
+      "Define el color de fondo",
+      "Cambia el tamaño de las fuentes",
+      "Oculta elementos en móviles"
+    ],
+    "correctAnswer": "Establece el zoom inicial al cargar la página",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es una media query en CSS?",
+    "options": [
+      "Una función de javascript",
+      "Una regla para aplicar estilos según características del dispositivo",
+      "Un tipo de layout",
+      "Una etiqueta HTML"
+    ],
+    "correctAnswer": "Una regla para aplicar estilos según características del dispositivo",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es la sintaxis básica de una media query?",
+    "options": [
+      "@media (max-width: 600px) { ... }",
+      "<media query='max-width:600px'>",
+      "media-query: 600px;",
+      "if (screen.width < 600) { ... }"
+    ],
+    "correctAnswer": "@media (max-width: 600px) { ... }",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad se usa para detectar el ancho de la pantalla en una media query?",
+    "options": ["width", "screen-width", "device-width", "max-width"],
+    "correctAnswer": "max-width",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad es absoluta en CSS?",
+    "options": ["px", "%", "em", "rem"],
+    "correctAnswer": "px",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál de las siguientes es una unidad relativa?",
+    "options": ["cm", "mm", "em", "in"],
+    "correctAnswer": "em",
+    "category": "responsive"
+  },
+  {
+    "question": "¿A qué se refiere la unidad 'em'?",
+    "options": [
+      "Al tamaño de la fuente del elemento actual",
+      "Al tamaño de la pantalla",
+      "A la raíz del documento",
+      "A la altura de la ventana"
+    ],
+    "correctAnswer": "Al tamaño de la fuente del elemento actual",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué significa la unidad 'rem'?",
+    "options": [
+      "Root em, relativo al tamaño de fuente del elemento raíz",
+      "Relative em, relativo al elemento padre",
+      "Responsive em, para layouts adaptables",
+      "Random em, valor aleatorio"
+    ],
+    "correctAnswer": "Root em, relativo al tamaño de fuente del elemento raíz",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre 'em' y 'rem'?",
+    "options": [
+      "'em' depende del elemento padre, 'rem' del elemento raíz",
+      "'em' es absoluta, 'rem' es relativa",
+      "'em' es para márgenes, 'rem' para padding",
+      "No hay diferencia"
+    ],
+    "correctAnswer": "'em' depende del elemento padre, 'rem' del elemento raíz",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Para qué se usa la unidad '%' en CSS?",
+    "options": [
+      "Para definir tamaños relativos al elemento padre",
+      "Para valores absolutos",
+      "Para colores",
+      "Para fuentes"
+    ],
+    "correctAnswer": "Para definir tamaños relativos al elemento padre",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox alinea los elementos horizontalmente?",
+    "options": [
+      "justify-content",
+      "align-items",
+      "flex-direction",
+      "flex-wrap"
+    ],
+    "correctAnswer": "justify-content",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox alinea los elementos verticalmente?",
+    "options": ["align-items", "justify-content", "flex-basis", "order"],
+    "correctAnswer": "align-items",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' activa flexbox en un contenedor?",
+    "options": ["flex", "block", "inline", "grid"],
+    "correctAnswer": "flex",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es la sintaxis para activar grid en un contenedor?",
+    "options": [
+      "display: grid;",
+      "display: flex;",
+      "display: block;",
+      "display: table;"
+    ],
+    "correctAnswer": "display: grid;",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad define el número de columnas en CSS Grid?",
+    "options": [
+      "grid-template-columns",
+      "grid-columns",
+      "columns",
+      "flex-columns"
+    ],
+    "correctAnswer": "grid-template-columns",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad define el número de filas en CSS Grid?",
+    "options": ["grid-template-rows", "grid-rows", "rows", "flex-rows"],
+    "correctAnswer": "grid-template-rows",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es la unidad base de los píxeles en CSS?",
+    "options": [
+      "1px = 1 punto en la pantalla",
+      "1px = 1 milímetro",
+      "1px = 1 centímetro",
+      "1px = 1 pulgada"
+    ],
+    "correctAnswer": "1px = 1 punto en la pantalla",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué significa 'responsive web design'?",
+    "options": [
+      "Diseño que se adapta a diferentes dispositivos y tamaños de pantalla",
+      "Diseño solo para computadoras",
+      "Diseño solo para móviles",
+      "Diseño fijo"
+    ],
+    "correctAnswer": "Diseño que se adapta a diferentes dispositivos y tamaños de pantalla",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace el valor 'flex-wrap: wrap;' en flexbox?",
+    "options": [
+      "Permite que los elementos se acomoden en varias líneas",
+      "Alinea los elementos al centro",
+      "Elimina el espacio entre elementos",
+      "Oculta elementos"
+    ],
+    "correctAnswer": "Permite que los elementos se acomoden en varias líneas",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox define la dirección de los elementos?",
+    "options": ["flex-direction", "flex-flow", "direction", "align-direction"],
+    "correctAnswer": "flex-direction",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'flex-direction' coloca los elementos en columna?",
+    "options": ["column", "row", "vertical", "block"],
+    "correctAnswer": "column",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'min-width' en una media query?",
+    "options": [
+      "Aplica estilos cuando el ancho es igual o mayor al valor dado",
+      "Aplica estilos solo en móviles",
+      "Oculta elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Aplica estilos cuando el ancho es igual o mayor al valor dado",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'max-width' en una media query?",
+    "options": [
+      "Aplica estilos cuando el ancho es igual o menor al valor dado",
+      "Aplica estilos solo en escritorio",
+      "Aumenta el tamaño de fuente",
+      "Cambia el layout a grid"
+    ],
+    "correctAnswer": "Aplica estilos cuando el ancho es igual o menor al valor dado",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es la mejor práctica para el diseño responsive?",
+    "options": [
+      "Usar unidades relativas y media queries",
+      "Usar solo píxeles",
+      "No usar media queries",
+      "Evitar layouts adaptables"
+    ],
+    "correctAnswer": "Usar unidades relativas y media queries",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es un 'breakpoint' en diseño responsive?",
+    "options": [
+      "Un punto donde cambian los estilos según el tamaño de pantalla",
+      "Un error en el código",
+      "Un tipo de layout",
+      "Una propiedad de color"
+    ],
+    "correctAnswer": "Un punto donde cambian los estilos según el tamaño de pantalla",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es el valor por defecto de 'flex-direction'?",
+    "options": ["row", "column", "block", "inline"],
+    "correctAnswer": "row",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace 'align-self' en flexbox?",
+    "options": [
+      "Alinea un elemento individualmente dentro del contenedor",
+      "Alinea todos los elementos",
+      "Cambia el tamaño del contenedor",
+      "Oculta el elemento"
+    ],
+    "correctAnswer": "Alinea un elemento individualmente dentro del contenedor",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite espaciar columnas?",
+    "options": ["grid-column-gap", "column-gap", "gap", "margin"],
+    "correctAnswer": "gap",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite espaciar filas?",
+    "options": ["grid-row-gap", "row-gap", "gap", "padding"],
+    "correctAnswer": "gap",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad es mejor para fuentes escalables?",
+    "options": ["rem", "px", "cm", "in"],
+    "correctAnswer": "rem",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué ventaja tiene usar '%' para el ancho de un contenedor?",
+    "options": [
+      "Se adapta al tamaño del elemento padre",
+      "Siempre es igual en todos los dispositivos",
+      "No se adapta al tamaño de pantalla",
+      "Solo sirve en móviles"
+    ],
+    "correctAnswer": "Se adapta al tamaño del elemento padre",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox distribuye el espacio sobrante?",
+    "options": ["justify-content", "align-items", "flex-basis", "order"],
+    "correctAnswer": "justify-content",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'justify-content' centra los elementos?",
+    "options": ["center", "flex-start", "flex-end", "space-between"],
+    "correctAnswer": "center",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'align-items' alinea los elementos al final?",
+    "options": ["flex-end", "center", "flex-start", "stretch"],
+    "correctAnswer": "flex-end",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace 'grid-template-areas'?",
+    "options": [
+      "Define áreas nombradas en el grid",
+      "Alinea los elementos",
+      "Cambia el tamaño de las filas",
+      "Ajusta el padding"
+    ],
+    "correctAnswer": "Define áreas nombradas en el grid",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid posiciona un elemento en una columna específica?",
+    "options": ["grid-column", "column", "grid-row", "row"],
+    "correctAnswer": "grid-column",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid posiciona un elemento en una fila específica?",
+    "options": ["grid-row", "row", "grid-column", "column"],
+    "correctAnswer": "grid-row",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'order' en flexbox?",
+    "options": [
+      "Cambia el orden visual de los elementos",
+      "Alinea los elementos",
+      "Cambia el tamaño del contenedor",
+      "Define el color de fondo"
+    ],
+    "correctAnswer": "Cambia el orden visual de los elementos",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' permite usar media queries?",
+    "options": [
+      "Cualquier valor, las media queries no dependen de 'display'",
+      "Solo flex",
+      "Solo grid",
+      "Solo block"
+    ],
+    "correctAnswer": "Cualquier valor, las media queries no dependen de 'display'",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'flex-basis'?",
+    "options": [
+      "Define el tamaño inicial de un elemento flex",
+      "Alinea los elementos",
+      "Cambia el color de fondo",
+      "Define el padding"
+    ],
+    "correctAnswer": "Define el tamaño inicial de un elemento flex",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'flex-direction' coloca los elementos en fila?",
+    "options": ["row", "column", "horizontal", "vertical"],
+    "correctAnswer": "row",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad es recomendable para márgenes en diseño responsive?",
+    "options": ["rem", "px", "cm", "mm"],
+    "correctAnswer": "rem",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite definir espacios entre filas y columnas a la vez?",
+    "options": ["gap", "spacing", "margin", "padding"],
+    "correctAnswer": "gap",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'auto-fit' en grid?",
+    "options": [
+      "Ajusta automáticamente el número de columnas según el espacio disponible",
+      "Alinea los elementos al centro",
+      "Cambia el tamaño de fuente",
+      "Oculta elementos"
+    ],
+    "correctAnswer": "Ajusta automáticamente el número de columnas según el espacio disponible",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es un layout adaptable?",
+    "options": [
+      "Un diseño que se ajusta a diferentes tamaños de pantalla",
+      "Un diseño fijo",
+      "Un diseño solo para escritorio",
+      "Un diseño solo para móviles"
+    ],
+    "correctAnswer": "Un diseño que se ajusta a diferentes tamaños de pantalla",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es el objetivo principal del diseño responsive?",
+    "options": [
+      "Que el sitio funcione y se vea bien en cualquier dispositivo",
+      "Que el sitio solo funcione en móviles",
+      "Que el sitio tenga muchos colores",
+      "Que el sitio sea solo para escritorio"
+    ],
+    "correctAnswer": "Que el sitio funcione y se vea bien en cualquier dispositivo",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox controla el crecimiento de los elementos?",
+    "options": ["flex-grow", "flex-shrink", "flex-basis", "order"],
+    "correctAnswer": "flex-grow",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox controla el encogimiento de los elementos?",
+    "options": ["flex-shrink", "flex-grow", "flex-basis", "order"],
+    "correctAnswer": "flex-shrink",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad se usa para definir porcentajes en CSS?",
+    "options": ["%", "px", "em", "rem"],
+    "correctAnswer": "%",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es el enfoque 'mobile first'?",
+    "options": [
+      "Diseñar primero para móviles y luego adaptar a pantallas más grandes",
+      "Diseñar solo para escritorio",
+      "Diseñar solo para tablets",
+      "Diseñar solo para móviles"
+    ],
+    "correctAnswer": "Diseñar primero para móviles y luego adaptar a pantallas más grandes",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es el enfoque 'desktop first'?",
+    "options": [
+      "Diseñar primero para escritorio y luego adaptar a móviles",
+      "Diseñar solo para móviles",
+      "Diseñar solo para tablets",
+      "Diseñar solo para escritorio"
+    ],
+    "correctAnswer": "Diseñar primero para escritorio y luego adaptar a móviles",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite que un elemento ocupe varias columnas?",
+    "options": [
+      "grid-column: 1 / 3;",
+      "column-span: 2;",
+      "grid-span: 2;",
+      "span-columns: 2;"
+    ],
+    "correctAnswer": "grid-column: 1 / 3;",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite que un elemento ocupe varias filas?",
+    "options": [
+      "grid-row: 1 / 3;",
+      "row-span: 2;",
+      "grid-span: 2;",
+      "span-rows: 2;"
+    ],
+    "correctAnswer": "grid-row: 1 / 3;",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'minmax()' en grid?",
+    "options": [
+      "Define un rango mínimo y máximo para el tamaño de una columna o fila",
+      "Alinea los elementos",
+      "Cambia el color de fondo",
+      "Define el padding"
+    ],
+    "correctAnswer": "Define un rango mínimo y máximo para el tamaño de una columna o fila",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite repetir columnas automáticamente?",
+    "options": ["repeat()", "auto-repeat", "grid-repeat", "columns-repeat"],
+    "correctAnswer": "repeat()",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'auto' en grid?",
+    "options": [
+      "Permite que el tamaño se ajuste automáticamente al contenido o espacio disponible",
+      "Alinea los elementos",
+      "Cambia el color de fondo",
+      "Define el padding"
+    ],
+    "correctAnswer": "Permite que el tamaño se ajuste automáticamente al contenido o espacio disponible",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' se usa para layouts de una sola columna en móviles?",
+    "options": ["block", "flex", "grid", "inline"],
+    "correctAnswer": "block",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox permite alinear elementos en varias líneas?",
+    "options": ["flex-wrap", "justify-content", "align-items", "align-content"],
+    "correctAnswer": "flex-wrap",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'align-content' en flexbox?",
+    "options": [
+      "Alinea las líneas del contenedor cuando hay espacio extra",
+      "Alinea los elementos individuales",
+      "Cambia el tamaño de fuente",
+      "Oculta elementos"
+    ],
+    "correctAnswer": "Alinea las líneas del contenedor cuando hay espacio extra",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad es mejor para definir el ancho de imágenes en responsive?",
+    "options": ["%", "px", "cm", "mm"],
+    "correctAnswer": "%",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Cuál es la ventaja de usar grid sobre flexbox?",
+    "options": [
+      "Permite crear layouts bidimensionales (filas y columnas)",
+      "Permite solo layouts en una dirección",
+      "No tiene ventajas",
+      "Es más difícil de usar"
+    ],
+    "correctAnswer": "Permite crear layouts bidimensionales (filas y columnas)",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' permite crear layouts bidimensionales?",
+    "options": ["grid", "flex", "block", "inline"],
+    "correctAnswer": "grid",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid define el tamaño de las columnas?",
+    "options": [
+      "grid-template-columns",
+      "columns",
+      "column-size",
+      "grid-columns"
+    ],
+    "correctAnswer": "grid-template-columns",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid define el tamaño de las filas?",
+    "options": ["grid-template-rows", "rows", "row-size", "grid-rows"],
+    "correctAnswer": "grid-template-rows",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la función 'fr' en grid?",
+    "options": [
+      "Define fracciones del espacio disponible",
+      "Define el color de fondo",
+      "Alinea los elementos",
+      "Cambia el tamaño de fuente"
+    ],
+    "correctAnswer": "Define fracciones del espacio disponible",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid define el espacio entre filas y columnas?",
+    "options": ["gap", "margin", "padding", "spacing"],
+    "correctAnswer": "gap",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' se recomienda para layouts adaptables modernos?",
+    "options": ["flex o grid", "block", "inline", "table"],
+    "correctAnswer": "flex o grid",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es una media query compuesta?",
+    "options": [
+      "Una media query que combina varias condiciones",
+      "Una media query dentro de otra",
+      "Una media query para colores",
+      "Una media query para fuentes"
+    ],
+    "correctAnswer": "Una media query que combina varias condiciones",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué operador se usa para combinar condiciones en media queries?",
+    "options": ["and", "or", "not", "xor"],
+    "correctAnswer": "and",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'overflow' en layouts adaptables?",
+    "options": [
+      "Controla cómo se muestra el contenido que desborda su contenedor",
+      "Alinea los elementos",
+      "Cambia el color de fondo",
+      "Define el padding"
+    ],
+    "correctAnswer": "Controla cómo se muestra el contenido que desborda su contenedor",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite superponer elementos?",
+    "options": ["z-index", "grid-area", "order", "position"],
+    "correctAnswer": "z-index",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'width' hace que un elemento ocupe todo el ancho disponible?",
+    "options": ["100%", "auto", "inherit", "fit-content"],
+    "correctAnswer": "100%",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'max-width' en CSS?",
+    "options": [
+      "Limita el ancho máximo de un elemento",
+      "Define el ancho mínimo",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Limita el ancho máximo de un elemento",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'min-width' en CSS?",
+    "options": [
+      "Define el ancho mínimo de un elemento",
+      "Define el ancho máximo",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Define el ancho mínimo de un elemento",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'box-sizing: border-box;'?",
+    "options": [
+      "Incluye el padding y el borde en el cálculo del ancho y alto",
+      "Solo calcula el contenido",
+      "Cambia el color de fondo",
+      "Alinea los elementos"
+    ],
+    "correctAnswer": "Incluye el padding y el borde en el cálculo del ancho y alto",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad es mejor para definir el tamaño de fuente en responsive?",
+    "options": ["rem", "px", "cm", "mm"],
+    "correctAnswer": "rem",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'object-fit: cover;' en imágenes?",
+    "options": [
+      "Hace que la imagen cubra todo el contenedor manteniendo la proporción",
+      "Estira la imagen",
+      "Recorta la imagen",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Hace que la imagen cubra todo el contenedor manteniendo la proporción",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad permite ocultar elementos en ciertos tamaños de pantalla?",
+    "options": [
+      "display: none;",
+      "visibility: hidden;",
+      "opacity: 0;",
+      "overflow: hidden;"
+    ],
+    "correctAnswer": "display: none;",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'overflow-x: auto;'?",
+    "options": [
+      "Agrega scroll horizontal si es necesario",
+      "Oculta el contenido",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Agrega scroll horizontal si es necesario",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de grid permite nombrar áreas?",
+    "options": [
+      "grid-template-areas",
+      "grid-areas",
+      "area-names",
+      "template-areas"
+    ],
+    "correctAnswer": "grid-template-areas",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la función 'calc()' en CSS?",
+    "options": [
+      "Permite realizar cálculos con diferentes unidades",
+      "Cambia el color de fondo",
+      "Alinea los elementos",
+      "Define el padding"
+    ],
+    "correctAnswer": "Permite realizar cálculos con diferentes unidades",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad permite cambiar el orden de los elementos en grid?",
+    "options": ["grid-row y grid-column", "order", "z-index", "position"],
+    "correctAnswer": "grid-row y grid-column",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' elimina el espacio entre elementos?",
+    "options": ["flex", "block", "inline", "table"],
+    "correctAnswer": "flex",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'flex-shrink: 0;'?",
+    "options": [
+      "Evita que un elemento se reduzca en flexbox",
+      "Permite que el elemento crezca",
+      "Oculta el elemento",
+      "Aumenta el tamaño de fuente"
+    ],
+    "correctAnswer": "Evita que un elemento se reduzca en flexbox",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox permite definir el espacio entre líneas?",
+    "options": [
+      "align-content",
+      "align-items",
+      "justify-content",
+      "flex-basis"
+    ],
+    "correctAnswer": "align-content",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'flex: 1;'?",
+    "options": [
+      "Permite que el elemento crezca y ocupe el espacio disponible",
+      "Oculta el elemento",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Permite que el elemento crezca y ocupe el espacio disponible",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' se usa para layouts de varias columnas en escritorio?",
+    "options": ["grid", "flex", "block", "inline"],
+    "correctAnswer": "grid",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'media' en la etiqueta <link>?",
+    "options": [
+      "Permite cargar estilos solo en ciertos dispositivos o condiciones",
+      "Cambia el color de fondo",
+      "Alinea los elementos",
+      "Define el padding"
+    ],
+    "correctAnswer": "Permite cargar estilos solo en ciertos dispositivos o condiciones",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué es el diseño líquido?",
+    "options": [
+      "Diseño que usa porcentajes para adaptarse al tamaño de la pantalla",
+      "Diseño fijo",
+      "Diseño solo para móviles",
+      "Diseño solo para escritorio"
+    ],
+    "correctAnswer": "Diseño que usa porcentajes para adaptarse al tamaño de la pantalla",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'vw' en CSS?",
+    "options": [
+      "Define el tamaño relativo al ancho de la ventana",
+      "Define el tamaño relativo al alto de la ventana",
+      "Define el tamaño relativo al elemento padre",
+      "Define el tamaño en píxeles"
+    ],
+    "correctAnswer": "Define el tamaño relativo al ancho de la ventana",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'vh' en CSS?",
+    "options": [
+      "Define el tamaño relativo al alto de la ventana",
+      "Define el tamaño relativo al ancho de la ventana",
+      "Define el tamaño relativo al elemento padre",
+      "Define el tamaño en píxeles"
+    ],
+    "correctAnswer": "Define el tamaño relativo al alto de la ventana",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué unidad es mejor para layouts fluidos?",
+    "options": ["%", "px", "cm", "mm"],
+    "correctAnswer": "%",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'max-height' en CSS?",
+    "options": [
+      "Limita la altura máxima de un elemento",
+      "Define la altura mínima",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Limita la altura máxima de un elemento",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'min-height' en CSS?",
+    "options": [
+      "Define la altura mínima de un elemento",
+      "Define la altura máxima",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Define la altura mínima de un elemento",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué propiedad de flexbox permite alinear elementos en el eje transversal?",
+    "options": [
+      "align-items",
+      "justify-content",
+      "align-content",
+      "flex-basis"
+    ],
+    "correctAnswer": "align-items",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué valor de 'display' se usa para ocultar elementos?",
+    "options": ["none", "block", "flex", "grid"],
+    "correctAnswer": "none",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué hace la propiedad 'visibility: hidden;'?",
+    "options": [
+      "Oculta el elemento pero mantiene su espacio",
+      "Elimina el elemento del flujo",
+      "Alinea los elementos",
+      "Cambia el color de fondo"
+    ],
+    "correctAnswer": "Oculta el elemento pero mantiene su espacio",
+    "category": "responsive"
+  },
+  {
+    "question": "¿Qué etiqueta se utiliza para crear un formulario en HTML?",
+    "options": ["<formulate>", "<form>", "<inputForm>", "<createForm>"],
+    "correctAnswer": "<form>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo especifica el método de envío de datos del formulario?",
+    "options": ["methodType", "send", "method", "submitType"],
+    "correctAnswer": "method",
+    "category": "form"
+  },
+  {
+    "question": "Para crear un campo de texto, ¿qué valor de atributo type se usa en la etiqueta `<input>`?",
+    "options": ["textfield", "text", "textbox", "string"],
+    "correctAnswer": "text",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se usa para definir un botón de envío en un formulario?",
+    "options": [
+      "type=\"submit\"",
+      "type=\"send\"",
+      "type=\"button\"",
+      "action=\"submit\""
+    ],
+    "correctAnswer": "type=\"submit\"",
+    "category": "form"
+  },
+  {
+    "question": "Para hacer un campo obligatorio, ¿qué atributo se debería añadir?",
+    "options": ["required", "need", "must", "necessary"],
+    "correctAnswer": "required",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué etiqueta se utiliza para agrupar elementos visualmente en un formulario?",
+    "options": ["<group>", "<fieldset>", "<section>", "<div>"],
+    "correctAnswer": "<fieldset>",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del atributo `action` en un formulario HTML?",
+    "options": [
+      "Define el tipo de acción a realizar.",
+      "Especifica una URL a la que se envían los datos del formulario.",
+      "Determina el método de acción.",
+      "Activa una función javascript al enviar el formulario."
+    ],
+    "correctAnswer": "Especifica una URL a la que se envían los datos del formulario.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se especifica un menú desplegable en HTML?",
+    "options": [
+      "<input type=\"dropdown\">",
+      "<dropdown>",
+      "<select>",
+      "<list>"
+    ],
+    "correctAnswer": "<select>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` define un control preseleccionado en un grupo de botones de radio?",
+    "options": ["select", "default", "checked", "active"],
+    "correctAnswer": "checked",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de `<input>` se utiliza para cargar archivos?",
+    "options": ["file", "upload", "attach", "document"],
+    "correctAnswer": "file",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se utiliza para agrupar botones de radio que pertenecen a la misma categoría?",
+    "options": ["name", "group", "class", "type"],
+    "correctAnswer": "name",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se define un área de texto en un formulario HTML?",
+    "options": [
+      "<input type=\"textarea\">",
+      "<textarea>",
+      "<input type=\"text\" area>",
+      "<text>"
+    ],
+    "correctAnswer": "<textarea>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` se usa para crear un campo de contraseña?",
+    "options": [
+      "type=\"password\"",
+      "type=\"hidden\"",
+      "password=\"true\"",
+      "type=\"pass\""
+    ],
+    "correctAnswer": "type=\"password\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se usa para definir una etiqueta para otro elemento del formulario?",
+    "options": ["<label>", "<legend>", "<tag>", "<title>"],
+    "correctAnswer": "<label>",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del elemento `<optgroup>` en un menú desplegable?",
+    "options": [
+      "Crear un grupo de opciones deshabilitadas.",
+      "Agrupar opciones relacionadas bajo una etiqueta común.",
+      "Añadir una opción predeterminada al menú.",
+      "Organizar las opciones en orden alfabético."
+    ],
+    "correctAnswer": "Agrupar opciones relacionadas bajo una etiqueta común.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo especifica el valor que será enviado de un campo de formulario?",
+    "options": ["send", "submit", "value", "post"],
+    "correctAnswer": "value",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se marca una opción como la opción predeterminada en un menú desplegable?",
+    "options": [
+      "Añadiendo el atributo default a la etiqueta <option>.",
+      "Añadiendo el atributo selected a la etiqueta <option>.",
+      "Añadiendo el atributo checked a la etiqueta <option>.",
+      "Usando el atributo value en la etiqueta <select> para especificar la opción predeterminada."
+    ],
+    "correctAnswer": "Añadiendo el atributo selected a la etiqueta <option>.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de input se utiliza para recoger una dirección de correo electrónico?",
+    "options": [
+      "type=\"email\"",
+      "type=\"mail\"",
+      "type=\"text\"",
+      "type=\"useremail\""
+    ],
+    "correctAnswer": "type=\"email\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se utiliza para crear un botón que no sea de envío en un formulario?",
+    "options": [
+      "<button type=\"button\">",
+      "<input type=\"button\">",
+      "Ambas A y B son correctas.",
+      "<btn>"
+    ],
+    "correctAnswer": "Ambas A y B son correctas.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del atributo `placeholder` en un campo de formulario?",
+    "options": [
+      "Definir el valor predeterminado del campo.",
+      "Mostrar un texto de ayuda dentro del campo hasta que el usuario comience a escribir.",
+      "Especificar un nombre de clase para estilizar el campo.",
+      "Validar el dato ingresado por el usuario."
+    ],
+    "correctAnswer": "Mostrar un texto de ayuda dentro del campo hasta que el usuario comience a escribir.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el atributo de `<form>` que define el tipo de contenido que se utiliza al enviar el formulario al servidor?",
+    "options": ["enctype", "method", "action", "type"],
+    "correctAnswer": "enctype",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se agrega un campo para números en un formulario HTML?",
+    "options": [
+      "<input type=\"number\">",
+      "<input type=\"num\">",
+      "<number>",
+      "<input type=\"integer\">"
+    ],
+    "correctAnswer": "<input type=\"number\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se utiliza para deshabilitar un campo de formulario, impidiendo que el usuario interactúe con él?",
+    "options": ["disabled", "inactive", "readonly", "nonactive"],
+    "correctAnswer": "disabled",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es la función del atributo `autocomplete` en un formulario HTML?",
+    "options": [
+      "Completar automáticamente los campos basándose en valores predeterminados.",
+      "Permitir al navegador autocompletar los campos basándose en entradas anteriores del usuario.",
+      "Verificar automáticamente la validez de los campos del formulario.",
+      "Activar la función de búsqueda automática mientras el usuario escribe."
+    ],
+    "correctAnswer": "Permitir al navegador autocompletar los campos basándose en entradas anteriores del usuario.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué valor del atributo `type` se usa para crear un botón de opción (radio button)?",
+    "options": ["radio", "option", "select-one", "checkbox"],
+    "correctAnswer": "radio",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se especifica que un campo de formulario puede aceptar múltiples valores, como en el caso de un campo de carga de archivos?",
+    "options": [
+      "Usando el atributo multiple",
+      "Definiendo type=\"multi\"",
+      "Añadiendo accept=\"multiple\"",
+      "Especificando value=\"multiple\""
+    ],
+    "correctAnswer": "Usando el atributo multiple",
+    "category": "form"
+  },
+  {
+    "question": "¿Para qué se utiliza el elemento `<datalist>` en HTML?",
+    "options": [
+      "Para definir un conjunto de opciones predefinidas para otros controles.",
+      "Para crear una lista desplegable de datos.",
+      "Para especificar una lista de datos tabulares.",
+      "Para listar enlaces de datos relevantes."
+    ],
+    "correctAnswer": "Para definir un conjunto de opciones predefinidas para otros controles.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál de los siguientes valores del atributo `type` NO es válido para el elemento `<input>`?",
+    "options": ["email", "text", "submit", "paragraph"],
+    "correctAnswer": "paragraph",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se utiliza para incluir un control deslizante en un formulario HTML?",
+    "options": [
+      "<input type=\"slider\">",
+      "<input type=\"range\">",
+      "<slider>",
+      "<range>"
+    ],
+    "correctAnswer": "<input type=\"range\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de un formulario HTML especifica cómo codificar los datos del formulario al enviarlos al servidor?",
+    "options": ["method", "encoding", "enctype", "contentType"],
+    "correctAnswer": "enctype",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` permite especificar un patrón contra el cual se valida el valor del campo?",
+    "options": ["pattern", "match", "regex", "validation"],
+    "correctAnswer": "pattern",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del elemento `<fieldset>` en un formulario?",
+    "options": [
+      "Establecer una conexión segura.",
+      "Agrupar elementos relacionados dentro de un formulario.",
+      "Crear un conjunto de campos para enviar archivos.",
+      "Definir un campo de texto grande."
+    ],
+    "correctAnswer": "Agrupar elementos relacionados dentro de un formulario.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se especifica un campo en un formulario que no debe ser visible para el usuario, pero cuyo valor debe ser enviado con el formulario?",
+    "options": [
+      "<input type=\"hidden\">",
+      "<input type=\"invisible\">",
+      "<input type=\"secret\">",
+      "<input type=\"private\">"
+    ],
+    "correctAnswer": "<input type=\"hidden\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se usa para limitar la cantidad máxima de caracteres permitidos en un campo de texto?",
+    "options": ["maxlength", "maxchars", "limit", "charsmax"],
+    "correctAnswer": "maxlength",
+    "category": "form"
+  },
+  {
+    "question": "¿Para qué sirve el atributo `step` en un input de tipo `number` o `range`?",
+    "options": [
+      "Define el número de pasos necesarios para completar el formulario.",
+      "Establece el valor mínimo que se puede ajustar.",
+      "Especifica el intervalo entre valores permitidos.",
+      "Determina la precisión del número introducido."
+    ],
+    "correctAnswer": "Especifica el intervalo entre valores permitidos.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se usa para crear un botón que resetea todos los campos de un formulario a sus valores por defecto?",
+    "options": [
+      "<input type=\"reset\">",
+      "<button type=\"reset\">",
+      "Ambas A y B son correctas.",
+      "<reset>"
+    ],
+    "correctAnswer": "Ambas A y B son correctas.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál de los siguientes NO es un valor válido para el atributo `target` de un formulario?",
+    "options": ["_self", "_blank", "_top", "_none"],
+    "correctAnswer": "_none",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de `<input>` se utiliza para recoger una fecha?",
+    "options": [
+      "type=\"date\"",
+      "type=\"datetime\"",
+      "type=\"calendar\"",
+      "type=\"day\""
+    ],
+    "correctAnswer": "type=\"date\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede especificar que un campo de formulario es solo de lectura?",
+    "options": [
+      "Añadiendo el atributo readonly",
+      "Añadiendo el atributo disabled",
+      "Usando el estilo CSS read-only",
+      "Definiendo el campo como type=\"readonly\""
+    ],
+    "correctAnswer": "Añadiendo el atributo readonly",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se utiliza para definir la dirección de correo electrónico que recibe la información del formulario cuando se envía?",
+    "options": [
+      "receiver",
+      "sendto",
+      "mailto",
+      "No se define mediante un atributo en el formulario, sino que se especifica en el atributo action utilizando el protocolo mailto:"
+    ],
+    "correctAnswer": "No se define mediante un atributo en el formulario, sino que se especifica en el atributo action utilizando el protocolo mailto:",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el atributo de `<input>` que define un valor inicial para el campo?",
+    "options": ["value", "placeholder", "default", "init"],
+    "correctAnswer": "value",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento HTML se utiliza para incluir un botón que permite al usuario seleccionar una fecha y hora?",
+    "options": [
+      "<input type=\"datetime-local\">",
+      "<datetime>",
+      "<input type=\"datetime\">",
+      "<timepicker>"
+    ],
+    "correctAnswer": "<input type=\"datetime-local\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se crea un botón de radio que ya está seleccionado por defecto?",
+    "options": [
+      "<input type=\"radio\" selected>",
+      "<input type=\"radio\" default>",
+      "<input type=\"radio\" checked>",
+      "<input type=\"radio\" active>"
+    ],
+    "correctAnswer": "<input type=\"radio\" checked>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<form>` se utiliza para especificar dónde responder después de enviar el formulario?",
+    "options": ["redirect", "forward", "action", "return"],
+    "correctAnswer": "action",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de `<input>` permite al usuario elegir entre un rango de valores deslizantes?",
+    "options": [
+      "type=\"slide\"",
+      "type=\"range\"",
+      "type=\"scale\"",
+      "type=\"bar\""
+    ],
+    "correctAnswer": "type=\"range\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es la función de `<label>` en relación con su elemento de formulario asociado?",
+    "options": [
+      "Define un título para el elemento.",
+      "Crea una descripción detallada.",
+      "Asocia textualmente el elemento con una etiqueta clickeable.",
+      "Establece una categoría o grupo para el elemento."
+    ],
+    "correctAnswer": "Asocia textualmente el elemento con una etiqueta clickeable.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo especifica que un campo de formulario debe ser verificado antes de enviar el formulario?",
+    "options": ["verify", "required", "check", "validate"],
+    "correctAnswer": "required",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede especificar un campo de formulario que acepta direcciones de correo electrónico?",
+    "options": [
+      "<input type=\"email\">",
+      "<input type=\"mail\">",
+      "<email>",
+      "<input type=\"text\" email>"
+    ],
+    "correctAnswer": "<input type=\"email\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el uso de `step=\"any\"` en un `<input>` de tipo `number` o `range`?",
+    "options": [
+      "Permite cualquier valor numérico, sin restricciones de paso.",
+      "Define un paso específico para incrementos numéricos.",
+      "Restringe el input a valores enteros solamente.",
+      "Es un valor no válido y no tiene efecto."
+    ],
+    "correctAnswer": "Permite cualquier valor numérico, sin restricciones de paso.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento HTML se utiliza para recoger firmas manuscritas en un formulario?",
+    "options": [
+      "<input type=\"signature\">",
+      "<signature>",
+      "<input type=\"text\">",
+      "No existe un tipo específico de <input> para firmas; se suelen utilizar soluciones de terceros."
+    ],
+    "correctAnswer": "No existe un tipo específico de <input> para firmas; se suelen utilizar soluciones de terceros.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué valor de atributo `type` se utiliza en `<input>` para crear un botón de envío de formulario?",
+    "options": ["send", "submit", "button", "go"],
+    "correctAnswer": "submit",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál de los siguientes elementos se utiliza para agregar una lista de opciones en un campo de entrada de texto, permitiendo autocompletado?",
+    "options": ["<select>", "<option>", "<datalist>", "<autocomplete>"],
+    "correctAnswer": "<datalist>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` se utiliza para controlar el número máximo de caracteres en un campo de tipo `text`?",
+    "options": ["length", "maxlength", "max", "limit"],
+    "correctAnswer": "maxlength",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede agrupar visualmente un conjunto de campos de formulario relacionados?",
+    "options": [
+      "Usando el elemento <group>",
+      "Con el atributo group en cada <input>",
+      "Utilizando el elemento <fieldset>...",
+      "Con el elemento <div> y estilos CSS"
+    ],
+    "correctAnswer": "Utilizando el elemento <fieldset>...",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se debe usar para preseleccionar una opción en un grupo de botones de opción (radio buttons)?",
+    "options": ["selected", "default", "checked", "active"],
+    "correctAnswer": "checked",
+    "category": "form"
+  },
+  {
+    "question": "¿Para qué sirve el atributo `for` en la etiqueta `<label>`?",
+    "options": [
+      "Para definir el formulario al que pertenece la etiqueta",
+      "Para especificar el ID del elemento de formulario al que está asociada la etiqueta",
+      "Para indicar el nombre del campo de formulario",
+      "Para asignar una clase CSS específica al elemento de etiqueta"
+    ],
+    "correctAnswer": "Para especificar el ID del elemento de formulario al que está asociada la etiqueta",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de `<input>` se utiliza para crear un control que permite a los usuarios seleccionar una hora?",
+    "options": [
+      "type=\"datetime\"",
+      "type=\"time\"",
+      "type=\"hour\"",
+      "type=\"clock\""
+    ],
+    "correctAnswer": "type=\"time\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del atributo `autofocus` en un elemento de formulario?",
+    "options": [
+      "Hacer que el campo sea el primer receptor del foco cuando se carga la página",
+      "Permitir la autocompletación de los datos del usuario",
+      "Resaltar visualmente el campo de formulario",
+      "Activar automáticamente la validación del campo"
+    ],
+    "correctAnswer": "Hacer que el campo sea el primer receptor del foco cuando se carga la página",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` permite definir un control como desactivado, impidiendo la interacción del usuario?",
+    "options": ["disabled", "inactive", "readonly", "nonactive"],
+    "correctAnswer": "disabled",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se define un botón en un formulario que no realiza la acción de enviar pero puede tener otras funcionalidades a través de javascript?",
+    "options": [
+      "<input type=\"button\">",
+      "<button type=\"submit\">",
+      "<button>",
+      "<input type=\"submit\">"
+    ],
+    "correctAnswer": "<input type=\"button\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se utiliza para proporcionar una opción que permite seleccionar varios archivos en un input de tipo `file`?",
+    "options": [
+      "<input type=\"files\">",
+      "<input type=\"file\" multiple>",
+      "<files>",
+      "<input type=\"file\" multi>"
+    ],
+    "correctAnswer": "<input type=\"file\" multiple>",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál de estos elementos se usa para crear un control deslizante para seleccionar un valor numérico?",
+    "options": [
+      "<input type=\"slider\">",
+      "<input type=\"scroll\">",
+      "<input type=\"range\">",
+      "<slider>"
+    ],
+    "correctAnswer": "<input type=\"range\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` se usa para definir que un campo debe tener un valor antes de enviar el formulario?",
+    "options": ["necessary", "mandatory", "required", "needed"],
+    "correctAnswer": "required",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se especifica un valor predeterminado para un elemento `<input type=\"date\">`?",
+    "options": [
+      "Usando el atributo value con la fecha en formato YYYY-MM-DD",
+      "A través del atributo default, en cualquier formato de fecha",
+      "Mediante CSS",
+      "Con javascript después de que la página se haya cargado"
+    ],
+    "correctAnswer": "Usando el atributo value con la fecha en formato YYYY-MM-DD",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué etiqueta se utiliza para crear una barra de navegación en un formulario?",
+    "options": [
+      "<navigation>",
+      "<navbar>",
+      "<nav>",
+      "No hay una etiqueta HTML específica para barras de navegación en formularios; se suele utilizar <div> o <nav> con CSS."
+    ],
+    "correctAnswer": "No hay una etiqueta HTML específica para barras de navegación en formularios; se suele utilizar <div> o <nav> con CSS.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<textarea>` especifica el número de filas visibles?",
+    "options": ["rows", "lines", "height", "size"],
+    "correctAnswer": "rows",
+    "category": "form"
+  },
+  {
+    "question": "¿Para qué se utiliza el atributo `formaction` en un elemento `<button>` o `<input type=\"submit\">`?",
+    "options": [
+      "Para definir la acción por defecto del formulario",
+      "Para sobreescribir la acción del formulario para ese botón específico",
+      "Para especificar una URL de imagen como acción",
+      "No existe tal atributo en HTML"
+    ],
+    "correctAnswer": "Para sobreescribir la acción del formulario para ese botón específico",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se usa en `<input>` para limitar la selección a archivos de tipos específicos (p. ej., solo imágenes)?",
+    "options": ["filetype", "accept", "typefilter", "mime"],
+    "correctAnswer": "accept",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede hacer que un campo de formulario sea solo de lectura?",
+    "options": [
+      "Usando el atributo readonly=\"true\"",
+      "Con el atributo readonly",
+      "Añadiendo disabled=\"true\"",
+      "Mediante CSS"
+    ],
+    "correctAnswer": "Con el atributo readonly",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del atributo `size` en un `<input type=\"text\">`?",
+    "options": [
+      "Especificar el tamaño máximo del texto que se puede ingresar",
+      "Definir el ancho del campo de texto en términos de caracteres visibles",
+      "Limitar el número de caracteres que el usuario puede introducir",
+      "Establecer el tamaño de la fuente del texto"
+    ],
+    "correctAnswer": "Definir el ancho del campo de texto en términos de caracteres visibles",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` permite preseleccionar un botón de chequeo (checkbox)?",
+    "options": ["select", "default", "checked", "active"],
+    "correctAnswer": "checked",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se crea un grupo de botones de opción (radio buttons) donde solo se puede seleccionar una opción?",
+    "options": [
+      "Dándoles a todos el mismo atributo name",
+      "Dándoles a todos el mismo atributo id",
+      "Dándoles a todos el mismo atributo class",
+      "Dándoles a todos el mismo atributo value"
+    ],
+    "correctAnswer": "Dándoles a todos el mismo atributo name",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<form>` se utiliza para especificar que el formulario no debe validar los campos al enviar?",
+    "options": [
+      "novalidate",
+      "validate=\"false\"",
+      "no-validation",
+      "disable-validation"
+    ],
+    "correctAnswer": "novalidate",
+    "category": "form"
+  },
+  {
+    "question": "¿Para qué sirve el elemento `<legend>` dentro de un formulario?",
+    "options": [
+      "Para definir un campo de entrada",
+      "Para proporcionar un título o leyenda a un grupo de campos agrupados por <fieldset>",
+      "Para agregar una descripción detallada a los elementos del formulario",
+      "Para crear una leyenda visual que aparezca al pasar el ratón sobre los campos del formulario"
+    ],
+    "correctAnswer": "Para proporcionar un título o leyenda a un grupo de campos agrupados por <fieldset>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de `<input>` se utiliza para crear un campo que permite escribir una URL?",
+    "options": [
+      "type=\"link\"",
+      "type=\"web\"",
+      "type=\"url\"",
+      "type=\"uri\""
+    ],
+    "correctAnswer": "type=\"url\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede incrementar el tamaño de una caja de texto `<textarea>` solo horizontalmente?",
+    "options": [
+      "Estableciendo el atributo rows a un número fijo y omitiendo el atributo cols",
+      "Estableciendo el atributo cols a un número mayor y usando CSS para ancho máximo",
+      "Usando solo el atributo width en CSS...",
+      "No es posible; siempre se incrementa tanto horizontal como verticalmente"
+    ],
+    "correctAnswer": "Estableciendo el atributo cols a un número mayor y usando CSS para ancho máximo",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` es útil para proporcionar una pista sobre el tipo de información que se espera en el campo?",
+    "options": ["placeholder", "hint", "type", "title"],
+    "correctAnswer": "placeholder",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es la diferencia principal entre los atributos `disabled` y `readonly` para un campo de formulario?",
+    "options": [
+      "disabled no permite interactuar con el campo, mientras que readonly sí permite la interacción pero no la modificación",
+      "No hay diferencia; ambos hacen lo mismo",
+      "readonly oculta el campo en el formulario, disabled no",
+      "disabled envía el valor del campo con el formulario, readonly no"
+    ],
+    "correctAnswer": "disabled no permite interactuar con el campo, mientras que readonly sí permite la interacción pero no la modificación",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se utiliza para especificar opciones en un `<datalist>`?",
+    "options": ["<select>", "<option>", "<item>", "<choice>"],
+    "correctAnswer": "<option>",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se agrega una imagen como botón de envío en un formulario HTML?",
+    "options": [
+      "<input type=\"submit\" src=\"image.jpg\">",
+      "<button type=\"submit\"><img src=\"image.jpg\"></button>",
+      "<input type=\"image\" src=\"image.jpg\">",
+      "<submit src=\"image.jpg\">"
+    ],
+    "correctAnswer": "<input type=\"image\" src=\"image.jpg\">",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál de los siguientes elementos se utiliza para recoger una firma digital en un formulario HTML?",
+    "options": [
+      "<input type=\"digital-signature\">",
+      "<signature>",
+      "<input type=\"signature\">",
+      "HTML no provee un tipo de input específico para firmas digitales; se suelen usar soluciones específicas de terceros."
+    ],
+    "correctAnswer": "HTML no provee un tipo de input específico para firmas digitales; se suelen usar soluciones específicas de terceros.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se usa para especificar que un campo de entrada debe ser automáticamente completado por el navegador?",
+    "options": [
+      "autocomplete=\"on\"",
+      "auto=\"true\"",
+      "autofill=\"enable\"",
+      "autoinput=\"yes\""
+    ],
+    "correctAnswer": "autocomplete=\"on\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede hacer un grupo de `<input type=\"checkbox\">` donde seleccionar uno automáticamente deseleccione cualquier otro seleccionado?",
+    "options": [
+      "Asignándoles el mismo nombre mediante el atributo name.",
+      "Utilizando javascript para manejar el comportamiento.",
+      "Este comportamiento es automático para los checkboxes.",
+      "No es posible; los checkboxes no están diseñados para comportarse de esta manera."
+    ],
+    "correctAnswer": "Utilizando javascript para manejar el comportamiento.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del atributo `form` en elementos `<input>`, `<select>`, `<textarea>`, y `<button>`?",
+    "options": [
+      "Para especificar el formulario al que pertenecen, permitiendo que estén físicamente fuera del <form>.",
+      "Para definir el tipo de formulario al que se aplican.",
+      "Para identificar únicamente cada formulario en la página.",
+      "Para asociar un estilo CSS específico al formulario."
+    ],
+    "correctAnswer": "Para especificar el formulario al que pertenecen, permitiendo que estén físicamente fuera del <form>.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué tipo de `<input>` crea un campo oculto que los usuarios no pueden ver ni interactuar?",
+    "options": [
+      "type=\"invisible\"",
+      "type=\"hidden\"",
+      "type=\"secret\"",
+      "type=\"concealed\""
+    ],
+    "correctAnswer": "type=\"hidden\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se especifica en HTML que un campo de texto debe ser editado solo con texto en mayúsculas?",
+    "options": [
+      "Mediante el atributo text-transform: uppercase; en CSS.",
+      "Usando el atributo uppercase=\"true\" en el <input>.",
+      "No es posible hacerlo solo con HTML; se necesita CSS o javascript.",
+      "Añadiendo type=\"UPPERCASE\" en el <input>."
+    ],
+    "correctAnswer": "No es posible hacerlo solo con HTML; se necesita CSS o javascript.",
+    "category": "form"
+  },
+  {
+    "question": "¿Para qué se usa el atributo `multiple` en un `<select>`?",
+    "options": [
+      "Para permitir la selección de múltiples opciones simultáneamente.",
+      "Para indicar que hay múltiples <select> en el formulario.",
+      "Para habilitar la adición de opciones múltiples por parte del usuario.",
+      "Para especificar que el <select> debería mostrar múltiples filas de opciones."
+    ],
+    "correctAnswer": "Para permitir la selección de múltiples opciones simultáneamente.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre `<input type=\"button\">` y `<button>`?",
+    "options": [
+      "<input type=\"button\"> no puede contener HTML dentro, mientras que <button> sí.",
+      "<button> es una característica obsoleta y no debe usarse.",
+      "No hay ninguna diferencia, son intercambiables.",
+      "<input type=\"button\"> es para formularios, mientras que <button> es para acciones generales fuera de formularios."
+    ],
+    "correctAnswer": "<input type=\"button\"> no puede contener HTML dentro, mientras que <button> sí.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` especifica un mensaje de error personalizado que se muestra cuando la validación falla?",
+    "options": [
+      "error=\"mensaje\"",
+      "validationMessage=\"mensaje\"",
+      "oninvalid=\"this.setCustomValidity('Tu mensaje')\"",
+      "message=\"Tu mensaje\""
+    ],
+    "correctAnswer": "oninvalid=\"this.setCustomValidity('Tu mensaje')\"",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento HTML se usa comúnmente para estructurar un grupo de campos relacionados en un formulario, proporcionando un encabezado para el grupo?",
+    "options": ["<fieldset>", "<group>", "<section>", "<header>"],
+    "correctAnswer": "<fieldset>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` se utiliza para hacer que un campo sea no editable por el usuario pero aún así enviable con el formulario?",
+    "options": ["readonly", "disabled", "fixed", "static"],
+    "correctAnswer": "readonly",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué valor del atributo `type` en `<input>` se utiliza para controlar la entrada de una dirección de correo electrónico?",
+    "options": ["text", "mail", "email", "e-mail"],
+    "correctAnswer": "email",
+    "category": "form"
+  },
+  {
+    "question": "¿Cuál es el propósito del atributo `method` en un formulario HTML?",
+    "options": [
+      "Define el método de codificación de los datos del formulario.",
+      "Especifica el método HTTP utilizado para enviar el formulario.",
+      "Determina el método de validación de los campos del formulario.",
+      "Identifica el método de acción cuando el formulario se envía."
+    ],
+    "correctAnswer": "Especifica el método HTTP utilizado para enviar el formulario.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se puede incluir una casilla de verificación que ya esté marcada por defecto en HTML?",
+    "options": [
+      "<input type=\"checkbox\" checked=\"checked\">",
+      "<input type=\"checkbox\" default=\"true\">",
+      "<input type=\"checkbox\" checked>",
+      "<input type=\"checkbox\" selected=\"selected\">"
+    ],
+    "correctAnswer": "<input type=\"checkbox\" checked>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<input>` se usa para agregar un límite inferior al valor que los usuarios pueden introducir en un campo de tipo `number`?",
+    "options": ["min", "lower", "minimum", "bottom"],
+    "correctAnswer": "min",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué elemento se usa para agregar un título a un `<fieldset>` dentro de un formulario HTML?",
+    "options": ["<legend>", "<label>", "<caption>", "<title>"],
+    "correctAnswer": "<legend>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo se utiliza para organizar los campos de formulario en categorías que se pueden navegar mediante pestañas en la interfaz de usuario?",
+    "options": [
+      "No existe tal funcionalidad directamente en HTML; se logra con javascript y CSS.",
+      "tabindex",
+      "category",
+      "group"
+    ],
+    "correctAnswer": "No existe tal funcionalidad directamente en HTML; se logra con javascript y CSS.",
+    "category": "form"
+  },
+  {
+    "question": "¿Cómo se especifica un campo de formulario que acepta múltiples líneas de texto?",
+    "options": [
+      "<input type=\"multiline\">",
+      "<input type=\"textarea\">",
+      "<textarea>",
+      "<input type=\"text\" multiline>"
+    ],
+    "correctAnswer": "<textarea>",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué atributo de `<form>` indica a dónde enviar los datos del formulario para su procesamiento?",
+    "options": ["sendto", "destination", "action", "target"],
+    "correctAnswer": "action",
+    "category": "form"
+  },
+  {
+    "question": "Considerando las prácticas de seguridad en la web, ¿cuál es la mejor manera de manejar la información sensible en un formulario HTML antes de enviarla a un servidor?",
+    "options": [
+      "Utilizar el atributo `method=\"get\"` para asegurar los datos mediante la URL.",
+      "Emplear el atributo `enctype=\"multipart/form-data\"` para encriptar los datos del formulario.",
+      "Asegurarse de que el formulario se envíe a través de una conexión HTTPS y utilizar el atributo `method=\"post\"`.",
+      "Codificar los valores de los campos del formulario en Base64 utilizando javascript antes de enviarlos."
+    ],
+    "correctAnswer": "Asegurarse de que el formulario se envíe a través de una conexión HTTPS y utilizar el atributo `method=\"post\"`.",
+    "category": "form"
+  },
+  {
+    "question": "¿Qué significa CSS?",
+    "options": [
+      "Colorful Style Sheets",
+      "Computer Style Sheets",
+      "Creative Style Sheets",
+      "Cascading Style Sheets"
+    ],
+    "correctAnswer": "Cascading Style Sheets",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué sintaxis es correcta para hacer referencia a un archivo CSS externo?",
+    "options": [
+      "<link href=\"estilo.css\" rel=\"stylesheet\">",
+      "<stylesheet>mystyle.css</stylesheet>",
+      "<style src=\"estilo.css\">",
+      "<css>estilo.css</css>"
+    ],
+    "correctAnswer": "<link href=\"estilo.css\" rel=\"stylesheet\">",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se inserta un comentario en un archivo CSS?",
+    "options": [
+      "// esto es un comentario",
+      "<!-- esto es un comentario -->",
+      "/* esto es un comentario */",
+      "# esto es un comentario"
+    ],
+    "correctAnswer": "/* esto es un comentario */",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la forma correcta de definir que todos los elementos `<p>` deben tener color de texto rojo en CSS?",
+    "options": [
+      "p {color: red;}",
+      "all.p {color: red;}",
+      "p.all {color: red;}",
+      "p.color {text: red;}"
+    ],
+    "correctAnswer": "p {color: red;}",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para cambiar el color de fondo?",
+    "options": ["bgcolor", "color", "background-color", "fondo"],
+    "correctAnswer": "background-color",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se hace para que todos los elementos `<a>` aparezcan sin subrayado?",
+    "options": [
+      "a {text-decoration: none;}",
+      "a {decoration: no-underline;}",
+      "a {underline: none;}",
+      "a {text-decoration: no-underline;}"
+    ],
+    "correctAnswer": "a {text-decoration: none;}",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se selecciona un elemento con el id \"demo\"?",
+    "options": [".demo", "#demo", "demo", "%demo"],
+    "correctAnswer": "#demo",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se usa para cambiar el tipo de letra?",
+    "options": ["font-family", "font-type", "typeface", "font-style"],
+    "correctAnswer": "font-family",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica un estilo a todos los elementos `<h>` solo cuando están dentro de elementos con la clase `.important`?",
+    "options": [
+      "h.important {...}",
+      "important.h {...}",
+      ".important h {...}",
+      "h + .important {...}"
+    ],
+    "correctAnswer": ".important h {...}",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la propiedad correcta para establecer el espaciado entre palabras?",
+    "options": ["word-spacing", "spacing", "letter-spacing", "text-spacing"],
+    "correctAnswer": "word-spacing",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece el margen izquierdo de un elemento?",
+    "options": [
+      "margin-left",
+      "margin: left",
+      "padding-left",
+      "margin: 0 auto"
+    ],
+    "correctAnswer": "margin-left",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué unidad NO es una unidad de medida en CSS?",
+    "options": ["px", "cm", "mm", "inches"],
+    "correctAnswer": "inches",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la propiedad correcta para establecer el grosor de una fuente?",
+    "options": ["font-weight", "font-style", "font-size", "font-thickness"],
+    "correctAnswer": "font-weight",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se hace que un elemento se muestre como bloque?",
+    "options": [
+      "display: block;",
+      "display: inline;",
+      "display: inline-block;",
+      "display: none;"
+    ],
+    "correctAnswer": "display: block;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál propiedad se utiliza para establecer la altura de un elemento?",
+    "options": ["width", "height", "length", "size"],
+    "correctAnswer": "height",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se seleccionan todos los párrafos (`<p>`) que son directamente hijos de un `<div>`?",
+    "options": ["div > p", "div + p", "div p", "p > div"],
+    "correctAnswer": "div > p",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué función CSS se utiliza para crear transiciones entre estados de un elemento?",
+    "options": ["transition()", "animate()", "change()", "transform()"],
+    "correctAnswer": "transition()",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se define una variable CSS que almacena un color primario?",
+    "options": [
+      "$primary-color: blue;",
+      "@primary-color: blue;",
+      "--primary-color: blue;",
+      "%primary-color: blue;"
+    ],
+    "correctAnswer": "--primary-color: blue;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para hacer que el texto esté en mayúsculas?",
+    "options": [
+      "text-transform: uppercase;",
+      "text-style: uppercase;",
+      "font-case: uppercase;",
+      "text-case: uppercase;"
+    ],
+    "correctAnswer": "text-transform: uppercase;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica un estilo CSS a todos los elementos excepto a aquellos con la clase `.exclude`?",
+    "options": [
+      "*:not(.exclude) { ... }",
+      "*.exclude { ... }",
+      "! .exclude { ... }",
+      "none(.exclude) { ... }"
+    ],
+    "correctAnswer": "*:not(.exclude) { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para establecer la opacidad de un elemento?",
+    "options": ["visibility", "filter", "transparency", "opacity"],
+    "correctAnswer": "opacity",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede hacer que un elemento no se muestre sin afectar el diseño de la página?",
+    "options": [
+      "display: none;",
+      "visibility: hidden;",
+      "opacity: 0;",
+      "display: invisible;"
+    ],
+    "correctAnswer": "visibility: hidden;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué selector se utiliza para apuntar a un elemento con un atributo específico?",
+    "options": ["[atributo]", "{atributo}", "(atributo)", "@atributo"],
+    "correctAnswer": "[atributo]",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál de las siguientes NO es una propiedad de flexbox?",
+    "options": ["flex-grow", "flex-basis", "flex-wrap", "flex-color"],
+    "correctAnswer": "flex-color",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece el espaciado entre las líneas de texto?",
+    "options": ["text-height", "line-spacing", "line-height", "text-spacing"],
+    "correctAnswer": "line-height",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se usa para crear sombras alrededor de un elemento?",
+    "options": ["box-shadow", "text-shadow", "shadow", "border-shadow"],
+    "correctAnswer": "box-shadow",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede cambiar el estilo del cursor?",
+    "options": [
+      "cursor: pointer;",
+      "pointer: cursor;",
+      "cursor: hand;",
+      "hand: cursor;"
+    ],
+    "correctAnswer": "cursor: pointer;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la propiedad correcta para hacer que los elementos `<a>` cambien el color al pasar el mouse sobre ellos?",
+    "options": [
+      "a:hover {color: red;}",
+      "a:mouseover {color: red;}",
+      "a:hover {background-color: red;}",
+      "a:mouse {color: red;}"
+    ],
+    "correctAnswer": "a:hover {color: red;}",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para controlar la posición de un elemento de fondo?",
+    "options": [
+      "background-position",
+      "background-placement",
+      "background-location",
+      "background-spot"
+    ],
+    "correctAnswer": "background-position",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede incluir un archivo CSS en HTML para impresión solamente?",
+    "options": [
+      "<link href=\"print.css\" rel=\"stylesheet\" media=\"print\">",
+      "<link href=\"print.css\" rel=\"stylesheet\" media=\"screen\">",
+      "<link href=\"print.css\" rel=\"stylesheet\" type=\"print\">",
+      "<stylesheet>print.css</stylesheet>"
+    ],
+    "correctAnswer": "<link href=\"print.css\" rel=\"stylesheet\" media=\"print\">",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué selector CSS se usa para definir un estilo para elementos únicos?",
+    "options": [
+      "ID selector (#id)",
+      "Clase selector (.class)",
+      "Tipo selector (element)",
+      "Universal selector (*)"
+    ],
+    "correctAnswer": "ID selector (#id)",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se representa un color RGB en CSS que tiene el máximo de rojo, ningún verde, y un poco de azul?",
+    "options": [
+      "rgb(255, 0, 255)",
+      "rrgb(255, 0, 0)",
+      "rgb(0, 0, 255)",
+      "rgb(255, 0, 15)"
+    ],
+    "correctAnswer": "rgb(255, 0, 15)",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para establecer el espaciado entre bordes de elementos adyacentes?",
+    "options": ["margin", "border", "padding", "space"],
+    "correctAnswer": "margin",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad permite controlar el tamaño de la fuente?",
+    "options": ["text-size", "font-weight", "font-style", "font-size"],
+    "correctAnswer": "font-size",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece una imagen de fondo para un elemento?",
+    "options": [
+      "background: url('imagen.jpg');",
+      "background-image: url('imagen.jpg');",
+      "background-content: url('imagen.jpg');",
+      "background-picture: url('imagen.jpg');"
+    ],
+    "correctAnswer": "background-image: url('imagen.jpg');",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se usa para cambiar la dirección del texto?",
+    "options": ["text-align", "text-direction", "direction", "text-flow"],
+    "correctAnswer": "direction",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede forzar a un elemento a tener un ancho mínimo de 200px y un ancho máximo de 400px?",
+    "options": [
+      "width: min(200px, max(400px));",
+      "min-width: 200px; max-width: 400px;",
+      "width: 200px; max-width: 400px;",
+      "width: between(200px, 400px);"
+    ],
+    "correctAnswer": "min-width: 200px; max-width: 400px;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica una hoja de estilo solo para pantallas con una anchura menor a 600px?",
+    "options": [
+      "<link href=\"small.css\" rel=\"stylesheet\" media=\"max-width: 600px\">",
+      "<link href=\"small.css\" rel=\"stylesheet\" media=\"screen and (max-width: 600px)\">",
+      "<style media=\"screen and (max-width: 600px)\">@import \"small.css\";</style>",
+      "<link href=\"small.css\" rel=\"stylesheet\" type=\"text/css\" media=\"only screen and (max-width: 600px)\">"
+    ],
+    "correctAnswer": "<link href=\"small.css\" rel=\"stylesheet\" media=\"screen and (max-width: 600px)\">",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la forma correcta de aplicar un gradiente como fondo en CSS?",
+    "options": [
+      "background: gradient(linear, left top, right bottom, from(#ff0000), to(#0000ff));",
+      "background-image: linear-gradient(to bottom right, #ff0000, #0000ff);",
+      "background: linear-gradient(left top, #ff0000, #0000ff);",
+      "background-color: gradient(#ff0000, #0000ff);"
+    ],
+    "correctAnswer": "background-image: linear-gradient(to bottom right, #ff0000, #0000ff);",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se seleccionan todos los elementos `<input>` de tipo `text` en un formulario?",
+    "options": [
+      "input[text]",
+      "input[type=\"text\"]",
+      "input.text",
+      "text[input]"
+    ],
+    "correctAnswer": "input[type=\"text\"]",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para establecer la posición de un fondo dentro de un elemento?",
+    "options": [
+      "background-align",
+      "background-position",
+      "background-placement",
+      "background-location"
+    ],
+    "correctAnswer": "background-position",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para hacer que un elemento sea completamente invisible y no ocupe espacio en el diseño de la página?",
+    "options": [
+      "visibility: hidden;",
+      "display: none;",
+      "opacity: 0;",
+      "hidden: true;"
+    ],
+    "correctAnswer": "display: none;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se crea una animación en CSS que dura 5 segundos?",
+    "options": [
+      "animation: example 5s;",
+      "duration: 5s;",
+      "@keyframes animation {duration: 5s;}",
+      "@animation: 5s;"
+    ],
+    "correctAnswer": "animation: example 5s;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué selector se usa para apuntar al primer párrafo dentro de cualquier elemento?",
+    "options": ["p:first-of-type", "p:child", "first:p", "p:first"],
+    "correctAnswer": "p:first-of-type",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece que un elemento HTML no se pueda seleccionar por el usuario?",
+    "options": [
+      "user-select: none;",
+      "selectable: false;",
+      "user-selection: none;",
+      "none-select: user;"
+    ],
+    "correctAnswer": "user-select: none;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para hacer que un texto se alinee al centro?",
+    "options": [
+      "text-align: center;",
+      "text-center: true;",
+      "alignment: center;",
+      "font-align: center;"
+    ],
+    "correctAnswer": "text-align: center;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece un borde redondeado en CSS?",
+    "options": [
+      "border-curve: 5px;",
+      "border-radius: 5px;",
+      "radius: 5px;",
+      "border-round: 5px;"
+    ],
+    "correctAnswer": "border-radius: 5px;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué función de CSS se usa para aplicar un efecto de sombra a un texto?",
+    "options": [
+      "text-shadow: 2px 2px 5px red;",
+      "font-shadow: 2px 2px red;",
+      "shadow-text: 5px 5px 5px black;",
+      "text-effect: shadow(2px 2px 5px red);"
+    ],
+    "correctAnswer": "text-shadow: 2px 2px 5px red;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es el mejor sitio para incluir los enlaces al CSS?",
+    "options": [
+      "head",
+      "body",
+      "al final del documento",
+      "No hay que ponerlo en HTML"
+    ],
+    "correctAnswer": "head",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica CSS específicamente a Internet Explorer 10?",
+    "options": [
+      "@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { ... }",
+      "<!--[if IE 10]>CSS aquí<![endif]-->",
+      "@browser ie10 { ... }",
+      "@supports (-ms-ime-align: auto) { ... }"
+    ],
+    "correctAnswer": "@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la forma correcta de definir múltiples selectores CSS con las mismas propiedades de estilo?",
+    "options": [
+      "h1 { ... }; h2 { ... }; h3 { ... };",
+      "h1, h2, h3 { ... }",
+      "h1 + h2 + h3 { ... }",
+      "h1 > h2 > h3 { ... }"
+    ],
+    "correctAnswer": "h1, h2, h3 { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se agrega una sombra interna a un elemento?",
+    "options": [
+      "box-shadow: inset 0 0 10px #000;",
+      "inner-shadow: 10px 10px 5px #000;",
+      "shadow: inside 10px 10px 5px #000;",
+      "box-shadow: inside 0 0 10px #000;"
+    ],
+    "correctAnswer": "box-shadow: inset 0 0 10px #000;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para establecer el tipo de lista en un elemento `<ul>` o `<ol>`?",
+    "options": ["list-style-type", "list-type", "bullet-type", "type-list"],
+    "correctAnswer": "list-style-type",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se define un keyframe llamado \"slide\" que mueve un elemento de izquierda a derecha?",
+    "options": [
+      "@keyframes slide { from {left: 0;} to {left: 100%;} }",
+      "@animation slide { start {left: 0;} end {left: 100%;} }",
+      "@frames slide { 0% {left: 0;} 100% {left: 100%;} }",
+      "@key-slide { from {left: 0px;} to {left: 100px;} }"
+    ],
+    "correctAnswer": "@keyframes slide { from {left: 0;} to {left: 100%;} }",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para especificar el espaciado entre las celdas de una tabla?",
+    "options": ["cell-spacing", "table-spacing", "border-spacing", "spacing"],
+    "correctAnswer": "border-spacing",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece un estilo para los enlaces visitados?",
+    "options": [
+      "a:visited { color: purple; }",
+      "a { visited-color: purple; }",
+      "a.visited { color: purple; }",
+      "visited a { color: purple; }"
+    ],
+    "correctAnswer": "a:visited { color: purple; }",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es el valor predeterminado de la propiedad `position`?",
+    "options": ["absolute", "fixed", "relative", "static"],
+    "correctAnswer": "static",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS permite el desplazamiento de elementos dentro de su caja si el contenido es más grande que la caja misma?",
+    "options": ["overflow", "scroll", "overflow-scroll", "box-scroll"],
+    "correctAnswer": "overflow",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se utiliza un selector de atributo para seleccionar elementos con un atributo específico cuyo valor comienza con \"https\"?",
+    "options": [
+      "a[href^=\"https\"]",
+      "a[href$=\"https\"]",
+      "a[href*=\"https\"]",
+      "a[href=\"https\"]"
+    ],
+    "correctAnswer": "a[href^=\"https\"]",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para ocultar un elemento pero manteniendo el espacio que ocupaba en el diseño de la página?",
+    "options": [
+      "visibility: hidden;",
+      "display: none;",
+      "opacity: 0;",
+      "hidden: true;"
+    ],
+    "correctAnswer": "visibility: hidden;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para cambiar el estilo del puntero del ratón?",
+    "options": ["cursor", "pointer", "mouse-style", "pointer-style"],
+    "correctAnswer": "cursor",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica un estilo específico a elementos que están siendo apuntados por el ratón?",
+    "options": [
+      "element:focus { ... }",
+      "element:active { ... }",
+      "element:hover { ... }",
+      "element:mouseover { ... }"
+    ],
+    "correctAnswer": "element:hover { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para hacer que un elemento sea no seleccionable por el usuario?",
+    "options": [
+      "-webkit-user-select: none;",
+      "-moz-user-select: none;",
+      "-ms-user-select: none;",
+      "Todas las anteriores"
+    ],
+    "correctAnswer": "Todas las anteriores",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece la fuente de un elemento para usar la primera fuente disponible en una lista de varias fuentes?",
+    "options": [
+      "font-family: Arial, Helvetica, sans-serif;",
+      "font: Arial, Helvetica, sans-serif;",
+      "font-type: Arial, Helvetica, sans-serif;",
+      "typeface: Arial, Helvetica, sans-serif;"
+    ],
+    "correctAnswer": "font-family: Arial, Helvetica, sans-serif;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para establecer el espaciado entre letras?",
+    "options": [
+      "letter-spacing",
+      "character-spacing",
+      "spacing",
+      "text-spacing"
+    ],
+    "correctAnswer": "letter-spacing",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es el propósito de la propiedad `z-index` en CSS?",
+    "options": [
+      "Ajustar el espaciado entre elementos en el eje Z",
+      "Ajustar la rotación de elementos en el eje Z",
+      "Controlar el orden de apilamiento de elementos solapados",
+      "Definir la posición de un elemento en el eje Z sin solapamientos"
+    ],
+    "correctAnswer": "Controlar el orden de apilamiento de elementos solapados",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se hace para que un elemento se posicione fijo en la pantalla, incluso al hacer scroll?",
+    "options": [
+      "position: static;",
+      "position: absolute;",
+      "position: fixed;",
+      "position: relative;"
+    ],
+    "correctAnswer": "position: fixed;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué función de CSS se utiliza para realizar una transición suave entre colores de fondo en un hover?",
+    "options": [
+      "color-transition()",
+      "background-transition()",
+      "transition()",
+      "gradient-transition()"
+    ],
+    "correctAnswer": "transition()",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la sintaxis correcta para importar una fuente de Google Fonts en CSS?",
+    "options": [
+      "@import url('https://fonts.googleapis.com/css?family=Open+Sans');",
+      "@include font('https://fonts.googleapis.com/css?family=Open+Sans');",
+      "@font-face { font-family: 'Open Sans'; src: url('https://fonts.googleapis.com/css?family=Open+Sans'); }",
+      "import 'https://fonts.googleapis.com/css?family=Open+Sans';"
+    ],
+    "correctAnswer": "@import url('https://fonts.googleapis.com/css?family=Open+Sans');",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece el ancho de un borde sin afectar las dimensiones totales de un elemento?",
+    "options": [
+      "Usando la propiedad border-width con box-sizing: border-box;",
+      "Aplicando border-width sin cambiar el box-sizing",
+      "Cambiando el box-sizing a content-box y ajustando border-width",
+      "Definiendo border-width y ajustando manualmente el ancho y alto del elemento"
+    ],
+    "correctAnswer": "Usando la propiedad border-width con box-sizing: border-box;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para mostrar u ocultar el borde de las columnas?",
+    "options": ["column-rule", "column-border", "column-edge", "column-line"],
+    "correctAnswer": "column-rule",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se crea un contorno alrededor de un elemento, que no afecta el layout?",
+    "options": [
+      "border: 1px solid;",
+      "margin-outline: 1px solid;",
+      "outline: 1px solid;",
+      "edge: 1px solid;"
+    ],
+    "correctAnswer": "outline: 1px solid;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la propiedad que define la alineación de los items dentro de un contenedor flex?",
+    "options": [
+      "align-content",
+      "align-items",
+      "justify-content",
+      "flex-align"
+    ],
+    "correctAnswer": "align-items",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para establecer la transparencia de un elemento?",
+    "options": ["alpha", "opacity", "transparent", "clear"],
+    "correctAnswer": "opacity",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se especifica que un enlace no debe ser subrayado?",
+    "options": [
+      "a {decoration: none;}",
+      "a {underline: none;}",
+      "a {text-decoration: none;}",
+      "a {no-underline: true;}"
+    ],
+    "correctAnswer": "a {text-decoration: none;}",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para hacer que un elemento se oculte, pero sin cambiar el layout del documento?",
+    "options": [
+      "display: none;",
+      "visibility: hidden;",
+      "opacity: 0;",
+      "hide: true;"
+    ],
+    "correctAnswer": "visibility: hidden;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede forzar a un elemento a ocupar todo el ancho disponible de su contenedor?",
+    "options": [
+      "width: 100%;",
+      "width: auto;",
+      "width: full;",
+      "width: container;"
+    ],
+    "correctAnswer": "width: 100%;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué selector se utiliza para aplicar un estilo a todos los elementos pares dentro de un contenedor?",
+    "options": [":nth-child(even)", ":nth-of-type(odd)", ":even", ":odd"],
+    "correctAnswer": ":nth-child(even)",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede hacer que la imagen de fondo de un elemento no se repita?",
+    "options": [
+      "background-repeat: no-repeat;",
+      "background-no-repeat: true;",
+      "background-repeat: false;",
+      "no-repeat-background: true;"
+    ],
+    "correctAnswer": "background-repeat: no-repeat;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para añadir espacio dentro de los bordes de un elemento?",
+    "options": ["padding", "margin", "border", "spacing"],
+    "correctAnswer": "padding",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para cambiar el tipo de cursor que se muestra al pasar el ratón sobre un elemento?",
+    "options": ["cursor", "pointer", "mouse", "hand"],
+    "correctAnswer": "cursor",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica un estilo a todos los elementos `<h>` que son descendientes directos de un `<div>`?",
+    "options": [
+      "div > h { ... }",
+      "div + h { ... }",
+      "div h { ... }",
+      "h > div { ... }"
+    ],
+    "correctAnswer": "div > h { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál es la propiedad que establece el número máximo de líneas de texto que un elemento puede tener antes de ser truncado?",
+    "options": [
+      "text-max-lines",
+      "-webkit-line-clamp",
+      "max-lines",
+      "text-line-limit"
+    ],
+    "correctAnswer": "-webkit-line-clamp",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad se utiliza para hacer que un fondo sea fijo o se desplace con el contenido de la página?",
+    "options": [
+      "background-attachment",
+      "background-fixed",
+      "background-scroll",
+      "background-position"
+    ],
+    "correctAnswer": "background-attachment",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se establece el estilo de la lista para que no aparezcan viñetas en un `<ul>`?",
+    "options": [
+      "list-style-type: none;",
+      "list-style: no-bullet;",
+      "list-bullet: none;",
+      "bullet-style: none;"
+    ],
+    "correctAnswer": "list-style-type: none;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se usa para crear una nueva capa de apilamiento?",
+    "options": [
+      "z-index",
+      "position: relative;",
+      "new-layer",
+      "position: absolute;"
+    ],
+    "correctAnswer": "position: relative;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se seleccionan todos los elementos `<p>` que están inmediatamente precedidos por un `<div>`?",
+    "options": [
+      "div + p { ... }",
+      "div ~ p { ... }",
+      "p ~ div { ... }",
+      "p + div { ... }"
+    ],
+    "correctAnswer": "div + p { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad permite el desbordamiento de contenido en un eje específico?",
+    "options": [
+      "overflow-x",
+      "overflow-y",
+      "overflow-direction",
+      "A y B son correctas"
+    ],
+    "correctAnswer": "A y B son correctas",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se especifica que un estilo CSS solo se aplique cuando el dispositivo se encuentre en orientación horizontal?",
+    "options": [
+      "@media (orientation: landscape) { ... }",
+      "@media (orientation: horizontal) { ... }",
+      "@media screen and (horizontal) { ... }",
+      "@orientation: landscape { ... }"
+    ],
+    "correctAnswer": "@media (orientation: landscape) { ... }",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué función CSS se utiliza para mezclar colores basándose en su opacidad?",
+    "options": ["rgba()", "alpha()", "opacity()", "blend()"],
+    "correctAnswer": "rgba()",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para establecer el espaciado entre los caracteres de un texto?",
+    "options": [
+      "letter-spacing",
+      "text-spacing",
+      "character-spacing",
+      "font-spacing"
+    ],
+    "correctAnswer": "letter-spacing",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se puede ocultar un elemento utilizando la propiedad `visibility`?",
+    "options": [
+      "visibility: invisible;",
+      "visibility: none;",
+      "visibility: hidden;",
+      "visibility: 0;"
+    ],
+    "correctAnswer": "visibility: hidden;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál de las siguientes propiedades no es una propiedad válida de CSS para configurar el fondo de un elemento?",
+    "options": [
+      "background-color",
+      "background-image",
+      "background-repeat",
+      "background-opacity"
+    ],
+    "correctAnswer": "background-opacity",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué valor de la propiedad `display` hace que el elemento se comporte como un bloque en términos de layout pero permita establecer dimensiones como si fuera un elemento en línea?",
+    "options": [
+      "display: block;",
+      "display: inline;",
+      "display: inline-block;",
+      "display: flex;"
+    ],
+    "correctAnswer": "display: inline-block;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se aplica un gradiente como fondo de un elemento en CSS?",
+    "options": [
+      "background: gradient(linear, left top, right bottom, from(#FFBC), to(#FFFFFF));",
+      "background-image: linear-gradient(to right, #FFBC, #FFFFFF);",
+      "background-color: gradient(#FFBC, #FFFFFF);",
+      "background-style: linear-gradient(#FFBC to #FFFFFF);"
+    ],
+    "correctAnswer": "background-image: linear-gradient(to right, #FFBC, #FFFFFF);",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se especifica un color de fondo solo para el contenido de un elemento, excluyendo el relleno (padding)?",
+    "options": [
+      "background-color: content-box;",
+      "background-origin: content-box;",
+      "background-clip: content-box;",
+      "background-padding: content-box;"
+    ],
+    "correctAnswer": "background-clip: content-box;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cuál propiedad se utiliza para hacer que un elemento HTML se visualice como una cuadrícula?",
+    "options": [
+      "display: grid;",
+      "layout: grid;",
+      "format: grid;",
+      "style: grid;"
+    ],
+    "correctAnswer": "display: grid;",
+    "category": "css"
+  },
+  {
+    "question": "¿Cómo se alinean los elementos de una cuadrícula en el eje horizontal dentro de su contenedor?",
+    "options": [
+      "align-items: horizontal;",
+      "justify-items: start;",
+      "grid-horizontal-align: center;",
+      "place-items: center;"
+    ],
+    "correctAnswer": "justify-items: start;",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué función CSS se utiliza para incluir archivos CSS condicionales o recursos basados en ciertas condiciones?",
+    "options": ["@use", "@import", "@include", "@media"],
+    "correctAnswer": "@media",
+    "category": "css"
+  },
+  {
+    "question": "¿Qué propiedad CSS se utiliza para establecer el grosor del borde de un elemento?",
+    "options": [
+      "border-size",
+      "border-width",
+      "border-thickness",
+      "border-style"
+    ],
+    "correctAnswer": "border-width",
+    "category": "css"
+  },
+  {
+    "question": "¿Que significa HTML?",
+    "options": [
+      "Hyper Trainer Marking Language",
+      "Hyper Text Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "None of the above"
+    ],
+    "correctAnswer": "Hyperlinks and Text Markup Language",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual es la utilidad de la etiqueta <br> en HTML?",
+    "options": [
+      "Para añadir un titulo",
+      "Para insertar una imagen",
+      "Para crear una tabla",
+      "Para insertar un salto de linea"
+    ],
+    "correctAnswer": "Para insertar un salto de linea",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas es usada para insertar una imagen en HTML?",
+    "options": ["<img>", "<image>", "<pic>", "<picture>"],
+    "correctAnswer": "<img>",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se crea un enlace en HTML?",
+    "options": [
+      "<a>http://www.ejemplo.com</a>",
+      "<a href=\"http://www.ejemplo.com\">Ejemplo</a>",
+      "<link>http://www.ejemplo.com</link>",
+      "<a url=\"http://www.ejemplo.com\">Ejemplo</a>"
+    ],
+    "correctAnswer": "<a href=\"http://www.ejemplo.com\">Ejemplo</a>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir una lista numerada en HTML?",
+    "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+    "correctAnswer": "<ol>",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se puede abrir un enlace en una nueva pestaña del navegador?",
+    "options": [
+      "<a href=\"url\" new>",
+      "<a href=\"url\" target=\"_blank\">",
+      "<a href=\"url\" target=\"new\">",
+      "<a href=\"url\" open=\"new_tab\">"
+    ],
+    "correctAnswer": "<a href=\"url\" target=\"_blank\">",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para definir un parrafo?",
+    "options": ["<paragraph>", "<pg>", "<p>", "<para>"],
+    "correctAnswer": "<p>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual es el proposito de la etiqueta <title> en HTML?",
+    "options": [
+      "Definir el titulo de una columna en una tabla en HTML?",
+      "Crear un titulo grande en el cuerpo del documento",
+      "Especificar el título del documento, que se muestra en la barra de título que se muestra en la barra de título del navegador",
+      "Ninguno de los anteriores"
+    ],
+    "correctAnswer": "Especificar el título del documento, que se muestra en la barra de título que se muestra en la barra de título del navegador",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se comenta el codigo en HTML?",
+    "options": [
+      "<!-- Esto es un comentario -->",
+      "// Esto es un comentario",
+      "/* Esto es un comentario */",
+      "# Esto es un comentario"
+    ],
+    "correctAnswer": "<!-- Esto es un comentario -->",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para definir el encabezado de una tabla en HTML?",
+    "options": ["<thead>", "<th>", "<header>", "<tfoot>"],
+    "correctAnswer": "<thead>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para el título mas grande en HTML?",
+    "options": ["<h6>", "<heading>", "<h1>", "<head>"],
+    "correctAnswer": "<h1>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se utiliza para proporcionar informacion adicional sobre un elemento?",
+    "options": ["tooltip", "alt", "title", "description"],
+    "correctAnswer": "title",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas se usa para agregar un salto de línea?",
+    "options": ["<break>", "<lb>", "<br>", "<linebreak>"],
+    "correctAnswer": "<br>",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se define un comentario en HTML?",
+    "options": [
+      "// Comentario",
+      "/* Comentario */",
+      "<!-- Comentario -->",
+      "# Comentario"
+    ],
+    "correctAnswer": "<!-- Comentario -->",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se usa para especificar la URL en la etiqueta <a>?",
+    "options": ["link", "href", "url", "src"],
+    "correctAnswer": "href",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se usa para definir una lista desordenada?",
+    "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+    "correctAnswer": "<ul>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para insertar una imagen?",
+    "options": ["<src>", "<image>", "<img>", "<pic>"],
+    "correctAnswer": "<img>",
+    "category": "html"
+  },
+  {
+    "question": "¿Para que se utiliza la etiqueta <iframe>?",
+    "options": [
+      "Para insertar un archivo de audio",
+      "Para insertar un documento HTML dentro de otro",
+      "Para crear una seccion interactiva",
+      "Para definir un marco de imagenes"
+    ],
+    "correctAnswer": "Para insertar un documento HTML dentro de otro",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir el pie de pagina de un documento o sección?",
+    "options": ["<footer>", "<bottom>", "<foot>", "<end>"],
+    "correctAnswer": "<footer>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que significa la etiqueta <em>?",
+    "options": ["Insertar", "enfasis", "Ejemplo", "Eliminar"],
+    "correctAnswer": "enfasis",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo especifica el destino de un enlace en la etiqueta <a>?",
+    "options": ["target", "dest", "href", "link"],
+    "correctAnswer": "target",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para crear un formulario en HTML?",
+    "options": ["<form>", "<input>", "<fieldset>", "<formulary>"],
+    "correctAnswer": "<form>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <input> define el tipo de control a mostrar?",
+    "options": ["type", "control", "inputType", "display"],
+    "correctAnswer": "type",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se define un encabezado de seccion en HTML?",
+    "options": ["<header>", "<head>", "<section>", "<top>"],
+    "correctAnswer": "<header>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para mostrar datos tabulares?",
+    "options": ["<table>", "<data>", "<td>", "<tab>"],
+    "correctAnswer": "<table>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <meta> especifica la codificacion de caracteres de la página web?",
+    "options": ["charset", "encoding", "lang", "character"],
+    "correctAnswer": "charset",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir un ítem en una lista?",
+    "options": ["<li>", "<item>", "<list>", "<il>"],
+    "correctAnswer": "<li>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se utiliza para definir el nombre de un elemento de formulario?",
+    "options": ["name", "formName", "id", "type"],
+    "correctAnswer": "name",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para agrupar columnas en una tabla?",
+    "options": ["<colgroup>", "<col>", "<column>", "<group>"],
+    "correctAnswer": "<colgroup>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir una seccion de un documento?",
+    "options": ["<section>", "<div>", "<part>", "<segment>"],
+    "correctAnswer": "<section>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual es el proposito de la etiqueta <title> en HTML?",
+    "options": [
+      "Cambiar el color de fondo de la pagina.",
+      "Crear un titulo visible en el cuerpo de la pagina.",
+      "Definir el titulo del documento, que se muestra en la pestaña del navegador.",
+      "Insertar imagenes."
+    ],
+    "correctAnswer": "Definir el titulo del documento, que se muestra en la pestaña del navegador.",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <a> se utiliza para definir la URL del enlace?",
+    "options": ["src", "href", "link", "url"],
+    "correctAnswer": "href",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de estas etiquetas HTML se utiliza para añadir una imagen a una página web?",
+    "options": ["<image>", "<img>", "<pic>", "<src>"],
+    "correctAnswer": "<img>",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se puede comentar el codigo en HTML?",
+    "options": [
+      "<!-- Comentario -->",
+      "// Comentario",
+      "/* Comentario */",
+      "# Comentario"
+    ],
+    "correctAnswer": "<!-- Comentario -->",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para definir una lista ordenada?",
+    "options": ["<ul>", "<li>", "<ol>", "<dl>"],
+    "correctAnswer": "<ol>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se utiliza para abrir un enlace en una nueva ventana del navegador?",
+    "options": [
+      "new=\"_blank\"",
+      "target=\"_blank\"",
+      "window=\"new\"",
+      "open=\"newWindow\""
+    ],
+    "correctAnswer": "target=\"_blank\"",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para definir el pie de pagina de un documento o sección?",
+    "options": ["<footer>", "<bottom>", "<foot>", "<endpage>"],
+    "correctAnswer": "<footer>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para representar la importancia de un texto en HTML?",
+    "options": ["<strong>", "<em>", "<mark>", "<important>"],
+    "correctAnswer": "<strong>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de estas etiquetas HTML se utiliza para insertar un vídeo en una página web?",
+    "options": ["<video>", "<media>", "<movie>", "<mp4>"],
+    "correctAnswer": "<video>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para agregar un salto de linea en HTML?",
+    "options": ["<br>", "<lb>", "<break>", "<linebreak>"],
+    "correctAnswer": "<br>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para crear un enlace en HTML?",
+    "options": ["<link>", "<a>", "<href>", "<navigate>"],
+    "correctAnswer": "<a>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se usa con la etiqueta <img> para proporcionar texto alternativo para la imagen?",
+    "options": ["alt", "title", "description", "text"],
+    "correctAnswer": "alt",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas HTML se usa para definir un párrafo?",
+    "options": ["<paragraph>", "<p>", "<pg>", "<para>"],
+    "correctAnswer": "<p>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir una cabecera en un documento HTML?",
+    "options": ["<header>", "<head>", "<top>", "<heading>"],
+    "correctAnswer": "<head>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de estas etiquetas se usa para insertar un salto de página en HTML?",
+    "options": [
+      "<breakpage>",
+      "<pagebreak>",
+      "<newpage>",
+      "Ninguna de las anteriores"
+    ],
+    "correctAnswer": "Ninguna de las anteriores",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para definir una lista desordenada?",
+    "options": ["<ul>", "<ol>", "<li>", "<dl>"],
+    "correctAnswer": "<ul>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <meta> define la descripcion de la página?",
+    "options": [
+      "name=\"description\"",
+      "content=\"description\"",
+      "description",
+      "type=\"description\""
+    ],
+    "correctAnswer": "name=\"description\"",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se establece el color de fondo de una pagina en HTML?",
+    "options": [
+      "Usando la etiqueta <background>",
+      "Mediante el atributo bgcolor en la etiqueta <body>",
+      "Con la etiqueta <bg>",
+      "Ninguna de las anteriores"
+    ],
+    "correctAnswer": "Ninguna de las anteriores",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para agregar meta informacion al head de un documento HTML?",
+    "options": ["<meta>", "<info>", "<data>", "<details>"],
+    "correctAnswer": "<meta>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas se usa para definir texto importante en HTML?",
+    "options": ["<important>", "<strong>", "<em>", "<mark>"],
+    "correctAnswer": "<strong>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para insertar una tabla?",
+    "options": ["<table>", "<tbl>", "<tab>", "<tables>"],
+    "correctAnswer": "<table>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas es correcta para definir un encabezado de sección en HTML5?",
+    "options": ["<section>", "<header>", "<head>", "<sectionhead>"],
+    "correctAnswer": "<header>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para agregar un pie de pagina a un documento o sección en HTML5?",
+    "options": ["<footer>", "<bottom>", "<foot>", "<end>"],
+    "correctAnswer": "<footer>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas define un texto que debe ser marcado o resaltado por su relevancia o importancia en HTML5?",
+    "options": ["<highlight>", "<mark>", "<important>", "<em>"],
+    "correctAnswer": "<mark>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <a> especifica el medio utilizado para abrir el enlace?",
+    "options": ["target", "media", "mode", "method"],
+    "correctAnswer": "target",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir una cita larga en HTML?",
+    "options": ["<quote>", "<blockquote>", "<q>", "<cite>"],
+    "correctAnswer": "<blockquote>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual etiqueta HTML se utiliza para especificar un campo de entrada independiente?",
+    "options": ["<input>", "<field>", "<enter>", "<text>"],
+    "correctAnswer": "<input>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para representar un control de formulario para seleccionar entre múltiples options?",
+    "options": ["<select>", "<option>", "<dropdown>", "<choose>"],
+    "correctAnswer": "<select>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas HTML se utiliza para incluir un archivo javascript en una página web?",
+    "options": ["<javascript>", "<script>", "<js>", "<java>"],
+    "correctAnswer": "<script>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para especificar un encabezado de columna en una tabla HTML?",
+    "options": ["<th>", "<td>", "<thead>", "<column>"],
+    "correctAnswer": "<th>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de estas declaraciones es correcta para declarar el documento como HTML5?",
+    "options": [
+      "<!DOCTYPE HTML PUBLIC>",
+      "<!DOCTYPE HTML5>",
+      "<!DOCTYPE html>",
+      "<!HTML>"
+    ],
+    "correctAnswer": "<!DOCTYPE html>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que elemento se utiliza para representar la navegacion en un documento HTML?",
+    "options": ["<navigate>", "<nav>", "<navigation>", "<dir>"],
+    "correctAnswer": "<nav>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se usa para definir un texto preformateado?",
+    "options": ["<pre>", "<format>", "<code>", "<text>"],
+    "correctAnswer": "<pre>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir un encabezado de nivel 3",
+    "options": ["<h3>", "<heading3>", "<head3>", "<h3rd>"],
+    "correctAnswer": "<h3>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas HTML se utiliza para crear un botón?",
+    "options": [
+      "<button>",
+      "<btn>",
+      "<input type=\"button\">",
+      "A y C son correctas"
+    ],
+    "correctAnswer": "A y C son correctas",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se usa para especificar la direccion de correo en un campo de formulario que recopila direcciones de correo electrónico?",
+    "options": [
+      "type=\"email\"",
+      "type=\"mail\"",
+      "type=\"text\"",
+      "type=\"e-mail\""
+    ],
+    "correctAnswer": "type=\"email\"",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se especifica que un campo de entrada debe ser obligatoriamente llenado antes de enviar el formulario?",
+    "options": [
+      "necessary=\"true\"",
+      "required=\"true\"",
+      "must=\"true\"",
+      "required"
+    ],
+    "correctAnswer": "required",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para agrupar elementos en un formulario que se pueden manejar como un solo bloque?",
+    "options": ["<fieldset>", "<group>", "<formgroup>", "<set>"],
+    "correctAnswer": "<fieldset>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <meta> es utilizado para especificar la clave de caracteres de una página web?",
+    "options": ["charset", "encoding", "character-set", "setchar"],
+    "correctAnswer": "charset",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para incluir un archivo CSS externo?",
+    "options": [
+      "<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">",
+      "<css src=\"estilo.css\">",
+      "<stylesheet>estilo.css</stylesheet>",
+      "<style src=\"estilo.css\"></style>"
+    ],
+    "correctAnswer": "<link rel=\"stylesheet\" type=\"text/css\" href=\"estilo.css\">",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para definir el cuerpo de un documento HTML?",
+    "options": ["<body>", "<main>", "<content>", "<documentBody>"],
+    "correctAnswer": "<body>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <a> define la URL a la que el enlace apunta?",
+    "options": ["link", "href", "src", "url"],
+    "correctAnswer": "href",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se especifica que un script javascript se debe ejecutar de forma asíncrona?",
+    "options": [
+      "<script async>",
+      "<script defer>",
+      "<script type=\"async\">",
+      "<script src=\"async\">"
+    ],
+    "correctAnswer": "<script async>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas es correcta para hacer que el texto esté en negrita?",
+    "options": ["<bold>", "<strong>", "<b>", "B y C son correctas"],
+    "correctAnswer": "B y C son correctas",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para insertar un salto de linea en HTML?",
+    "options": ["<lb>", "<break>", "<br>", "<linebreak>"],
+    "correctAnswer": "<br>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <meta> especifica el nombre del autor del documento?",
+    "options": [
+      "name=\"author\"",
+      "author=\"name\"",
+      "content=\"author\"",
+      "type=\"author\""
+    ],
+    "correctAnswer": "name=\"author\"",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de estas etiquetas HTML se usa para definir una lista ordenada alfabéticamente?",
+    "options": ["<ul>", "<ol type=\"A\">", "<ol>", "<list type=\"alpha\">"],
+    "correctAnswer": "<ol type=\"A\">",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para especificar un pie de página para un documento o sección?",
+    "options": ["<footer>", "<bottom>", "<foot>", "<end>"],
+    "correctAnswer": "<footer>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se utiliza para hacer que un campo de formulario no sea editable?",
+    "options": ["immutable", "fixed", "readonly", "locked"],
+    "correctAnswer": "readonly",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para agregar informacion sobre la pagina en la cabecera del documento, como el conjunto de caracteres o las palabras clave?",
+    "options": ["<meta>", "<info>", "<data>", "<headinfo>"],
+    "correctAnswer": "<meta>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para definir una seccion dentro de un documento?",
+    "options": ["<div>", "<section>", "<part>", "<segment>"],
+    "correctAnswer": "<section>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual es el proposito de la etiqueta <meta> en HTML?",
+    "options": [
+      "Para definir el esquema de colores de una pagina.",
+      "Para insertar imagenes en el documento.",
+      "Para proporcionar metadatos como los caracteres y las descripciones de la página.",
+      "Para añadir enlaces a las fuentes de javascript."
+    ],
+    "correctAnswer": "Para proporcionar metadatos como los caracteres y las descripciones de la página.",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se utiliza con <img> para describir la imagen?",
+    "options": ["src", "alt", "desc", "title"],
+    "correctAnswer": "alt",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para crear un enlace que abre el correo electrónico del usuario para enviar un nuevo mensaje?",
+    "options": [
+      "<a href=\"mailto:ejemplo@correo.com\">",
+      "<email>",
+      "<mail>",
+      "<contact>"
+    ],
+    "correctAnswer": "<a href=\"mailto:ejemplo@correo.com\">",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para reproducir un video?",
+    "options": ["<media>", "<video>", "<movie>", "<mp4>"],
+    "correctAnswer": "<video>",
+    "category": "html"
+  },
+  {
+    "question": "¿Como se puede aumentar el tamaño de un campo de texto en un formulario?",
+    "options": [
+      "Usando el atributo length.",
+      "Ajustando el atributo size.",
+      "Cambiando el estilo CSS width.",
+      "B y C son correctas."
+    ],
+    "correctAnswer": "B y C son correctas.",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para especificar independientemente un grupo de estilos en HTML?",
+    "options": ["<styles>", "<css>", "<style>", "<format>"],
+    "correctAnswer": "<style>",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de estas declaraciones sobre HTML es correcta?",
+    "options": [
+      "HTML utiliza etiquetas para cerrar.",
+      "HTML es un lenguaje de programacion.",
+      "HTML es case-sensitive.",
+      "HTML es un lenguaje de marcado utilizado para crear documentos web."
+    ],
+    "correctAnswer": "HTML es un lenguaje de marcado utilizado para crear documentos web.",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se usa para agregar un pie de pagina a una sección o documento?",
+    "options": ["<footer>", "<bottom>", "<foot>", "<end>"],
+    "correctAnswer": "<footer>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <ol> cambia el tipo de numeracion de la lista?",
+    "options": ["num", "type", "style", "format"],
+    "correctAnswer": "type",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta se utiliza para definir el encabezamiento de un documento HTML?",
+    "options": ["<head>", "<header>", "<heading>", "<top>"],
+    "correctAnswer": "<head>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de la etiqueta <link> se utiliza para relacionar una hoja de estilos CSS con un documento HTML?",
+    "options": ["src", "rel", "type", "href"],
+    "correctAnswer": "rel",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual es la funcion de la etiqueta <base> en HTML?",
+    "options": [
+      "Especificar una base para los enlaces.",
+      "Definir una base de datos.",
+      "Establecer el color base del documento.",
+      "Crear una base para el javascript."
+    ],
+    "correctAnswer": "Especificar una base para los enlaces.",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se usa para definir texto con un significado más fuerte?",
+    "options": ["<bold>", "<strong>", "<important>", "<b>"],
+    "correctAnswer": "<strong>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo de <input> crea un boton para limpiar el formulario?",
+    "options": [
+      "type=\"reset\"",
+      "type=\"clear\"",
+      "type=\"delete\"",
+      "type=\"remove\""
+    ],
+    "correctAnswer": "type=\"reset\"",
+    "category": "html"
+  },
+  {
+    "question": "¿Cual de las siguientes etiquetas se utiliza para representar un articulo en HTML5?",
+    "options": ["<article>", "<item>", "<section>", "<content>"],
+    "correctAnswer": "<article>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para definir datos con un valor y un nombre en una lista de descripciones?",
+    "options": ["<dd>", "<dl>", "<dt>", "<list>"],
+    "correctAnswer": "<dt>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que elemento HTML5 se utiliza para especificar figuras independientes, como ilustraciones, diagramas, fotos, código, etc., con contenido opcional?",
+    "options": ["<figure>", "<image>", "<figcaption>", "<photo>"],
+    "correctAnswer": "<figure>",
+    "category": "html"
+  },
+  {
+    "question": "¿Que atributo se utiliza en HTML para validar que el valor en el campo de entrada debe ser un número?",
+    "options": [
+      "type=\"number\"",
+      "format=\"numeric\"",
+      "value=\"number\"",
+      "input=\"digit\""
+    ],
+    "correctAnswer": "type=\"number\"",
+    "category": "html"
+  },
+  {
+    "question": "¿Que etiqueta HTML se utiliza para especificar un encabezado para un documento o sección?",
+    "options": ["<header>", "<head>", "<top>", "<section title>"],
+    "correctAnswer": "<header>",
+    "category": "html"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = \"Lydia\";\n  let age = 21;\n}\n\nsayHi();",
+    "options": [
+      "Lydia y undefined",
+      "Lydia y ReferenceError",
+      "ReferenceError y 21",
+      "undefined y ReferenceError"
+    ],
+    "correctAnswer": "undefined y ReferenceError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}\n\nfor (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}",
+    "options": ["0 1 2 y 0 1 2", "0 1 2 y 3 3 3", "3 3 3 y 0 1 2"],
+    "correctAnswer": "3 3 3 y 0 1 2",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst shape = {\n  radius: 10,\n  diameter() {\n    return this.radius * 2;\n  },\n  perimeter: () => 2 * Math.PI * this.radius\n};\n\nshape.diameter();\nshape.perimeter();",
+    "options": ["20 y 62.83185307179586", "20 y NaN", "20 y 63", "NaN y 63"],
+    "correctAnswer": "20 y NaN",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\n+true;\n!\"Lydia\";",
+    "options": ["1 y false", "false y NaN", "false y false"],
+    "correctAnswer": "1 y false",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál NO es válida?\nconst bird = {\n  size: \"small\"\n};\n\nconst mouse = {\n  name: \"Mickey\",\n  small: true\n};",
+    "options": [
+      "mouse.bird.size",
+      "mouse[bird.size]",
+      "mouse[bird[\"size\"]]",
+      "Todas son correctas"
+    ],
+    "correctAnswer": "mouse.bird.size",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nlet c = { greeting: \"Hey!\" };\nlet d;\n\nd = c;\nc.greeting = \"Hello\";\nconsole.log(d.greeting);",
+    "options": ["Hello", "undefined", "ReferenceError", "TypeError"],
+    "correctAnswer": "Hello",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nlet a = 3;\nlet b = new Number(3);\nlet c = 3;\n\nconsole.log(a == b);\nconsole.log(a === b);\nconsole.log(b === c);",
+    "options": [
+      "true false true",
+      "false false true",
+      "true false false",
+      "false true true"
+    ],
+    "correctAnswer": "true false false",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nclass Chameleon {\n  static colorChange(newColor) {\n    this.newColor = newColor;\n    return this.newColor;\n  }\n\n  constructor({ newColor = \"green\" } = {}) {\n    this.newColor = newColor;\n  }\n}\n\nconst freddie = new Chameleon({ newColor: \"purple\" });\nfreddie.colorChange(\"orange\");",
+    "options": ["orange", "purple", "green", "TypeError"],
+    "correctAnswer": "TypeError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nlet greeting;\ngreetign = {}; // Typo!\nconsole.log(greetign);",
+    "options": ["{}", "ReferenceError: greetign is not defined", "undefined"],
+    "correctAnswer": "{}",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué ocurre cuando hacemos esto?\nfunction bark() {\n  console.log(\"Woof!\");\n}\n\nbark.animal = \"dog\";",
+    "options": [
+      "No pasa nada, es totalmente correcto.",
+      "SyntaxError. No es posible agregar propiedades a una función de esta manera.",
+      "undefined",
+      "ReferenceError"
+    ],
+    "correctAnswer": "No pasa nada, es totalmente correcto.",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\n\nconst member = new Person(\"Lydia\", \"Hallie\");\nPerson.getFullName = function () {\n  return `${this.firstName} ${this.lastName}`;\n}\n\nconsole.log(member.getFullName());",
+    "options": [
+      "TypeError",
+      "SyntaxError",
+      "Lydia Hallie",
+      "undefined undefined"
+    ],
+    "correctAnswer": "TypeError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\n\nconst lydia = new Person(\"Lydia\", \"Hallie\");\nconst sarah = Person(\"Sarah\", \"Smith\");\n\nconsole.log(lydia);\nconsole.log(sarah);",
+    "options": [
+      "Person {firstName: \"Lydia\", lastName: \"Hallie\"} and undefined",
+      "Person {firstName: \"Lydia\", lastName: \"Hallie\"} and Person {firstName: \"Sarah\", lastName: \"Smith\"}",
+      "Person {firstName: \"Lydia\", lastName: \"Hallie\"} and {} \nD:Person {firstName: \"Lydia\", lastName: \"Hallie\"} and ReferenceError"
+    ],
+    "correctAnswer": "Person {firstName: \"Lydia\", lastName: \"Hallie\"} and undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuáles son las tres fases de la propagación de eventos?",
+    "options": [
+      "Target > Capturing > Bubbling",
+      "Bubbling > Target > Capturing",
+      "Target > Bubbling > Capturing",
+      "Capturing > Target > Bubbling"
+    ],
+    "correctAnswer": "Capturing > Target > Bubbling",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction sum(a, b) {\n  return a + b;\n}\n\nsum(1, \"2\");",
+    "options": ["NaN", "TypeError", "\"12\"", "3"],
+    "correctAnswer": "\"12\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
+    "options": ["1 1 2", "1 2 2", "0 2 2", "0 1 2"],
+    "correctAnswer": "0 2 2",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction getPersonInfo(one, two, three) {\n  console.log(one);\n  console.log(two);\n  console.log(three);\n}\n\nconst person = \"Lydia\";\nconst age = 21;\n\ngetPersonInfo`${person} is ${age} years old`;",
+    "options": [
+      "\"Lydia\" 21 [\"\", \" is \", \" years old\"]",
+      "[\"\", \" is \", \" years old\"] \"Lydia\" 21",
+      "\"Lydia\" [\"\", \" is \", \" years old\"] 21"
+    ],
+    "correctAnswer": "[\"\", \" is \", \" years old\"] \"Lydia\" 21",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction checkAge(data) {\n  if (data === { age: 18 }) {\n    console.log(\"You are an adult!\");\n  } else if (data == { age: 18 }) {\n    console.log(\"You are still an adult.\");\n  } else {\n    console.log(`Hmm.. You don't have an age I guess`);\n  }\n}\n\ncheckAge({ age: 18 });",
+    "options": [
+      "You are an adult!",
+      "You are still an adult.",
+      "Hmm.. You don't have an age I guess"
+    ],
+    "correctAnswer": "Hmm.. You don't have an age I guess",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction getAge(...args) {\n  console.log(typeof args);\n}\n\ngetAge(21);",
+    "options": ["\"number\"", "\"array\"", "\"object\"", "\"NaN\""],
+    "correctAnswer": "\"object\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction getAge() {\n  \"use strict\";\n  age = 21;\n  console.log(age);\n}\n\ngetAge();",
+    "options": ["21", "undefined", "ReferenceError", "TypeError"],
+    "correctAnswer": "ReferenceError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el valor de sum?\nconst sum = eval(\"10*10+5\");",
+    "options": ["105", "\"105\"", "TypeError", "\"10*10+5\""],
+    "correctAnswer": "105",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuánto tiempo es accesible cool_secret?\nsessionStorage.setItem(\"cool_secret\", 123);",
+    "options": [
+      "Para siempre, los datos no se pierden.",
+      "Cuando el usuario cierra la pestaña.",
+      "Cuando el usuario cierra todo el navegador, no sólo la pestaña.",
+      "Cuando el usuario apaga su ordenador."
+    ],
+    "correctAnswer": "Cuando el usuario cierra la pestaña.",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nvar num = 8;\nvar num = 10;\n\nconsole.log(num);",
+    "options": ["8", "10", "SyntaxError", "ReferenceError"],
+    "correctAnswer": "10",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst obj = { 1: \"a\", 2: \"b\", 3: \"c\" };\nconst set = new Set([1, 2, 3, 4, 5]);\n\nobj.hasOwnProperty(\"1\");\nobj.hasOwnProperty(1);\nset.has(\"1\");\nset.has(1);",
+    "options": [
+      "false true false true",
+      "false true true true",
+      "true true false true",
+      "true true true true"
+    ],
+    "correctAnswer": "true true false true",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst obj = { a: \"one\", b: \"two\", a: \"three\" };\nconsole.log(obj);",
+    "options": [
+      "{ a: \"one\", b: \"two\" }",
+      "{ b: \"two\", a: \"three\" }",
+      "{ a: \"three\", b: \"two\" }",
+      "SyntaxError"
+    ],
+    "correctAnswer": "{ a: \"three\", b: \"two\" }",
+    "category": "javascript"
+  },
+  {
+    "question": "El contexto de ejecución de JS crea dos cosas: el objecto global y la palabra reservada \"this\".",
+    "options": ["true", "false", "it depends"],
+    "correctAnswer": "false",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfor (let i = 1; i < 5; i++) {\n  if (i === 3) continue;\n  console.log(i);\n}",
+    "options": ["1 2", "1 2 3", "1 2 4", "1 3 4"],
+    "correctAnswer": "1 2 4",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nString.prototype.giveLydiaPizza = () => {\n  return \"Just give Lydia pizza already!\";\n};\n\nconst name = \"Lydia\";\n\nconsole.log(name.giveLydiaPizza())",
+    "options": [
+      "\"Just give Lydia pizza already!\"",
+      "TypeError: not a function",
+      "SyntaxError",
+      "undefined"
+    ],
+    "correctAnswer": "\"Just give Lydia pizza already!\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst a = {};\nconst b = { key: \"b\" };\nconst c = { key: \"c\" };\n\na[b] = 123;\na[c] = 456;\n\nconsole.log(a[b]);",
+    "options": ["123", "456", "undefined", "ReferenceError"],
+    "correctAnswer": "456",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst foo = () => console.log(\"First\");\nconst bar = () => setTimeout(() => console.log(\"Second\"));\nconst baz = () => console.log(\"Third\");\n\nbar();\nfoo();\nbaz();",
+    "options": [
+      "First Second Third",
+      "First Third Second",
+      "Second First Third",
+      "Second Third First"
+    ],
+    "correctAnswer": "First Third Second",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es la referencia al objeto que lanza el evento cuando se hace click en el botón?\n<div onclick=\"console.log('first div')\">\n  <div onclick=\"console.log('second div')\">\n    <button onclick=\"console.log('button')\">\n      Click!\n    </button>\n  </div>\n</div>",
+    "options": [
+      "Outer div",
+      "Inner div",
+      "button",
+      "An array of all nested elements."
+    ],
+    "correctAnswer": "button",
+    "category": "javascript"
+  },
+  {
+    "question": "Al hacer click en el párrafo, ¿qué se muestra por pantalla?\n<div onclick=\"console.log('div')\">\n  <p onclick=\"console.log('p')\">\n    Click here!\n  </p>\n</div>",
+    "options": ["p div", "div p", "p", "div"],
+    "correctAnswer": "p div",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst person = { name: \"Lydia\" };\n\nfunction sayHi(age) {\n  console.log(`${this.name} is ${age}`);\n}\n\nsayHi.call(person, 21);\nsayHi.bind(person, 21);",
+    "options": [
+      "undefined is 21 Lydia is 21",
+      "function function",
+      "Lydia is 21 Lydia is 21",
+      "Lydia is 21 function"
+    ],
+    "correctAnswer": "Lydia is 21 function",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nfunction sayHi() {\n  return (() => 0)();\n}\n\ntypeof sayHi();",
+    "options": ["\"object\"", "\"number\"", "\"function\"", "\"undefined\""],
+    "correctAnswer": "\"number\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuáles de estos valores son falsos?\n0;\nnew Number(0);\n(\"\");\n(\" \");\nnew Boolean(false);\nundefined;",
+    "options": [
+      "0, '', undefined",
+      "0, new Number(0), '', new Boolean(false), undefined",
+      "0, '', new Boolean(false), undefined",
+      "All of them are falsy"
+    ],
+    "correctAnswer": "0, '', undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconsole.log(typeof typeof 1);",
+    "options": ["\"number\"", "\"string\"", "\"object\"", "\"undefined\""],
+    "correctAnswer": "\"string\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\nconst numbers = [1, 2, 3];\nnumbers[10] = 11;\nconsole.log(numbers);",
+    "options": [
+      "[1, 2, 3, 7 x null, 11]",
+      "[1, 2, 3, 11]",
+      "[1, 2, 3, 7 x empty, 11]",
+      "SyntaxError"
+    ],
+    "correctAnswer": "[1, 2, 3, 7 x empty, 11]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\n(() => {\n  let x, y;\n  try {\n    throw new Error();\n  } catch (x) {\n    (x = 1), (y = 2);\n    console.log(x);\n  }\n  console.log(x);\n  console.log(y);\n})();",
+    "options": [
+      "1 undefined 2",
+      "undefined undefined undefined",
+      "1 1 2",
+      "1 undefined undefined"
+    ],
+    "correctAnswer": "1 undefined 2",
+    "category": "javascript"
+  },
+  {
+    "question": "Todo en javascript es o bien un(a)..",
+    "options": [
+      "tipo primitivo o un objeto",
+      "función u objeto",
+      "¡pregunta trampa! solo objetos",
+      "número u objeto"
+    ],
+    "correctAnswer": "tipo primitivo o un objeto",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\n[[0, 1], [2, 3]].reduce(\n  (acc, cur) => {\n    return acc.concat(cur);\n  },\n  [1, 2]\n);",
+    "options": [
+      "[0, 1, 2, 3, 1, 2]",
+      "[6, 1, 2]",
+      "[1, 2, 0, 1, 2, 3]",
+      "[1, 2, 6]"
+    ],
+    "correctAnswer": "[1, 2, 0, 1, 2, 3]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\n!!null;\n!!\"\";\n!!1;",
+    "options": [
+      "false true false",
+      "false false true",
+      "false true true",
+      "true true false"
+    ],
+    "correctAnswer": "false false true",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve el método setInterval?\nsetInterval(() => console.log(\"Hi\"), 1000);",
+    "options": [
+      "una id único",
+      "la cantidad de milisegundos especificada",
+      "la función pasada",
+      "undefined"
+    ],
+    "correctAnswer": "una id único",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve la siguiente función?\n[...\"Lydia\"];",
+    "options": [
+      "[\"L\", \"y\", \"d\", \"i\", \"a\"]",
+      "[\"Lydia\"]",
+      "[[], \"Lydia\"]",
+      "[[\"L\", \"y\", \"d\", \"i\", \"a\"]]"
+    ],
+    "correctAnswer": "[\"L\", \"y\", \"d\", \"i\", \"a\"]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction* generator(i) {\n  yield i;\n  yield i * 2;\n}\n\nconst gen = generator(10);\n\nconsole.log(gen.next().value);\nconsole.log(gen.next().value);",
+    "options": ["[0, 10], [10, 20]", "20, 20", "10, 20", "0, 10 y 10, 20"],
+    "correctAnswer": "10, 20",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué devuelve esto?\nconst firstPromise = new Promise((res, rej) => {\n  setTimeout(res, 500, \"one\");\n});\n\nconst secondPromise = new Promise((res, rej) => {\n  setTimeout(res, 100, \"two\");\n});\n\nPromise.race([firstPromise, secondPromise]).then(res => console.log(res));",
+    "options": ["\"one\"", "\"two\"", "\"two\" \"one\"", "\"one\" \"two\""],
+    "correctAnswer": "\"two\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nlet person = { name: \"Lydia\" };\nconst members = [person];\nperson = null;\n\nconsole.log(members);",
+    "options": ["null", "[null]", "[{}]", "[{ name: \"Lydia\" }]"],
+    "correctAnswer": "[{ name: \"Lydia\" }]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst person = {\n  name: \"Lydia\",\n  age: 21\n};\n\nfor (const item in person) {\n  console.log(item);\n}",
+    "options": [
+      "{ name: \"Lydia\" }, { age: 21 }",
+      "\"name\", \"age\"",
+      "\"Lydia\", 21",
+      "[\"name\", \"Lydia\"], [\"age\", 21]"
+    ],
+    "correctAnswer": "\"name\", \"age\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconsole.log(3 + 4 + \"5\");",
+    "options": ["\"345\"", "\"75\"", "12", "\"12\""],
+    "correctAnswer": "\"75\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el valor de num?\nconst num = parseInt(\"7*6\", 10);",
+    "options": ["42", "\"42\"", "7", "NaN"],
+    "correctAnswer": "7",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\n[1, 2, 3].map(num => {\n  if (typeof num === \"number\") return;\n  return num * 2;\n});",
+    "options": [
+      "[]",
+      "[null, null, null]",
+      "[undefined, undefined, undefined]",
+      "[ 3 huecos vacíos ]"
+    ],
+    "correctAnswer": "[undefined, undefined, undefined]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction getInfo(member, year) {\n  member.name = \"Lydia\";\n  year = \"1998\";\n}\n\nconst person = { name: \"Sarah\" };\nconst birthYear = \"1997\";\n\ngetInfo(person, birthYear);\n\nconsole.log(person, birthYear);",
+    "options": [
+      "{ name: \"Lydia\" }, \"1997\"",
+      "{ name: \"Sarah\" }, \"1998\"",
+      "{ name: \"Lydia\" }, \"1998\"",
+      "{ name: \"Sarah\" }, \"1997\""
+    ],
+    "correctAnswer": "{ name: \"Lydia\" }, \"1997\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction greeting() {\n  throw \"Hello world!\";\n}\n\nfunction sayHi() {\n  try {\n    const data = greeting();\n    console.log(\"It worked!\", data);\n  } catch (e) {\n    console.log(\"Oh no an error!\", e);\n  }\n}\n\nsayHi();",
+    "options": [
+      "\"It worked! Hello world!\"",
+      "\"Oh no an error! undefined",
+      "SyntaxError: can only throw Error objects",
+      "\"Oh no an error! Hello world!"
+    ],
+    "correctAnswer": "\"Oh no an error! Hello world!\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction Car() {\n  this.make = \"Lamborghini\";\n  return { make: \"Maserati\" };\n}\n\nconst myCar = new Car();\nconsole.log(myCar.make);",
+    "options": [
+      "\"Lamborghini\"",
+      "\"Maserati\"",
+      "ReferenceError",
+      "TypeError"
+    ],
+    "correctAnswer": "\"Maserati\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\n(() => {\n  let x = (y = 10);\n})();\n\nconsole.log(typeof x);\nconsole.log(typeof y);",
+    "options": [
+      "\"undefined\", \"number\"",
+      "\"number\", \"number\"",
+      "\"object\", \"number\"",
+      "\"number\", \"undefined\""
+    ],
+    "correctAnswer": "\"undefined\", \"number\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nclass Dog {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nDog.prototype.bark = function() {\n  console.log(`Woof I am ${this.name}`);\n};\n\nconst pet = new Dog(\"Mara\");\n\npet.bark();\n\ndelete Dog.prototype.bark;\n\npet.bark();",
+    "options": [
+      "\"Woof I am Mara\", TypeError",
+      "\"Woof I am Mara\", \"Woof I am Mara\"",
+      "\"Woof I am Mara\", undefined",
+      "TypeError, TypeError"
+    ],
+    "correctAnswer": "\"Woof I am Mara\", TypeError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst set = new Set([1, 1, 2, 3, 4]);\n\nconsole.log(set);",
+    "options": [
+      "[1, 1, 2, 3, 4]",
+      "[1, 2, 3, 4]",
+      "{1, 1, 2, 3, 4}",
+      "{1, 2, 3, 4}"
+    ],
+    "correctAnswer": "{1, 2, 3, 4}",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\n// counter.js\nlet counter = 10;\nexport default counter;\n// index.js\nimport myCounter from \"./counter\";\n\nmyCounter += 1;\n\nconsole.log(myCounter);",
+    "options": ["10", "11", "Error", "NaN"],
+    "correctAnswer": "Error",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst name = \"Lydia\";\nage = 21;\n\nconsole.log(delete name);\nconsole.log(delete age);",
+    "options": [
+      "false, true",
+      "\"Lydia\", 21",
+      "true, true",
+      "undefined, undefined"
+    ],
+    "correctAnswer": "false, true",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst numbers = [1, 2, 3, 4, 5];\nconst [y] = numbers;\n\nconsole.log(y);",
+    "options": ["[[1, 2, 3, 4, 5]]", "[1, 2, 3, 4, 5]", "1", "[1]"],
+    "correctAnswer": "1",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst person = { name: \"Lydia\" };\n\nObject.defineProperty(person, \"age\", { value: 21 });\n\nconsole.log(person);\nconsole.log(Object.keys(person));",
+    "options": [
+      "{ name: \"Lydia\", age: 21 }, [\"name\", \"age\"]",
+      "{ name: \"Lydia\", age: 21 }, [\"name\"]",
+      "{ name: \"Lydia\"}, [\"name\", \"age\"]",
+      "{ name: \"Lydia\"}, [\"age\"]"
+    ],
+    "correctAnswer": "{ name: \"Lydia\", age: 21 }, [\"name\"]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst settings = {\n  username: \"lydiahallie\",\n  level: 19,\n  health: 90\n};\n\nconst data = JSON.stringify(settings, [\"level\", \"health\"]);\nconsole.log(data);",
+    "options": [
+      "\"{\"level\":19, \"health\":90}\"",
+      "\"{\"username\": \"lydiahallie\"}\"",
+      "\"[\"level\", \"health\"]\"",
+      "\"{\"username\": \"lydiahallie\", \"level\":19, \"health\":90}\""
+    ],
+    "correctAnswer": "\"{\"level\":19, \"health\":90}\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nlet num = 10;\n\nconst increaseNumber = () => num++;\nconst increasePassedNumber = number => number++;\n\nconst num1 = increaseNumber();\nconst num2 = increasePassedNumber(num1);\n\nconsole.log(num1);\nconsole.log(num2);",
+    "options": ["10, 10", "10, 11", "11, 11", "11, 12"],
+    "correctAnswer": "10, 10",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst value = { number: 10 };\n\nconst multiply = (x = { ...value }) => {\n  console.log((x.number *= 2));\n};\n\nmultiply();\nmultiply();\nmultiply(value);\nmultiply(value);",
+    "options": [
+      "20, 40, 80, 160",
+      "20, 40, 20, 40",
+      "20, 20, 20, 40",
+      "NaN, NaN, 20, 40"
+    ],
+    "correctAnswer": "20, 20, 20, 40",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\n[1, 2, 3, 4].reduce((x, y) => console.log(x, y));",
+    "options": [
+      "1 2 y 3 3 y 6 4",
+      "1 2 y 2 3 y 3 4",
+      "1 undefined y 2 undefined y 3 undefined y 4 undefined",
+      "1 2 y undefined 3 y undefined 4"
+    ],
+    "correctAnswer": "1 2 y undefined 3 y undefined 4",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Con qué constructor podemos extender correctamente la clase Dog?\nclass Dog {\n  constructor(name) {\n    this.name = name;\n  }\n};\n\nclass Labrador extends Dog {\n  // 1 \n  constructor(name, size) {\n    this.size = size;\n  }\n  // 2\n  constructor(name, size) {\n    super(name);\n    this.size = size;\n  }\n  // 3\n  constructor(size) {\n    super(name);\n    this.size = size;\n  }\n  // 4 \n  constructor(name, size) {\n    this.name = name;\n    this.size = size;\n  }\n\n};",
+    "options": ["1", "2", "3", "4"],
+    "correctAnswer": "2",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\n// index.js\nconsole.log('running index.js');\nimport { sum } from './sum.js';\nconsole.log(sum(1, 2));\n\n// sum.js\nconsole.log('running sum.js');\nexport const sum = (a, b) => a + b;",
+    "options": [
+      "running index.js, running sum.js, 3",
+      "running sum.js, running index.js, 3",
+      "running sum.js, 3, running index.js",
+      "running index.js, undefined, running sum.js"
+    ],
+    "correctAnswer": "running sum.js, running index.js, 3",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconsole.log(Number(2) === Number(2))\nconsole.log(Boolean(false) === Boolean(false))\nconsole.log(Symbol('foo') === Symbol('foo'))",
+    "options": [
+      "true, true, false",
+      "false, true, false",
+      "true, false, true",
+      "true, true, true"
+    ],
+    "correctAnswer": "true, true, false",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst name = \"Lydia Hallie\"\nconsole.log(name.padStart(13))\nconsole.log(name.padStart(2))",
+    "options": [
+      "\"Lydia Hallie\", \"Lydia Hallie\"",
+      "\" Lydia Hallie\", \" Lydia Hallie\" (\"[13 espacios en blanco]Lydia Hallie\", \"[2 espacios en blanco]Lydia Hallie\")",
+      "\" Lydia Hallie\", \"Lydia Hallie\" (\"[1 espacio en blanco]Lydia Hallie\", \"Lydia Hallie\")",
+      "\"Lydia Hallie\", \"Lyd\","
+    ],
+    "correctAnswer": "\" Lydia Hallie\", \"Lydia Hallie\" (\"[1 espacio en blanco]Lydia Hallie\", \"Lydia Hallie\")",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconsole.log(\"🥑\" + \"💻\");",
+    "options": [
+      "\"🥑💻\"",
+      "257548",
+      "Un string con una secuencia de puntos de código",
+      "Error"
+    ],
+    "correctAnswer": "\"🥑💻\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cómo puedes mostrar por consola los valores comentados junto a las sentencias console.log?\nfunction* startGame() {\n  const answer = yield \"Do you love javascript?\";\n  if (answer !== \"Yes\") {\n    return \"Oh wow... Guess we're gone here\";\n  }\n  return \"javascript loves you back ❤️\";\n}\n\nconst game = startGame();\nconsole.log(/* 1 */); // Do you love javascript?\nconsole.log(/* 2 */); // javascript loves you back ❤️",
+    "options": [
+      "game.next(\"Yes\").value y game.next().value",
+      "game.next.value(\"Yes\") y game.next.value()",
+      "game.next().value y game.next(\"Yes\").value",
+      "game.next.value() y game.next.value(\"Yes\")"
+    ],
+    "correctAnswer": "game.next().value y game.next(\"Yes\").value",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconsole.log(String.raw`Hello\\nworld`);",
+    "options": [
+      "Hello world!",
+      "Hello \n     world",
+      "Hello\\nworld",
+      "Hello\\n \n     world"
+    ],
+    "correctAnswer": "Hello\\nworld",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nasync function getData() {\n  return await Promise.resolve(\"I made it!\");\n}\n\nconst data = getData();\nconsole.log(data);",
+    "options": [
+      "\"I made it!\"",
+      "Promise {<resolved>: \"I made it!\"}",
+      "Promise {<pending>}",
+      "undefined"
+    ],
+    "correctAnswer": "Promise {<pending>}",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction addToList(item, list) {\n  return list.push(item);\n}\n\nconst result = addToList(\"apple\", [\"banana\"]);\nconsole.log(result);",
+    "options": ["['apple', 'banana']", "2", "true", "undefined"],
+    "correctAnswer": "2",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst box = { x: 10, y: 20 };\n\nObject.freeze(box);\n\nconst shape = box;\nshape.x = 100;\n\nconsole.log(shape);",
+    "options": [
+      "{ x: 100, y: 20 }",
+      "{ x: 10, y: 20 }",
+      "{ x: 100 }",
+      "ReferenceError"
+    ],
+    "correctAnswer": "{ x: 10, y: 20 }",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst { name: myName } = { name: \"Lydia\" };\n\nconsole.log(name);",
+    "options": ["\"Lydia\"", "\"myName\"", "undefined", "ReferenceError"],
+    "correctAnswer": "undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst add = () => {\n  const cache = {};\n  return num => {\n    if (num in cache) {\n      return `From cache! ${cache[num]}`;\n    } else {\n      const result = num + 10;\n      cache[num] = result;\n      return `Calculated! ${result}`;\n    }\n  };\n};\n\nconst addFunction = add();\nconsole.log(addFunction(10));\nconsole.log(addFunction(10));\nconsole.log(addFunction(5 * 2));",
+    "options": [
+      "Calculated! 20 Calculated! 20 Calculated! 20",
+      "Calculated! 20 From cache! 20 Calculated! 20",
+      "Calculated! 20 From cache! 20 From cache! 20",
+      "Calculated! 20 From cache! 20 Error"
+    ],
+    "correctAnswer": "Calculated! 20 From cache! 20 From cache! 20",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst myLifeSummedUp = [\"☕\", \"💻\", \"🍷\", \"🍫\"]\n\nfor (let item in myLifeSummedUp) {\n  console.log(item)\n}\n\nfor (let item of myLifeSummedUp) {\n  console.log(item)\n}",
+    "options": [
+      "0 1 2 3 y \"☕\" \"💻\" \"🍷\" \"🍫\"",
+      "\"☕\" \"💻\" \"🍷\" \"🍫\" y \"☕\" \"💻\" \"🍷\" \"🍫\"",
+      "\"☕\" \"💻\" \"🍷\" \"🍫\" y 0 1 2 3",
+      "0 1 2 3 y {0: \"☕\", 1: \"💻\", 2: \"🍷\", 3: \"🍫\"}"
+    ],
+    "correctAnswer": "0 1 2 3 y \"☕\" \"💻\" \"🍷\" \"🍫\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst list = [1 + 2, 1 * 2, 1 / 2]\nconsole.log(list)",
+    "options": [
+      "[\"1 + 2\", \"1 * 2\", \"1 / 2\"]",
+      "[\"12\", 2, 0.5]",
+      "[3, 2, 0.5]",
+      "[1, 1, 1]"
+    ],
+    "correctAnswer": "[3, 2, 0.5]",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction sayHi(name) {\n  return `Hi there, ${name}`\n}\n\nconsole.log(sayHi())",
+    "options": [
+      "Hi there,",
+      "Hi there, undefined",
+      "Hi there, null",
+      "ReferenceError"
+    ],
+    "correctAnswer": "Hi there, undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nvar status = \"😎\"\n\nsetTimeout(() => {\n  const status = \"😍\"\n\n  const data = {\n    status: \"🥑\",\n    getStatus() {\n      return this.status\n    }\n  }\n\n  console.log(data.getStatus())\n  console.log(data.getStatus.call(this))\n}, 0)",
+    "options": [
+      "\"🥑\" y \"😍\"",
+      "\"🥑\" y \"😎\"",
+      "\"😍\" y \"😎\"",
+      "\"😎\" y \"😎\""
+    ],
+    "correctAnswer": "\"🥑\" y \"😎\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst person = {\n  name: \"Lydia\",\n  age: 21\n}\n\nlet city = person.city\ncity = \"Amsterdam\"\n\nconsole.log(person)",
+    "options": [
+      "{ name: \"Lydia\", age: 21 }",
+      "{ name: \"Lydia\", age: 21, city: \"Amsterdam\" }",
+      "{ name: \"Lydia\", age: 21, city: undefined }",
+      "\"Amsterdam\""
+    ],
+    "correctAnswer": "{ name: \"Lydia\", age: 21 }",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction checkAge(age) {\n  if (age < 18) {\n    const message = \"Sorry, you're too young.\"\n  } else {\n    const message = \"Yay! You're old enough!\"\n  }\n\n  return message\n}\n\nconsole.log(checkAge(21))",
+    "options": [
+      "\"Sorry, you're too young.\"",
+      "\"Yay! You're old enough!\"",
+      "ReferenceError",
+      "undefined"
+    ],
+    "correctAnswer": "ReferenceError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué tipo de información se mostrará por consola?\nfetch('https://www.website.com/api/user/1')\n  .then(res => res.json())\n  .then(res => console.log(res))",
+    "options": [
+      "El resultado del método fetch.",
+      "El resultado de la segunda invocación del método fetch.",
+      "El resultado de callback en el .then() anterior.",
+      "Sería siempre undefined."
+    ],
+    "correctAnswer": "El resultado de callback en el .then() anterior.",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Qué opción es una forma de igualar hasName a true, teniendo en cuenta que no se puede pasar true como argumento?\nfunction getName(name) {\n  const hasName = //\n}",
+    "options": ["!!name", "name", "new Boolean(name)", "name.length"],
+    "correctAnswer": "!!name",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconsole.log(\"I want pizza\"[0])",
+    "options": ["\"\"\"", "\"I\"", "SyntaxError", "undefined"],
+    "correctAnswer": "\"I\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction sum(num1, num2 = num1) {\n  console.log(num1 + num2)\n}\n\nsum(10)",
+    "options": ["NaN", "20", "ReferenceError", "undefined"],
+    "correctAnswer": "20",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\n// module.js \nexport default () => \"Hello world\"\nexport const name = \"Lydia\"\n\n// index.js \nimport * as data from \"./module\"\n\nconsole.log(data)",
+    "options": [
+      "{ default: function default(), name: \"Lydia\" }",
+      "{ default: function default() }",
+      "{ default: \"Hello world\", name: \"Lydia\" }",
+      "Objeto global de module.js"
+    ],
+    "correctAnswer": "{ default: function default(), name: \"Lydia\" }",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nclass Person {\n  constructor(name) {\n    this.name = name\n  }\n}\n\nconst member = new Person(\"John\")\nconsole.log(typeof member)",
+    "options": ["\"class\"", "\"function\"", "\"object\"", "\"string\""],
+    "correctAnswer": "\"object\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nlet newList = [1, 2, 3].push(4)\n\nconsole.log(newList.push(5))",
+    "options": ["[1, 2, 3, 4, 5]", "[1, 2, 3, 5]", "[1, 2, 3, 4]", "Error"],
+    "correctAnswer": "Error",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction giveLydiaPizza() {\n  return \"Here is pizza!\"\n}\n\nconst giveLydiaChocolate = () => \"Here's chocolate... now go hit the gym already.\"\n\nconsole.log(giveLydiaPizza.prototype)\nconsole.log(giveLydiaChocolate.prototype)",
+    "options": [
+      "{ constructor: ...} { constructor: ...}",
+      "{} { constructor: ...}",
+      "{ constructor: ...} {}",
+      "{ constructor: ...} undefined"
+    ],
+    "correctAnswer": "{ constructor: ...} undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst person = {\n  name: \"Lydia\",\n  age: 21\n}\n\nfor (const [x, y] of Object.entries(person)) {\n  console.log(x, y)\n}",
+    "options": [
+      "name Lydia y age 21",
+      "[\"name\", \"Lydia\"] y [\"age\", 21]",
+      "[\"name\", \"age\"] y undefined",
+      "Error"
+    ],
+    "correctAnswer": "name Lydia y age 21",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction getItems(fruitList, ...args, favoriteFruit) {\n  return [...fruitList, ...args, favoriteFruit]\n}\n\ngetItems([\"banana\", \"apple\"], \"pear\", \"orange\")",
+    "options": [
+      "[\"banana\", \"apple\", \"pear\", \"orange\"]",
+      "[[\"banana\", \"apple\"], \"pear\", \"orange\"]",
+      "[\"banana\", \"apple\", [\"pear\"], \"orange\"]",
+      "SyntaxError"
+    ],
+    "correctAnswer": "SyntaxError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nfunction nums(a, b) {\n  if\n  (a > b)\n  console.log('a is bigger')\n  else \n  console.log('b is bigger')\n  return \n  a + b\n}\n\nconsole.log(nums(4, 2))\nconsole.log(nums(1, 2))",
+    "options": [
+      "a is bigger, 6 y b is bigger, 3",
+      "a is bigger, undefined y b is bigger, undefined",
+      "undefined y undefined",
+      "SyntaxError"
+    ],
+    "correctAnswer": "a is bigger, undefined y b is bigger, undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nclass Person {\n  constructor() {\n    this.name = \"Lydia\"\n  }\n}\n\nPerson = class AnotherPerson {\n  constructor() {\n    this.name = \"Sarah\"\n  }\n}\n\nconst member = new Person()\nconsole.log(member.name)",
+    "options": [
+      "\"Lydia\"",
+      "\"Sarah\"",
+      "Error: cannot redeclare Person",
+      "SyntaxError"
+    ],
+    "correctAnswer": "\"Sarah\"",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst info = {\n  [Symbol('a')]: 'b'\n}\n\nconsole.log(info)\nconsole.log(Object.keys(info))",
+    "options": [
+      "{Symbol('a'): 'b'} y [\"{Symbol('a')\"]",
+      "{} y []",
+      "{ a: \"b\" } y [\"a\"]",
+      "{Symbol('a'): 'b'} y []"
+    ],
+    "correctAnswer": "{Symbol('a'): 'b'} y []",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst getList = ([x, ...y]) => [x, y]\nconst getUser = user => { name: user.name, age: user.age }\n\nconst list = [1, 2, 3, 4]\nconst user = { name: \"Lydia\", age: 21 }\n\nconsole.log(getList(list))\nconsole.log(getUser(user))",
+    "options": [
+      "[1, [2, 3, 4]] y undefined",
+      "[1, [2, 3, 4]] y { name: \"Lydia\", age: 21 }",
+      "[1, 2, 3, 4] y { name: \"Lydia\", age: 21 }",
+      "Error y { name: \"Lydia\", age: 21 }"
+    ],
+    "correctAnswer": "[1, [2, 3, 4]] y undefined",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el resultado?\nconst name = \"Lydia\"\n\nconsole.log(name())",
+    "options": ["SyntaxError", "ReferenceError", "TypeError", "undefined"],
+    "correctAnswer": "TypeError",
+    "category": "javascript"
+  },
+  {
+    "question": "¿Cuál es el valor de la salida?\n// 🎉✨ This is my 100th question! ✨🎉\n\nconst output = `${[] && 'Im'}possible!\nYou should${'' && `n't`} see a therapist after so much javascript lol`",
+    "options": [
+      "possible! You should see a therapist after so much javascript lol",
+      "Impossible! You should see a therapist after so much javascript lol",
+      "possible! You shouldn't see a therapist after so much javascript lol",
+      "Impossible! You shouldn't see a therapist after so much javascript lol"
+    ],
+    "correctAnswer": "possible! You should see a therapist after so much javascript lol",
+    "category": "javascript"
+  }
+]
