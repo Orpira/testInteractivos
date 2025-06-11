@@ -27,3 +27,4 @@ dist-ssr
 
 src/services/firebase.ts
 src/utils/importQuestions.cjs
+src/utils/uploadChallenges.cjs

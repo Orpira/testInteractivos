@@ -257,6 +257,6 @@ Puedes extender esta configuración con herramientas como lint-staged, prettier,
 
 ## 👨‍💻 Autor
 
-Orlando – [github.com/tu-usuario](https://github.com/orpira)
+Orlando – [github.com/orpira](https://github.com/orpira)
 
 ---

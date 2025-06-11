@@ -1,4 +1,3 @@
-// src/test/Result.test.tsx
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { MemoryRouter } from "react-router-dom";
@@ -28,5 +27,47 @@ describe("Result page", () => {
     expect(
       screen.getByText(/Has obtenido 7 de 10 puntos/i)
     ).toBeInTheDocument();
+  });
+
+  it("muestra mensaje si no hay datos", () => {
+    render(
+      <MemoryRouter initialEntries={["/result"]}>
+        <Result />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText(/No hay datos del resultado/i)).toBeInTheDocument();
+  });
+
+  it("muestra la categoría correctamente", () => {
+    render(
+      <MemoryRouter
+        initialEntries={[
+          {
+            pathname: "/result",
+            state: {
+              score: 5,
+              total: 10,
+              category: "css",
+            },
+          } as any,
+        ]}
+      >
+        <Result />
+      </MemoryRouter>
+    );
+
+    // Buscar el elemento exacto que contiene la categoría
+    const categoriaNode = screen
+      .getAllByText(
+        (content, node) => {
+          return (node?.textContent || "")
+            .toLowerCase()
+            .includes("categoría: css");
+        },
+        { exact: false }
+      )
+      .find((el) => el.textContent?.toLowerCase().includes("categoría: css"));
+    expect(categoriaNode).toBeInTheDocument();
   });
 });

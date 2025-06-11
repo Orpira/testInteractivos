@@ -20,6 +20,9 @@ export default function Home() {
     <div className="min-h-screen flex flex-col" style={{ minHeight: "100vh" }}>
       <div className="flex-1 flex items-center justify-center bg-gray-50 bg-opacity-80">
         <main className="flex-1 flex flex-col items-start justify-center p-12 text-left">
+          <h1 className="text-4xl md:text-5xl text-blue-600 font-bold mb-4">
+            WebWiz Quiz
+          </h1>
           <h6 className="text-lg mb-6 max-w-xl">
             Plataforma de cuestionarios y práctica interactiva en HTML, CSS y
             JavaScript.

@@ -18,6 +18,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "setupTest.ts"],
+  "include": [
+    "src",
+    "setupTests.ts",
+    "src/utils/uploadChallenges.cjs",
+    "importQuestions.cjs"
+  ],
   "exclude": ["node_modules", "dist", "src/test", "**/*.test.tsx"]
 }
