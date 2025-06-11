@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Gracias() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-white">
@@ -8,12 +10,12 @@ export default function Gracias() {
         Hemos recibido tu mensaje correctamente. Te responderemos lo antes
         posible.
       </p>
-      <a
-        href="/"
+      <Link
+        to="/"
         className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
       >
         Volver al inicio
-      </a>
+      </Link>
     </div>
   );
 }

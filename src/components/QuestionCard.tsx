@@ -1,6 +1,7 @@
 import React from "react";
 
 type QuestionProps = {
+  category: string;
   question: string;
   options: string[];
   selected: string | null;
@@ -10,6 +11,7 @@ type QuestionProps = {
 };
 
 export const QuestionCard = ({
+  category,
   question,
   options,
   selected,
@@ -56,22 +58,30 @@ export const QuestionCard = ({
   ];
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-[500px] py-8 px-2 md:px-0 w-full max-w-7xl mx-auto">
+    <div className="relative flex flex-col items-center justify-center min-h-[500px] py-8 px-2 md:px-0 w-full max-w-[1100px] mx-auto">
       {/* Contenedor pregunta + número */}
       <div className="flex items-center justify-center w-full mb-12 relative z-10">
         {/* Número de pregunta grande flotante, en círculo y fuera del cuadro principal */}
         {typeof number === "number" && (
-          <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 rounded-full bg-green-400 text-white text-6xl font-extrabold drop-shadow-2xl select-none z-30 border-8 border-white shadow-2xl mr-6">
+          <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 rounded-full bg-blue-300 text-blue-900 text-6xl font-extrabold drop-shadow-2xl select-none z-30 border-8 border-white shadow-2xl mr-6">
             {number}
           </div>
         )}
         {/* Enunciado flotante */}
         <div className="shadow-2xl rounded-2xl bg-white border-4 border-blue-200 px-8 py-6 max-w-3xl w-full text-center text-blue-900 text-xl font-semibold">
-          {question}
+          {category === "javascript" ? (
+            <pre
+              className={`flex-1 text-left px-4 py-3 flex items-center text-sm md:text-base bg-transparent z-10 `}
+            >
+              {question}{" "}
+            </pre>
+          ) : (
+            <>{question}</>
+          )}
         </div>
       </div>
       {/* Opciones flotantes con letra separada y diagonal */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[900px]">
         {options.map((option, idx) => {
           const isCorrect = option === correctAnswer;
           const isSelected = option === selected;
@@ -83,34 +93,12 @@ export const QuestionCard = ({
             isSelected && !showFeedback
               ? "translate-y-1 scale-95 shadow-inner ring-4 " + color.ring
               : "";
-          // Fondo y color de texto para feedback
-          let feedbackBg = "";
-          let feedbackText = "";
-          let feedbackBorder = "";
-          if (showFeedback) {
-            // El borde debe ser SIEMPRE el color de la letra (color.border) en cualquier estado de feedback
-            feedbackBorder = color.border;
-            if (isCorrect) {
-              feedbackBg = "bg-green-100";
-              feedbackText = "text-green-900";
-            } else if (isSelected) {
-              feedbackBg = "bg-red-100";
-              feedbackText = "text-red-900";
-            } else {
-              feedbackBg = "bg-gray-100";
-              feedbackText = "text-gray-700";
-            }
-          }
+
           return (
             <button
               key={idx}
               onClick={() => onSelect(option)}
-              className={
-                optionClass +
-                " " +
-                pressedClass +
-                (showFeedback ? ` ${feedbackBorder}` : "")
-              }
+              className={optionClass + " " + pressedClass}
               disabled={showFeedback}
               style={{ minHeight: 80 }}
             >
@@ -136,7 +124,7 @@ export const QuestionCard = ({
               </div>
               {/* Texto de la opción */}
               <span
-                className={`flex-1 text-left px-8 py-6 flex items-center text-lg md:text-xl bg-transparent z-10 ${feedbackBg} ${feedbackText}`}
+                className={`flex-1 text-left px-4 py-3 flex items-center text-sm md:text-base bg-transparent z-10 `}
               >
                 {option}
               </span>

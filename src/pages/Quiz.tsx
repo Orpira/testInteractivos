@@ -1,68 +1,86 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const CATEGORIES = [
-  { label: "HTML", value: "html" },
-  { label: "CSS", value: "css" },
-  { label: "JavaScript", value: "javascript" },
-  { label: "Responsive", value: "responsive" },
-  { label: "API (quizapi)", value: "api" }, // Nueva opción para API externa
-];
-const QUESTION_COUNTS = [5, 10, 15, 20];
+import { motion } from "framer-motion";
 
 export default function Quiz() {
+  const [category, setCategory] = useState<string>("");
+  const [count, setCount] = useState<number>(10);
   const navigate = useNavigate();
-  const [category, setCategory] = useState("html");
-  const [count, setCount] = useState(10);
 
   const handleStart = () => {
+    if (!category) return;
     navigate(`/quiz/${category}?count=${count}`);
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center p-6 bg-white text-center">
-      <h2 className="text-3xl font-bold mb-4">Configuración del Test</h2>
+    <motion.div
+      className="max-w-2xl mx-auto p-6 bg-white rounded-2xl shadow-xl mt-10 space-y-6"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h2 className="text-2xl font-bold text-center text-gray-800">
+        Configura tu Test
+      </h2>
 
-      <div className="mb-4">
-        <label className="block mb-2 text-lg font-semibold">
-          Selecciona una categoría:
-        </label>
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          className="px-4 py-2 border rounded"
-        >
-          {CATEGORIES.map((cat) => (
-            <option key={cat.value} value={cat.value}>
-              {cat.label}
-            </option>
+      {/* Categorías */}
+      <div>
+        <h3 className="text-lg font-medium mb-2">Selecciona una categoría:</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { key: "html", label: "HTML", icon: "🌐" },
+            { key: "css", label: "CSS", icon: "🎨" },
+            { key: "javascript", label: "JavaScript", icon: "🧠" },
+            { key: "form", label: "Formularios", icon: "📝" },
+            { key: "responsive", label: "Responsive", icon: "📱" },
+            { key: "api", label: "Linux", icon: "🐧" },
+          ].map(({ key, label, icon }) => (
+            <motion.button
+              key={key}
+              onClick={() => setCategory(key)}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              className={`p-4 border rounded-xl text-center transition ${
+                category === key
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "bg-gray-50 text-gray-800"
+              }`}
+            >
+              <div className="text-2xl mb-2">{icon}</div>
+              <div className="font-semibold">{label}</div>
+            </motion.button>
           ))}
-        </select>
+        </div>
       </div>
 
-      <div className="mb-6">
-        <label className="block mb-2 text-lg font-semibold">
-          Cantidad de preguntas:
-        </label>
+      {/* Cantidad */}
+      <div>
+        <h3 className="text-lg font-medium mb-2">Número de preguntas:</h3>
         <select
+          className="w-full border p-2 rounded-lg"
           value={count}
           onChange={(e) => setCount(Number(e.target.value))}
-          className="px-4 py-2 border rounded"
         >
-          {QUESTION_COUNTS.map((num) => (
+          {[5, 10, 15, 20].map((num) => (
             <option key={num} value={num}>
-              {num}
+              {num} preguntas
             </option>
           ))}
         </select>
       </div>
 
-      <button
-        onClick={handleStart}
-        className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"
-      >
-        Iniciar cuestionario
-      </button>
-    </section>
+      {/* Botón */}
+      <div className="text-center">
+        <motion.button
+          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.05 }}
+          onClick={handleStart}
+          disabled={!category}
+          className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg font-semibold disabled:opacity-50"
+        >
+          Empezar test
+        </motion.button>
+      </div>
+    </motion.div>
   );
 }

@@ -26,4 +26,4 @@ dist-ssr
 .env
 
 src/services/firebase.ts
-importQuestions.cjs
+src/utils/importQuestions.cjs

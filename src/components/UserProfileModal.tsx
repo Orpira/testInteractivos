@@ -22,7 +22,15 @@ export default function UserProfileModal({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
+        {/* Botón X cerrar arriba a la derecha */}
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-2xl font-bold focus:outline-none"
+          aria-label="Cerrar"
+        >
+          ×
+        </button>
         <h2 className="text-xl font-bold mb-4">Mi perfil</h2>
 
         <div className="mb-4">
@@ -62,13 +70,7 @@ export default function UserProfileModal({
           </div>
         )}
 
-        <div className="flex justify-between">
-          <button
-            onClick={() => setOpen(false)}
-            className="text-gray-600 hover:underline"
-          >
-            Cerrar
-          </button>
+        <div className="flex justify-end">
           <button
             onClick={() =>
               logout({ logoutParams: { returnTo: window.location.origin } })

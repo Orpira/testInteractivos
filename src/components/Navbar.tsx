@@ -51,7 +51,7 @@ export default function Navbar() {
           {isAuthenticated && (
             <Link
               to="/dashboard"
-              className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
+              className="text-gray-700 hover:text-blue-700 font-medium"
             >
               Dashboard
             </Link>
@@ -66,11 +66,7 @@ export default function Navbar() {
               Ranking
             </Link>
           )}
-          {isAuthenticated && user && (
-            <span className="text-gray-700 font-medium truncate max-w-[120px]">
-              {user.name || user.email}
-            </span>
-          )}
+          <UserButton />
           {!isAuthenticated && (
             <button
               onClick={() => loginWithRedirect()}
@@ -135,6 +131,15 @@ export default function Navbar() {
               Ranking
             </Link>
           )}
+          {isAuthenticated && (
+            <Link
+              to="/dashboard"
+              className="text-gray-700 hover:text-blue-700 w-fit"
+              onClick={() => setOpen(false)}
+            >
+              Dashboard
+            </Link>
+          )}
           {isAuthenticated && user && (
             <span className="text-gray-700 font-medium truncate max-w-[150px] w-fit">
               {user.name || user.email}
@@ -188,7 +193,6 @@ export default function Navbar() {
           )}
         </div>
       )}
-      <UserButton />
     </nav>
   );
 }

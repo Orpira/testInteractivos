@@ -127,17 +127,16 @@ export default function QuizRunner() {
     // Comparar por texto real, no por valor crudo
     let selectedText = option;
     let correctText = currentQuestion.correctAnswer;
-    if (
-      typeof option === "number" &&
-      Array.isArray(currentQuestion.options)
-    ) {
+    if (typeof option === "number" && Array.isArray(currentQuestion.options)) {
       selectedText = currentQuestion.options[option] ?? option;
     }
     if (
       typeof currentQuestion.correctAnswer === "number" &&
       Array.isArray(currentQuestion.options)
     ) {
-      correctText = currentQuestion.options[currentQuestion.correctAnswer] ?? currentQuestion.correctAnswer;
+      correctText =
+        currentQuestion.options[currentQuestion.correctAnswer] ??
+        currentQuestion.correctAnswer;
     }
     const isReallyCorrect = String(selectedText) === String(correctText);
     if (isReallyCorrect) {
@@ -158,22 +157,25 @@ export default function QuizRunner() {
         setCurrentIndex((prev) => prev + 1);
         setSelected(null);
       } else {
+        const summaryCopy = [
+          ...summaryData,
+          {
+            question: currentQuestion.question,
+            options: currentQuestion.options,
+            correctAnswer: currentQuestion.correctAnswer,
+            selectedAnswer: option,
+          },
+        ];
+        // Mostrar resultado automáticamente al terminar
         navigate("/result", {
           state: {
             score: isReallyCorrect ? score + 1 : score,
             total: questions.length,
             category,
-            summary: [
-              ...summaryData,
-              {
-                question: currentQuestion.question,
-                options: currentQuestion.options,
-                correctAnswer: currentQuestion.correctAnswer,
-                selectedAnswer: option,
-              },
-            ],
+            summary: summaryCopy,
           },
         });
+        // No limpiar el estado aquí, para que el usuario pueda ver el resultado y navegar correctamente
       }
     }, 300); // Pequeño delay para UX
   };
@@ -185,6 +187,7 @@ export default function QuizRunner() {
   return (
     <div className="max-w-xl mx-auto p-6">
       <QuestionCard
+        category={category}
         question={currentQuestion.question}
         options={currentQuestion.options}
         selected={selected}

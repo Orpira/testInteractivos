@@ -106,11 +106,7 @@ export default function Dashboard() {
                 <td className="p-2">
                   <button
                     className="text-blue-600 hover:underline text-sm"
-                    onClick={() =>
-                      navigate("/result", {
-                        state: { ...entry },
-                      })
-                    }
+                    onClick={() => navigate(`/result?id=${entry.id}`)}
                   >
                     Ver
                   </button>
