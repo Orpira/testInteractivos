@@ -12,7 +12,7 @@ test('el botón "Empezar sin cuenta" redirige al quiz', async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: /Empezar sin cuenta/i }).click();
   await expect(
-    page.getByRole("heading", { name: /Configuración del Test/i })
+    page.getByRole("heading", { name: /Configura tu Test/i })
   ).toBeVisible();
 });
 test('el botón "Iniciar test" redirige al quiz', async ({ page }) => {
@@ -20,7 +20,7 @@ test('el botón "Iniciar test" redirige al quiz', async ({ page }) => {
   await page.getByRole("button", { name: /Iniciar test/i }).click();
   // Usa getByRole para asegurar que encuentra el heading
   await expect(
-    page.getByRole("heading", { name: /Configuración del Test/i })
+    page.getByRole("heading", { name: /Configura tu Test/i })
   ).toBeVisible();
 });
 test('el botón "Probar editor" redirige al editor', async ({ page }) => {
