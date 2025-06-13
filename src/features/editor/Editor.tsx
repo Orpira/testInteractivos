@@ -18,12 +18,14 @@ type EditorProps = {
   categoryFromChallenge?: string;
   initialCode?: string;
   expectedOutput?: string;
+  validationRules?: string[];
 };
 
 export default function Editor({
   starterCode,
   categoryFromChallenge,
   expectedOutput,
+  validationRules,
 }: EditorProps) {
   const templates: Record<"html" | "css" | "javascript", string> = {
     html: "<h1>Hola Mundo</h1>",
@@ -49,6 +51,11 @@ export default function Editor({
 
   const [resultMessage, setResultMessage] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+
+  // Normalizar espacios y saltos de línea
+  // Esto es para comparar el código del usuario con el resultado esperado
+  // sin importar espacios adicionales o saltos de línea
+  const normalize = (str: string) => str.replace(/\s+/g, "").toLowerCase();
 
   useEffect(() => {
     if (fromHistorial) {
@@ -108,18 +115,44 @@ export default function Editor({
     );
   }
 
+  function validateCode(
+    user: string,
+    rules: string[] | undefined,
+    expected?: string
+  ) {
+    const userNorm = normalize(user);
+
+    // 1️⃣ Si hay validationRules, tómalas como referencia
+    if (rules && rules.length) {
+      return rules.every((fragment) => userNorm.includes(normalize(fragment)));
+    }
+
+    // 2️⃣ Si no hay reglas, cae al expectedOutput (legacy)
+    if (expected) {
+      return userNorm.includes(normalize(expected));
+    }
+
+    return false;
+  }
+
   function handleValidate(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void {
     event.preventDefault();
     if (!expectedOutput) return;
 
-    const normalizedUserCode = code.trim().replace(/\s+/g, "");
-    const normalizedExpected = expectedOutput.trim().replace(/\s+/g, "");
+    const normalizedUserCode = normalize(code);
+    const normalizedExpected = normalize(expectedOutput ?? "");
 
     console.log("Código del usuario:", normalizedUserCode);
     console.log("Código esperado:", normalizedExpected);
     // Normalizar espacios y saltos de línea
+
+    const ok = validateCode(
+      normalizedUserCode,
+      validationRules,
+      normalizedExpected
+    );
 
     if (normalizedUserCode === normalizedExpected) {
       setIsCorrect(true);

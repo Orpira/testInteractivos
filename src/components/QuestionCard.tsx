@@ -1,4 +1,5 @@
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 type QuestionProps = {
   category: string;
@@ -8,6 +9,9 @@ type QuestionProps = {
   onSelect: (option: string) => void;
   correctAnswer: string;
   showFeedback: boolean;
+  number?: number;
+  total?: number;
+  onPrev?: () => void;
 };
 
 export const QuestionCard = ({
@@ -21,102 +25,95 @@ export const QuestionCard = ({
   number,
   total,
   onPrev,
-}: QuestionProps & {
-  number?: number;
-  total?: number;
-  onPrev?: () => void;
-}) => {
+}: QuestionProps) => {
   // Letras para las opciones
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
   // Colores para letras y bordes (A, B, C, D)
   const letterColors = [
     {
-      bg: "bg-blue-900",
-      border: "border-blue-900",
-      text: "text-blue-900",
-      ring: "ring-blue-900",
-    },
-    {
-      bg: "bg-blue-400",
-      border: "border-blue-400",
-      text: "text-blue-600",
-      ring: "ring-blue-400",
-    },
-    {
-      bg: "bg-yellow-500",
-      border: "border-yellow-500",
-      text: "text-yellow-700",
-      ring: "ring-yellow-500",
+      bg: "bg-blue-700",
+      text: "text-white",
     },
     {
       bg: "bg-cyan-500",
-      border: "border-cyan-500",
-      text: "text-cyan-700",
-      ring: "ring-cyan-500",
+      text: "text-white",
+    },
+    {
+      bg: "bg-red-500",
+      text: "text-white",
+    },
+    {
+      bg: "bg-yellow-500",
+      text: "text-white",
     },
   ];
 
+  const { isAuthenticated } = useAuth0();
+
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-[500px] py-8 px-2 md:px-0 w-full max-w-[1100px] mx-auto">
+    <div className="relative flex flex-col items-center justify-center min-h-[500px] py-8 px-2 md:px-0 w-full max-w-[1100px] mx-auto ">
       {/* Contenedor pregunta + número */}
       <div className="flex items-center justify-center w-full mb-12 relative z-10">
-        {/* Número de pregunta grande flotante, en círculo y fuera del cuadro principal */}
+        {/* Número de pregunta grande */}
         {typeof number === "number" && (
-          <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 rounded-full bg-blue-300 text-blue-900 text-6xl font-extrabold drop-shadow-2xl select-none z-30 border-8 border-white shadow-2xl mr-6">
-            {number}
+          <div className="flex-shrink-0 flex flex-col items-center justify-center mr-6">
+            <span className="w-24 h-24 flex items-center justify-center text-7xl font-extrabold rounded-full bg-blue-200 text-blue-900 select-none z-30 shadow-lg">
+              {number}
+            </span>
           </div>
         )}
-        {/* Enunciado flotante */}
-        <div className="shadow-2xl rounded-2xl bg-white border-4 border-blue-200 px-8 py-6 max-w-3xl w-full text-center text-blue-900 text-xl font-semibold">
-          {category === "javascript" ? (
-            <pre
-              className={`flex-1 text-left px-4 py-3 flex items-center text-sm md:text-base bg-transparent z-10 `}
-            >
-              {question}{" "}
-            </pre>
-          ) : (
-            <>{question}</>
-          )}
+        {/* Enunciado */}
+        <div className="shadow-2xl rounded-2xl bg-white border-4 border-blue-200 px-8 py-6 max-w-3xl w-full text-center text-blue-900 text-lg font-semibold skew-x-[-10deg]">
+          <div className="skew-x-[10deg]">
+            {category === "javascript" ? (
+              <pre className="text-left text-base bg-transparent z-10 whitespace-pre-wrap">
+                {question}
+              </pre>
+            ) : (
+              <span className="text-2xl font-extrabold text-blue-900">
+                {question}
+              </span>
+            )}
+          </div>
         </div>
       </div>
-      {/* Opciones flotantes con letra separada y diagonal */}
+      {/* Opciones tipo romboide */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[900px]">
         {options.map((option, idx) => {
-          const isCorrect = option === correctAnswer;
           const isSelected = option === selected;
           const color = letterColors[idx % 4];
-          // Por defecto, sin borde de color
-          let optionClass = `relative flex items-stretch px-0 py-0 rounded-2xl border-4 border-transparent cursor-pointer transition duration-300 text-lg font-medium shadow-2xl bg-white hover:scale-105 overflow-hidden group`;
-          // Efecto hundido si está seleccionada
+          // Efecto presionado si está seleccionada
           const pressedClass =
             isSelected && !showFeedback
-              ? "translate-y-1 scale-95 shadow-inner ring-4 " + color.ring
+              ? "translate-y-1 scale-95 shadow-inner ring-4 ring-white"
               : "";
 
           return (
             <button
               key={idx}
               onClick={() => onSelect(option)}
-              className={optionClass + " " + pressedClass}
+              className={
+                `relative flex items-stretch rounded-xl shadow-xl transition duration-200 overflow-hidden group
+                w-full min-h-[70px] transform skew-x-[-20deg] hover:scale-105 ` +
+                pressedClass
+              }
               disabled={showFeedback}
-              style={{ minHeight: 80 }}
+              style={{
+                background: "#f5faff",
+              }}
             >
-              {/* Letra de opción en cuadrado separado con corte diagonal */}
+              {/* Letra de opción */}
               <div
-                className={`relative flex-shrink-0 w-20 h-full flex items-center justify-center bg-white z-10`}
+                className={`flex items-center justify-center px-8 min-w-[70px] h-full ${color.bg}`}
+                style={{
+                  clipPath: "polygon(0 0, 80% 0, 80% 100%, 0% 100%)",
+                }}
               >
-                y
-                <div
-                  className={`absolute left-0 top-0 w-full h-full ${color.bg} clip-diagonal`}
-                  style={{ zIndex: 1 }}
-                ></div>
                 <span
-                  className={`relative z-10 text-3xl font-extrabold text-white drop-shadow-lg ${
-                    showFeedback ? "font-black" : ""
-                  }`}
+                  className={`text-4xl font-extrabold ${color.text} drop-shadow-lg skew-x-[20deg] rotate-45`}
                   style={{
-                    WebkitTextStroke: "2px #1e293b",
+                    WebkitTextStroke: "2px #fff",
                   }}
                 >
                   {letters[idx]}
@@ -124,26 +121,46 @@ export const QuestionCard = ({
               </div>
               {/* Texto de la opción */}
               <span
-                className={`flex-1 text-left px-4 py-3 flex items-center text-sm md:text-base bg-transparent z-10 `}
+                className={`flex-1 flex items-center px-6 text-2xl md:text-2xl font-semibold text-blue-800 skew-x-[20deg]`}
               >
                 {option}
               </span>
-              {/* Diagonal visual */}
-              <div
-                className="absolute left-20 top-0 h-full w-4 bg-white z-20"
-                style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-              ></div>
             </button>
           );
         })}
       </div>
-
-      {/* Estilo para el corte diagonal */}
-      <style>{`
-        .clip-diagonal {
-          clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-        }
-      `}</style>
+      {/* Botón de reinicio de test debajo de las preguntas SOLO si no está autenticado */}
+      {!isAuthenticated && (
+        <div className="w-full flex justify-end mt-6">
+          <button
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.location.reload();
+              }
+              if (onPrev) onPrev();
+            }}
+            title="Reiniciar test"
+            className="bg-blue-100 hover:bg-blue-200 rounded-full p-2 shadow transition flex items-center justify-center"
+            style={{ width: 40, height: 40 }}
+          >
+            {/* Icono de reinicio (SVG mejorado) */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-6 h-6 text-red-700"
+            >
+              <path d="M21 2v6h-6" />
+              <path d="M3 12a9 9 0 0 1 15-6.7l3 2.7" />
+              <path d="M21 12a9 9 0 1 1-9-9" />
+            </svg>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

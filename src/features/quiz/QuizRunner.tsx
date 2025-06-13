@@ -185,7 +185,7 @@ export default function QuizRunner() {
     return <p className="p-6 text-center">No se encontraron preguntas.</p>;
 
   return (
-    <div className="max-w-xl mx-auto p-6">
+    <div className="w-full max-w-4xl mx-auto p-6 ">
       <QuestionCard
         category={category}
         question={currentQuestion.question}
