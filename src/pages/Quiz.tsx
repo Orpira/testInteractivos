@@ -20,7 +20,7 @@ export default function Quiz() {
       transition={{ duration: 0.5 }}
     >
       <h2 className="text-2xl font-bold text-center text-gray-800">
-        Configura tu Test
+        Configura tu Quiz
       </h2>
 
       {/* Categorías */}

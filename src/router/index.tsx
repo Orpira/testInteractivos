@@ -3,7 +3,6 @@ import QuizRunner from "@/features/quiz/QuizRunner";
 import Home from "@/features/home/Home";
 import Quiz from "@/pages/Quiz";
 import Result from "@/features/quiz/Result";
-import Editor from "@/features/editor/Editor";
 import Ranking from "@/features/ranking/Ranking";
 import Historial from "@/pages/Historial";
 import PrivateRoute from "@/features/auth/PrivateRoute";
@@ -17,69 +16,69 @@ import Achievements from "@/components/Achievements";
 import ChallengeCategories from "@/features/challenges/pages/ChallengeCategories";
 import ChallengeEditorPage from "@/features/challenges/pages/ChallengeEditorPage";
 
+export type Category = { id: string; slug?: string; name?: string };
+
 export default function AppRouter() {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/quiz/:category" element={<QuizRunner />} />
-          <Route path="/result" element={<Result />} />
-          <Route path="/summary" element={<Summary />} />
-          <Route path="/ranking" element={<Ranking />} />
-          <Route
-            path="/historial"
-            element={
-              <PrivateRoute>
-                <Historial />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/editor"
-            element={
-              <PrivateRoute>
-                <ChallengeCategories />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/editor/:categoria/:id"
-            element={
-              <PrivateRoute>
-                <ChallengeEditorPage />
-              </PrivateRoute>
-            }
-          />
-          <Route path="/contacto" element={<ContactForm />} />
-          <Route path="/gracias" element={<Gracias />} />
-          <Route
-            path="/dashboard"
-            element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/logros"
-            element={
-              <PrivateRoute>
-                <Achievements
-                  achievements={[
-                    { icon: "🏆", title: "Logro 1", unlocked: true },
-                    { icon: "🎉", title: "Logro 2", unlocked: false },
-                    { icon: "🥇", title: "Logro 3", unlocked: true },
-                  ]}
-                />
-              </PrivateRoute>
-            }
-          />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quiz/:category" element={<QuizRunner />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/summary" element={<Summary />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route
+          path="/historial"
+          element={
+            <PrivateRoute>
+              <Historial />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/editor"
+          element={
+            <PrivateRoute>
+              <ChallengeCategories />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/editor/:categoria/:id"
+          element={
+            <PrivateRoute>
+              <ChallengeEditorPage />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/contacto" element={<ContactForm />} />
+        <Route path="/gracias" element={<Gracias />} />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/logros"
+          element={
+            <PrivateRoute>
+              <Achievements
+                achievements={[
+                  { icon: "🏆", title: "Logro 1", unlocked: true },
+                  { icon: "🎉", title: "Logro 2", unlocked: false },
+                  { icon: "🥇", title: "Logro 3", unlocked: true },
+                ]}
+              />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }

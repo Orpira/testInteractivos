@@ -1,28 +1,27 @@
 {
   "compilerOptions": {
+    /* Básico ---------------------------------------------------- */
     "target": "ESNext",
+    "module": "esnext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // ← antes “bundler”
     "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    /* Calidad --------------------------------------------------- */
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "types": ["vitest/globals", "vite/client"],
+    "skipLibCheck": true,
+    /* Paths / Imports ------------------------------------------- */
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    /* Build ----------------------------------------------------- */
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "types": ["vite/client", "react", "react-dom"]
   },
-  "include": [
-    "src",
-    "setupTests.ts",
-    "src/utils/uploadChallenges.cjs",
-    "importQuestions.cjs"
-  ],
+  "include": ["src"],
   "exclude": ["node_modules", "dist", "src/test", "**/*.test.tsx"]
 }

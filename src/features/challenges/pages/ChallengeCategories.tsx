@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "@/services/firebase";
@@ -5,7 +6,19 @@ import { collection, query, where, getDocs, limit } from "firebase/firestore";
 
 const categories = ["HTML", "CSS", "JavaScript"];
 
-export default function ChallengeCategories() {
+type Category = {
+  name: string;
+  color: string;
+  category: string;
+};
+
+interface ChallengeCategoriesProps {
+  onCategoryClick?: (cat: { id: string; slug?: string; name?: string }) => void;
+}
+
+export default function ChallengeCategories({
+  onCategoryClick,
+}: ChallengeCategoriesProps) {
   const [firstChallenges, setFirstChallenges] = useState<{
     [key: string]: string;
   }>({});

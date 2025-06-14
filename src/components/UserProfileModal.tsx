@@ -34,21 +34,23 @@ export default function UserProfileModal({
         <h2 className="text-xl font-bold mb-4">Mi perfil</h2>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-1">Nombre</label>
+          <label className="block text-black text-sm font-medium mb-1">
+            Nombre
+          </label>
           <input
             defaultValue={user.name}
-            className="w-full border rounded px-3 py-2"
+            className="w-full border rounded px-3 py-2 text-black"
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-1">
+          <label className="block text-black text-sm font-medium mb-1">
             Correo electrónico
           </label>
           <input
             value={user.email}
             disabled
-            className="w-full bg-gray-100 border text-gray-500 rounded px-3 py-2"
+            className="w-full bg-gray-100 border text-black rounded px-3 py-2"
           />
         </div>
 

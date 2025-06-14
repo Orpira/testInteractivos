@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SimpleCodeEditor from "react-simple-code-editor";
 import { highlight } from "prismjs";
-import Prism from "prismjs";
+import * as Prism from "prismjs";
 import "prismjs/components/prism-markup";
 import "prismjs/components/prism-css";
 import "prismjs/components/prism-javascript";

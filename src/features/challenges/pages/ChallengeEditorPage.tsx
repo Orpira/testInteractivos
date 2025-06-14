@@ -1,47 +1,25 @@
 import { useParams } from "react-router-dom";
 import Editor from "@/features/editor/Editor";
 import { useEffect, useState } from "react";
-import { query, collection, where, getDocs } from "firebase/firestore";
-import { db } from "@/services/firebase";
+import { useChallengeStore } from "@/store/challengeStore";
 
 export default function ChallengeEditorPage() {
-  const { id, categoria } = useParams();
+  const { id } = useParams();
+  const { challenges, loading, fetchChallenges, getChallengeById } =
+    useChallengeStore();
   const [challenge, setChallenge] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchChallenge() {
-      setLoading(true);
-      const challengeId = `${id}`;
-      if (!challengeId || !categoria) {
-        setChallenge(null);
-        setLoading(false);
-        return;
-      }
-      try {
-        const q = query(
-          collection(db, "challenges"),
-          where("id", "==", challengeId)
-        );
-        const snapshot = await getDocs(q);
-        if (!snapshot.empty) {
-          const found = snapshot.docs[0].data();
-          setChallenge(found);
-        } else {
-          setChallenge(null);
-        }
-      } catch (error) {
-        console.error("Error fetching challenge:", error);
-        setChallenge(null);
-      } finally {
-        setLoading(false);
-      }
+    if (challenges.length === 0 && !loading) {
+      fetchChallenges();
     }
-    // Verifica que categoria e id estén definidos antes de hacer la consulta
-    if (categoria && id) {
-      fetchChallenge();
+  }, [challenges.length, loading, fetchChallenges]);
+
+  useEffect(() => {
+    if (id && challenges.length > 0) {
+      setChallenge(getChallengeById(id));
     }
-  }, [categoria, id]);
+  }, [id, challenges, getChallengeById]);
 
   if (loading) return <p className="p-6 text-center">Cargando reto...</p>;
   if (!challenge) return <p className="p-6 text-center">Reto no encontrado.</p>;
