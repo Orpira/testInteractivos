@@ -38,10 +38,10 @@ export function calculateAchievements(results: TestResult[]) {
   return [
     {
       icon: "🥇",
-      title: "Primer test completado",
+      title: "Primer quiz completado",
       unlocked: unlocked.firstTest,
     },
-    { icon: "🔥", title: "5 tests seguidos", unlocked: unlocked.fiveTests },
+    { icon: "🔥", title: "5 quizzes seguidos", unlocked: unlocked.fiveTests },
     { icon: "💯", title: "Puntuación perfecta", unlocked: unlocked.perfect },
     {
       icon: "🚀",

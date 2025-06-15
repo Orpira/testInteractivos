@@ -122,12 +122,13 @@ export default function Editor({
   ) {
     const userNorm = normalize(user);
 
-    // 1️⃣ Si hay validationRules, tómalas como referencia
+    //Si hay validationRules, tómalas como referencia
     if (rules && rules.length) {
       return rules.every((fragment) => userNorm.includes(normalize(fragment)));
     }
 
-    // 2️⃣ Si no hay reglas, cae al expectedOutput (legacy)
+    // Si no hay reglas, cae al expectedOutput
+    // y verifica si el código del usuario contiene el resultado esperado
     if (expected) {
       return userNorm.includes(normalize(expected));
     }
@@ -163,67 +164,92 @@ export default function Editor({
     }
   }
   return (
-    <div className="p-6 max-w-5xl mx-auto grid gap-6 md:grid-cols-2">
-      <div>
-        <SimpleCodeEditor
-          value={code}
-          onValueChange={setCode}
-          highlight={(code) =>
-            highlight(
-              code,
-              Prism.languages[
-                language === "javascript" ? "javascript" : language
-              ],
-              language
-            )
-          }
-          padding={10}
-          className="border rounded font-mono min-h-[300px] text-sm bg-gray-100"
-        />
+    <div className="p-6 max-w-7xl mx-auto">
+      {" "}
+      {/* Contenedor principal más ancho */}
+      <div className="grid gap-6 md:grid-cols-2">
+        {" "}
+        {/* Grid para editor y vista previa */}
+        {/* Columna Izquierda: Editor de Código */}
+        <div>
+          {/* Aquí podrías añadir un título como "Editor de Código" si quieres */}
+          <SimpleCodeEditor
+            value={code}
+            onValueChange={setCode}
+            highlight={(code) =>
+              highlight(
+                code,
+                Prism.languages[
+                  language === "javascript" ? "javascript" : language
+                ],
+                language
+              )
+            }
+            padding={10}
+            className="border rounded font-mono min-h-[300px] md:min-h-[calc(400px+theme(spacing.12)+theme(spacing.4))] text-sm bg-gray-100 dark:bg-slate-800 dark:text-slate-200 dark:border-slate-700"
+            // Ajuste de altura para igualar la vista previa
+          />
+        </div>
+        {/* Columna Derecha: Vista Previa y Verificación */}
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-xl font-semibold dark:text-slate-100">
+              Vista Previa
+            </h3>
+            <button
+              onClick={handleValidate}
+              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+              // Mantenemos el tamaño actual para "Verificar solución"
+            >
+              Verificar solución
+            </button>
+          </div>
+          <iframe
+            title="preview"
+            className="w-full h-[400px] border dark:border-slate-700"
+            srcDoc={renderCode()}
+            sandbox="allow-scripts allow-same-origin"
+          />
+          {/* Mensaje de validación */}
+          <div className="mt-4 flex gap-3 items-center">
+            {resultMessage && (
+              <span
+                className={`${
+                  isCorrect
+                    ? "text-green-600 dark:text-green-400"
+                    : "text-red-600 dark:text-red-400"
+                } font-medium`}
+              >
+                {resultMessage}
+              </span>
+            )}
+          </div>
+        </div>
       </div>
-
-      {isAuthenticated && (
-        <>
+      {/* Sección de Botones Inferiores */}
+      <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+        {isAuthenticated && (
           <button
             onClick={handleSave}
-            className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition w-full sm:w-auto"
+            // Botón "Guardar código" con el mismo padding que "Verificar"
+            // y responsive en ancho
           >
             Guardar código
           </button>
-        </>
-      )}
-
-      <div>
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-xl font-semibold">Vista Previa</h3>
-          <button
-            onClick={handleValidate}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-          >
-            Verificar solución
-          </button>
-        </div>
-        <iframe
-          title="preview"
-          className="w-full h-[400px] border"
-          srcDoc={renderCode()}
-          sandbox="allow-scripts allow-same-origin"
-        />
-        {/* Mensaje de validación SOLO aquí */}
-        <div className="mt-4 flex gap-3 items-center">
-          {resultMessage && (
-            <span className={isCorrect ? "text-green-600" : "text-red-600"}>
-              {resultMessage}
-            </span>
-          )}
-        </div>
+        )}
         <button
-          onClick={() => navigate("/")}
-          className="mt-4 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
+          onClick={() => navigate("/")} // Asumo que quieres mantener el botón de volver
+          className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition w-full sm:w-auto"
         >
           Volver al inicio
         </button>
       </div>
+      {showNotice && (
+        <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded shadow-md z-50 animate-fade-in">
+          Código cargado desde historial 📝
+        </div>
+      )}
     </div>
   );
 }

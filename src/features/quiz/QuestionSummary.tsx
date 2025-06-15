@@ -29,7 +29,7 @@ export default function QuestionSummary() {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-6 text-center">Resumen del test</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center">Resumen del quiz</h2>
       <ul className="space-y-6">
         {summary.map((item: AnswerSummary, index: number) => {
           const isCorrect = item.selectedAnswer === item.correctAnswer;

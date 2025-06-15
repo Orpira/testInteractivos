@@ -3,11 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
-import { toast } from "react-hot-toast";
+import AuthModal from "@/components/ui/AuthModal";
+import ChallengeCategories from "../challenges/pages/ChallengeCategories";
 
 export default function Home() {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
   const [showAuthAlert, setShowAuthAlert] = useState(false);
+  // Para manejar el modal de autenticación
+  const [showAuth, setShowAuth] = useState(false);
   const navigate = useNavigate();
 
   type Lang = "HTML" | "CSS" | "JavaScript";
@@ -26,82 +29,71 @@ export default function Home() {
   };
 
   return (
-    <div className="relative isolate min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-brbg-gray-50 bg-opacity-80 p-4 md:p-6">
-      {showAuthAlert && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-          <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
-            <h3 className="text-lg font-bold mb-2">Bienvenido</h3>
-            <p className="mb-4">
-              Para acceder a los retos, debes iniciar sesión.
+    <>
+      <section className="bg-blue-100 w-full min-h-screen flex flex-col items-center justify-start px-4 pt-10">
+        <div className="flex flex-col items-center justify-center w-full mx-auto">
+          <div className="flex flex-col items-center justify-between w-full">
+            <p className="font-intro text-lg sm:text-xl max-w-xl text-center">
+              Quizzes y retos interactivos de{" "}
+              <strong>HTML, CSS, JavaScript</strong>. <br />
+              Construye, valida y comparte tus soluciones al instante.
             </p>
-            <div className="flex gap-4 justify-center">
-              <button
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                onClick={() => {
-                  setShowAuthAlert(false);
-                  loginWithRedirect();
-                }}
-              >
-                Iniciar sesión
-              </button>
-              <button
-                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-                onClick={() => setShowAuthAlert(false)}
-              >
-                Cancelar
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* hero */}
-      <section className="text-center space-y-6 max-w-3xl bg-gray-200 bg-opacity-80 backdrop-blur-lg rounded-xl p-8 shadow-lg">
-        <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight text-blue-900 drop-shadow-lg">
-          Domina la magía del código,
-          <span className="text-green-700"> un Quiz a la vez.</span>
-        </h1>
-        <p className="text-lg sm:text-xl/relaxed">
-          Quizzes y retos interactivos de <strong>HTML, CSS, JavaScript</strong>
-          . Compila, valida y comparte tus soluciones al instante.
-        </p>
-        {/* Botón "¡Empieza ahora!" */}
-        <button
-          className="mt-16 mb-4 px-6 py-3 bg-yellow-400 text-indigo-900 font-bold rounded-lg shadow-lg hover:bg-yellow-300 transition text-lg w-full max-w-xs"
-          onClick={() => {
-            navigate("/quiz");
-          }}
-        >
-          ¡Empieza ahora!
-        </button>
-        <br />
-      </section>
-      <br />
-
-      {/* categorías */}
-      <div className="flex flex-col md:flex-row gap-6 w-full max-w-2xl justify-center items-center">
-        {["HTML", "CSS", "JavaScript"].map((category) => (
-          <motion.article
-            key={category}
-            onClick={() => handleCardClick(category as Lang)}
-            role="button"
-            tabIndex={0}
-            whileHover={{ y: -6 }}
-            whileTap={{ scale: 0.97 }}
-            className="rounded-xl p-6 bg-gray-50 bg-opacity-80 bg-gray-200/10 shadow-2xl w-full md:w-1/3 transition-transform hover:scale-105"
-          >
-            <img
-              src={`/icons/${category.toLowerCase()}.svg`}
-              alt={category}
-              className="h-12 mb-4 text-blue-900"
+            <motion.img
+              src="/languajes.png"
+              alt="Lenguajes de Programación"
+              className="hidden sm:block w-64 md:w-80 lg:w-96 h-auto object-contain mt-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
             />
-            <h3 className="text-xl text-blue-900 font-bold mb-2">{category}</h3>
-            <p className="text-sm text-black/80">
-              Desbloquea 50+ retos desde principiante hasta avanzado.
-            </p>
-          </motion.article>
-        ))}
-      </div>
-    </div>
+          </div>
+          <button
+            className="mt-6 px-6 py-3 bg-gray-800 text-white text-base font-bold rounded-lg shadow-lg hover:bg-gray-700 transition-colors duration-200 flex items-center"
+            onClick={() => {
+              navigate("/quiz");
+            }}
+          >
+            ¡Empieza ahora!
+            <motion.div
+              animate={{
+                x: [0, 3, 0], // Mueve 3px a la derecha y vuelve a 0
+              }}
+              transition={{
+                duration: 1.5, // Duración de un ciclo de animación
+                repeat: Infinity, // Repetir infinitamente
+                repeatType: "loop", // Tipo de repetición
+                ease: "easeInOut", // Suavizado de la animación
+              }}
+              className="inline-block" // Para que motion.div se comporte como un span
+            >
+              <ArrowRight className="ml-2" />
+            </motion.div>
+          </button>
+        </div>
+
+        {/* categorías */}
+        <div className="mt-12 mb-16 flex flex-col md:flex-row gap-6 w-full max-w-2xl justify-center items-center">
+          {showAuthAlert && (
+            <AuthModal
+              open={showAuthAlert}
+              onLogin={() => {
+                setShowAuthAlert(false);
+                loginWithRedirect();
+              }}
+              onClose={() => setShowAuthAlert(false)}
+            />
+          )}
+          <ChallengeCategories
+            isAuthenticated={isAuthenticated}
+            onSelectCategory={handleCardClick}
+          />
+        </div>
+      </section>
+    </>
   );
 }

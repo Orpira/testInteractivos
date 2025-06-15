@@ -81,7 +81,7 @@ export default function Historial() {
             className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 font-semibold"
             onClick={() => setTipo("test")}
           >
-            Historial de Tests
+            Historial de Quiz
           </button>
           <button
             className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 font-semibold"
@@ -98,7 +98,7 @@ export default function Historial() {
     <>
       <section className="max-w-4xl mx-auto p-6">
         <h2 className="text-2xl font-bold mb-4 text-center">
-          {tipo === "test" ? "Historial de Test" : "Historial de Código"}
+          {tipo === "test" ? "Historial de Quizzes" : "Historial de Código"}
         </h2>
         <div className="flex justify-center mb-6">
           <button

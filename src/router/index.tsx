@@ -6,15 +6,16 @@ import Result from "@/features/quiz/Result";
 import Ranking from "@/features/ranking/Ranking";
 import Historial from "@/pages/Historial";
 import PrivateRoute from "@/features/auth/PrivateRoute";
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/ui/ContactForm";
 import Gracias from "@/pages/Gracias";
 import Summary from "@/features/quiz/pages/Summary";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/Navbar";
 import Dashboard from "@/features/dashboard/Dashboard";
-import Achievements from "@/components/Achievements";
+import Achievements from "@/components/ui/Achievements";
 import ChallengeCategories from "@/features/challenges/pages/ChallengeCategories";
 import ChallengeEditorPage from "@/features/challenges/pages/ChallengeEditorPage";
+import Header from "@/components/ui/Header";
 
 export type Category = { id: string; slug?: string; name?: string };
 
@@ -22,6 +23,7 @@ export default function AppRouter() {
   return (
     <BrowserRouter>
       <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
@@ -41,7 +43,10 @@ export default function AppRouter() {
           path="/editor"
           element={
             <PrivateRoute>
-              <ChallengeCategories />
+              <ChallengeCategories
+                isAuthenticated={true}
+                onSelectCategory={() => {}}
+              />
             </PrivateRoute>
           }
         />

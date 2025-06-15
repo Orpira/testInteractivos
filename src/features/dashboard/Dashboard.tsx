@@ -3,7 +3,7 @@ import { useUserHistory } from "@/hooks/useUserHistory";
 import PerformanceChart from "./PerformanceChart"; // Placeholder para el gráfico
 import { useNavigate } from "react-router-dom";
 import { exportToCSV } from "../../utils/exportCSV"; // Asegúrate de tener esta función implementada
-import Achievements from "@/components/Achievements"; // Componente no encontrado, import eliminado
+import Achievements from "@/components/ui/Achievements"; // Componente no encontrado, import eliminado
 import { calculateAchievements } from "../../utils/achievements";
 
 export default function Dashboard() {
@@ -64,10 +64,10 @@ export default function Dashboard() {
 
       {/* Métricas principales */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-        <Card title="Tests Realizados" value={totalTests} color="indigo" />
+        <Card title="Quiz Realizados" value={totalTests} color="indigo" />
         <Card title="Promedio" value={`${averageScore} pts`} color="green" />
         <Card
-          title="Último Test"
+          title="Último Quiz"
           value={lastTest?.category ?? "—"}
           color="blue"
         />
@@ -81,9 +81,9 @@ export default function Dashboard() {
       {/* (Placeholder) Aquí irá el gráfico y resumen más adelante */}
       <h2 className="text-2xl font-bold mb-4">Rendimiento por Categoría</h2>
       <PerformanceChart data={chartData} />
-      {/* Últimos 5 tests */}
+      {/* Últimos 5 quiz */}
       <section className="bg-white rounded shadow p-4">
-        <h3 className="text-lg font-semibold mb-2">🕒 Últimos 5 tests</h3>
+        <h3 className="text-lg font-semibold mb-2">🕒 Últimos 5 quiz</h3>
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="border-b font-medium">

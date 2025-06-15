@@ -3,7 +3,7 @@ import { useParams, useSearchParams, useNavigate } from "react-router-dom";
 import { collection, getDocs, query, where, limit } from "firebase/firestore";
 import { useQuestions } from "@/hooks/useQuestions";
 import { db } from "../../services/firebase";
-import QuestionCard from "@/components/QuestionCard";
+import QuestionCard from "@/components/ui/QuestionCard";
 
 type Question = {
   question: string;

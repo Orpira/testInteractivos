@@ -78,7 +78,7 @@ export default function Quiz() {
           disabled={!category}
           className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl text-lg font-semibold disabled:opacity-50"
         >
-          Empezar test
+          Empezar quiz
         </motion.button>
       </div>
     </motion.div>

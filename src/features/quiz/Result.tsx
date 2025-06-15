@@ -101,7 +101,7 @@ export default function Result() {
 
   return (
     <div className="max-w-xl mx-auto p-6 text-center">
-      <h2 className="text-2xl font-bold mb-4">Resultado del test</h2>
+      <h2 className="text-2xl font-bold mb-4">Resultado del quiz</h2>
       <p className="mb-4">
         Categoría: <strong>{finalCategory}</strong>
       </p>
@@ -160,7 +160,7 @@ export default function Result() {
         </div>
       ) : (
         <div className="mt-8 text-center text-red-600 font-semibold">
-          No hay detalle de respuestas para este test.
+          No hay detalle de respuestas para este quiz.
         </div>
       )}
 
@@ -171,7 +171,7 @@ export default function Result() {
           }
           className="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700"
         >
-          Repetir Test
+          Repetir Quiz
         </button>
         <button
           onClick={() => navigate("/")}
