@@ -12,6 +12,7 @@ import { db } from "../../services/firebase";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { validateCode } from "@/utils/validateCode";
 
 type EditorProps = {
   starterCode?: string;
@@ -113,27 +114,6 @@ export default function Editor({
         Código cargado desde historial 📝
       </div>
     );
-  }
-
-  function validateCode(
-    user: string,
-    rules: string[] | undefined,
-    expected?: string
-  ) {
-    const userNorm = normalize(user);
-
-    //Si hay validationRules, tómalas como referencia
-    if (rules && rules.length) {
-      return rules.every((fragment) => userNorm.includes(normalize(fragment)));
-    }
-
-    // Si no hay reglas, cae al expectedOutput
-    // y verifica si el código del usuario contiene el resultado esperado
-    if (expected) {
-      return userNorm.includes(normalize(expected));
-    }
-
-    return false;
   }
 
   function handleValidate(

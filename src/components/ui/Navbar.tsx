@@ -94,9 +94,9 @@ export default function Navbar() {
 
         {/* ---------- HAMBURGER ---------- */}
         <button
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 text-slate-700 dark:text-slate-200"
-          aria-label="Abrir menú"
         >
           {open ? (
             <svg
@@ -132,35 +132,19 @@ export default function Navbar() {
 
       {/* ---------- PANEL MOBILE ---------- */}
       {open && (
-        <div
-          className="
-            md:hidden absolute top-full left-0 w-full z-40
-            bg-slate-800/95 dark:bg-slate-950
-            backdrop-blur-md shadow-xl
-          "
+        <nav
+          aria-label="Menú móvil" // Texto accesible para el contenedor
+          data-testid="mobile-nav" // Identificador para pruebas
+          className="md:hidden absolute top-full left-0 w-full z-40 bg-slate-800/95 dark:bg-slate-950 backdrop-blur-md shadow-xl"
         >
+          <button
+            aria-label="Cerrar menú" // Texto accesible para el botón
+            onClick={() => setOpen(false)}
+            className="p-2 text-white hover:text-gray-300"
+          >
+            Cerrar
+          </button>
           <div className="flex flex-col items-center gap-4 py-6">
-            {/* botón X */}
-            <button
-              className="absolute top-4 right-4 p-1"
-              onClick={close}
-              aria-label="Cerrar menú"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
             {/* enlaces */}
             <Link to="/" onClick={close} className={mobileLink}>
               Inicio
@@ -204,7 +188,7 @@ export default function Navbar() {
               </button>
             )}
           </div>
-        </div>
+        </nav>
       )}
     </nav>
   );
