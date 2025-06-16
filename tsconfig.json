@@ -22,6 +22,6 @@
     "resolveJsonModule": true,
     "types": ["vite/client", "react", "react-dom"]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "src/test", "**/*.test.tsx"]
+  "include": ["src", "test"],
+  "exclude": ["node_modules", "dist", "test", "**/*.test.tsx"]
 }

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { MemoryRouter } from "react-router-dom";
-import Result from "../features/quiz/Result";
+import Result from "../src/features/quiz/Result";
 import "@testing-library/jest-dom";
 
 describe("Result page", () => {
@@ -23,7 +23,7 @@ describe("Result page", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText(/Resultado del test/i)).toBeInTheDocument();
+    expect(screen.getByText(/Resultado del quiz/i)).toBeInTheDocument();
     expect(
       screen.getByText(/Has obtenido 7 de 10 puntos/i)
     ).toBeInTheDocument();

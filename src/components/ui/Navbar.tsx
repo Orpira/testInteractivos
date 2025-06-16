@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 
 /* ——— helpers ——— */
 const desktopLink =
-  "relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-indigo-500 after:transition-all hover:after:w-full";
+  "relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-indigo-500 after:transition-all text-xl hover:after:w-full";
 const desktopDashboard =
-  "relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-indigo-500 after:transition-all hover:after:w-full font-semibold text-indigo-600 dark:text-indigo-400";
+  "relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-indigo-500 after:transition-all text-xl hover:after:w-full font-semibold text-indigo-600 dark:text-indigo-400";
 const mobileLink = "text-slate-100 hover:text-indigo-300 transition";
 const mobileDashboard = "text-slate-100 hover:text-indigo-300 transition";
 
@@ -36,7 +36,7 @@ export default function Navbar() {
           className="flex items-center gap-2 font-extrabold text-lg sm:text-2xl text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           onClick={close}
         >
-          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
+          <img src="/logo.png" alt="Logo" className="w-24 h-24" />
           WebWiz&nbsp;Quiz
         </Link>
 
