@@ -1,3 +1,4 @@
+@import "./glide-utilities.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,5 +65,107 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Estilos para LightParticles */
+.dot {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #3b82f6; /* Azul */
+  border-radius: 50%;
+}
+
+@keyframes glide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.animate-glide {
+  animation: glide 5s linear infinite;
+}
+
+@keyframes move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes move-left {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50%;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.particle {
+  animation: fade 5s linear infinite;
+}
+
+@layer utilities {
+  @keyframes move-right {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+      box-shadow: -100px 0 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      transform: translateX(100vw);
+      opacity: 0;
+      box-shadow: 100px 0 60px rgba(255, 255, 255, 0);
+    }
+  }
+
+  @keyframes move-left {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+      box-shadow: 100px 0 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      transform: translateX(-100vw);
+      opacity: 0;
+      box-shadow: -100px 0 60px rgba(255, 255, 255, 0);
+    }
+  }
+
+  @keyframes fade {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    30%,
+    70% {
+      opacity: 1;
+    }
+  }
+
+  .particle {
+    filter: blur(2px);
   }
 }

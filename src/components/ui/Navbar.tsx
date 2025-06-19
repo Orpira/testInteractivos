@@ -1,11 +1,8 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import UserButton from "./UserButton";
 import { ArrowRight } from "lucide-react";
-import ChallengePicker from "@/features/challenges/pages/ChallengePicker";
-import AuthModal from "@/components/ui/AuthModal";
-import { useHandleGo } from "@/utils/navigateUtils";
 
 /* ——— helpers ——— */
 const desktopLink =
@@ -17,28 +14,9 @@ const mobileDashboard = "text-slate-100 hover:text-indigo-300 transition";
 
 export default function Navbar() {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
-  const [showAuthAlert, setShowAuthAlert] = useState(false);
-  const [showChallengePicker, setShowChallengePicker] = useState(false);
   const [open, setOpen] = useState(false);
+
   const close = () => setOpen(false);
-  const navigate = useNavigate();
-  const handleGo = useHandleGo();
-
-  type Lang = "HTML" | "CSS" | "JavaScript";
-
-  const handleRetosClick = (category: Lang) => {
-    if (!isAuthenticated) {
-      setShowAuthAlert(true);
-      return;
-    }
-    console.log("Retos clicked:", category);
-    handleGo(category, "01"); // Aquí puedes ajustar el ID del primer reto
-
-    /*  setShowChallengePicker(true);
-    const cat = "HTML"; // Ejemplo de categoría
-    const id = "123"; // Ejemplo de ID
-    handleGo(cat, id);*/
-  };
 
   return (
     /* ---------- NAV ---------- */
@@ -49,13 +27,14 @@ export default function Navbar() {
         dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-900/60
         backdrop-blur-md ring-1 ring-slate-900/5 dark:ring-slate-50/10
         shadow-md transition-colors
+        font-sans
       "
     >
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
         {/* ---------- LOGO ---------- */}
         <Link
           to="/"
-          className="flex items-center gap-2 font-extrabold text-lg sm:text-2xl text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+          className="flex items-center gap-2 font-extrabold text-xl sm:text-3xl text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           onClick={close}
         >
           <img src="/logo.png" alt="Logo" className="w-24 h-24" />
@@ -63,29 +42,20 @@ export default function Navbar() {
         </Link>
 
         {/* ---------- LINKS DESKTOP ---------- */}
-        <ul className="hidden md:flex gap-6 text-sm font-medium text-slate-700 dark:text-slate-200">
+        <ul className="hidden md:flex gap-8 text-base font-semibold text-slate-700 dark:text-slate-200">
           <li>
             <Link to="/" className={desktopLink}>
               Inicio
             </Link>
           </li>
           <li>
-            <Link to="/quiz" className={desktopLink}>
-              Quizzez
+            <Link to="/contacto" className={desktopLink}>
+              Contactenos
             </Link>
-          </li>
-          <li>
-            <button
-              onClick={() => handleRetosClick("HTML")}
-              className={desktopLink}
-            >
-              Retos
-            </button>
           </li>
 
           {isAuthenticated && (
             <>
-              <li></li>
               <li>
                 <Link to="/dashboard" className={desktopDashboard}>
                   Dashboard
@@ -103,21 +73,16 @@ export default function Navbar() {
               </li>
             </>
           )}
-          <li>
-            <Link to="/contacto" className={desktopLink}>
-              Contactenos
-            </Link>
-          </li>
         </ul>
 
         {/* ---------- CTA DESKTOP ---------- */}
         {!isAuthenticated && (
           <button
             onClick={() => loginWithRedirect()}
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition"
+            className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 transition text-lg"
           >
             Iniciar&nbsp;sesión
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-5 h-5" />
           </button>
         )}
 
@@ -129,13 +94,13 @@ export default function Navbar() {
 
         {/* ---------- HAMBURGER ---------- */}
         <button
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-slate-700 dark:text-slate-200"
-          aria-label="Abrir menú"
+          className="md:hidden p-3 text-slate-700 dark:text-slate-200"
         >
           {open ? (
             <svg
-              className="w-7 h-7"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -149,7 +114,7 @@ export default function Navbar() {
             </svg>
           ) : (
             <svg
-              className="w-7 h-7"
+              className="w-8 h-8"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -167,48 +132,22 @@ export default function Navbar() {
 
       {/* ---------- PANEL MOBILE ---------- */}
       {open && (
-        <div
-          className="
-            md:hidden absolute top-full left-0 w-full z-40
-            bg-slate-800/95 dark:bg-slate-950
-            backdrop-blur-md shadow-xl
-          "
+        <nav
+          aria-label="Menú móvil"
+          data-testid="mobile-nav"
+          className="md:hidden absolute top-full left-0 w-full z-40 bg-slate-800/95 dark:bg-slate-950 backdrop-blur-md shadow-xl"
         >
-          <div className="flex flex-col items-center gap-4 py-6">
-            {/* botón X */}
-            <button
-              className="absolute top-4 right-4 p-1"
-              onClick={close}
-              aria-label="Cerrar menú"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
-            {/* enlaces */}
+          <button
+            aria-label="Cerrar menú"
+            onClick={() => setOpen(false)}
+            className="p-3 text-white hover:text-gray-300"
+          >
+            Cerrar
+          </button>
+          <div className="flex flex-col items-center gap-6 py-8">
             <Link to="/" onClick={close} className={mobileLink}>
               Inicio
             </Link>
-            <Link to="/quiz" onClick={close} className={mobileLink}>
-              Quizzez
-            </Link>
-            <button
-              onClick={() => handleRetosClick("HTML")}
-              className={mobileLink}
-            >
-              Retos
-            </button>
             <Link to="/contacto" onClick={close} className={mobileLink}>
               Contactenos
             </Link>
@@ -242,24 +181,13 @@ export default function Navbar() {
                   loginWithRedirect();
                   close();
                 }}
-                className="mt-auto px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition"
+                className="mt-auto px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition text-lg"
               >
                 Iniciar sesión
               </button>
             )}
           </div>
-        </div>
-      )}
-      {/* ----------- Recordatorio de login ----------- */}
-      {showAuthAlert && (
-        <AuthModal // o tu propio div/portal
-          open={showAuthAlert}
-          onLogin={() => {
-            setShowAuthAlert(false);
-            loginWithRedirect(); // Auth0
-          }}
-          onClose={() => setShowAuthAlert(false)}
-        />
+        </nav>
       )}
     </nav>
   );

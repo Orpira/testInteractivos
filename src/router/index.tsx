@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import QuizRunner from "@/features/quiz/QuizRunner";
-import Home from "@/features/home/Home";
+import Hero from "@/features/hero/Hero";
 import Quiz from "@/pages/Quiz";
 import Result from "@/features/quiz/Result";
 import Ranking from "@/features/ranking/Ranking";
@@ -23,9 +23,9 @@ export default function AppRouter() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Header />
+      {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Hero />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/quiz/:category" element={<QuizRunner />} />
         <Route path="/result" element={<Result />} />
