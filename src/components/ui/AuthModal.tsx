@@ -18,7 +18,7 @@ export default function AuthModal({
   if (!open) return null; // No renderiza nada si no está abierto
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/40 pt-20 px-4">
       <div className="bg-white text-gray-800 rounded-lg shadow-xl p-6 w-full max-w-xs sm:max-w-sm md:max-w-md text-center sm:p-8">
         <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
           Bienvenido

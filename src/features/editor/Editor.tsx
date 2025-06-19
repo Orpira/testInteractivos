@@ -167,6 +167,27 @@ export default function Editor({
     );
   }
 
+  function validateCode(
+    user: string,
+    rules: string[] | undefined,
+    expected?: string
+  ) {
+    const userNorm = normalize(user);
+
+    //Si hay validationRules, tómalas como referencia
+    if (rules && rules.length) {
+      return rules.every((fragment) => userNorm.includes(normalize(fragment)));
+    }
+
+    // Si no hay reglas, cae al expectedOutput
+    // y verifica si el código del usuario contiene el resultado esperado
+    if (expected) {
+      return userNorm.includes(normalize(expected));
+    }
+
+    return false;
+  }
+
   function handleValidate(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void {

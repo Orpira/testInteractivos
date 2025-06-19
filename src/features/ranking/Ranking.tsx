@@ -148,6 +148,18 @@ export default function Ranking() {
             </tbody>
           </table>
         )}
+        <h3 className="text-lg font-semibold mb-2 text-center">
+          🕒 Últimos resultados
+        </h3>
+        <div className="flex justify-end mb-2">
+          <input
+            type="text"
+            className="border px-3 py-2 rounded w-full md:w-64"
+            placeholder="Filtrar por nombre, categoría o email..."
+            value={recientesFilter}
+            onChange={(e) => setRecientesFilter(e.target.value)}
+          />
+        </div>
         {loading ? (
           <p className="text-center">Cargando...</p>
         ) : (
