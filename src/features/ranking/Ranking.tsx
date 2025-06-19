@@ -122,10 +122,19 @@ export default function Ranking() {
                     className={`border-t ${
                       i === 0
                         ? "bg-yellow-100 font-extrabold text-blue-900"
+                        : i === 1
+                        ? "bg-gray-200 font-bold text-gray-800"
+                        : i === 2
+                        ? "bg-yellow-300 font-semibold text-yellow-900"
                         : ""
                     }`}
                   >
-                    <td className="p-2">{i + 1}</td>
+                    <td className="p-2">
+                      {i + 1}
+                      {i === 0 && " 🥇"}
+                      {i === 1 && " 🥈"}
+                      {i === 2 && " 🥉"}
+                    </td>
                     <td className="p-2">{res.name || res.email}</td>
                     <td className="p-2">{res.category.toUpperCase()}</td>
                     <td className="p-2">
@@ -139,18 +148,6 @@ export default function Ranking() {
             </tbody>
           </table>
         )}
-        <h3 className="text-lg font-semibold mb-2 text-center">
-          🕒 Últimos resultados
-        </h3>
-        <div className="flex justify-end mb-2">
-          <input
-            type="text"
-            className="border px-3 py-2 rounded w-full md:w-64"
-            placeholder="Filtrar por nombre, categoría o email..."
-            value={recientesFilter}
-            onChange={(e) => setRecientesFilter(e.target.value)}
-          />
-        </div>
         {loading ? (
           <p className="text-center">Cargando...</p>
         ) : (

@@ -108,6 +108,19 @@ export default function Result() {
       <p className="text-xl font-semibold mb-6">
         Has obtenido {finalScore} de {finalTotal} puntos. ({percentage}%)
       </p>
+      {/* Mensaje de motivación basado en el porcentaje */}
+      <p className="text-2xl font-bold text-blue-700 mb-6">
+        {percentage === 100 &&
+          "¡Increíble! Has logrado un puntaje perfecto. ¡Eres un maestro en esta categoría!"}
+        {percentage >= 80 &&
+          percentage < 100 &&
+          "¡Excelente trabajo! Estás muy cerca de la perfección."}
+        {percentage >= 50 &&
+          percentage < 80 &&
+          "¡Buen esfuerzo! Sigue practicando para mejorar aún más."}
+        {percentage < 50 &&
+          "No te desanimes. Cada intento te acerca más al éxito."}
+      </p>
 
       {hasSummary ? (
         <div className="mt-8 text-left">

@@ -47,11 +47,6 @@ export default function Navbar() {
               Inicio
             </Link>
           </li>
-          <li>
-            <Link to="/contacto" className={desktopLink}>
-              Contactenos
-            </Link>
-          </li>
 
           {isAuthenticated && (
             <>
@@ -73,6 +68,11 @@ export default function Navbar() {
               </li>
             </>
           )}
+          <li>
+            <Link to="/contacto" className={desktopLink}>
+              Contactenos
+            </Link>
+          </li>
         </ul>
 
         {/* ---------- CTA DESKTOP ---------- */}

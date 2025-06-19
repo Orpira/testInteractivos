@@ -7,12 +7,20 @@ import "prismjs/components/prism-css";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import { addDoc, collection } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  query,
+  where,
+  orderBy,
+  limit,
+  getDocs,
+} from "firebase/firestore";
 import { db } from "../../services/firebase";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { validateCode } from "@/utils/validateCode";
+import { validarHTML } from "../../utils/validadorHTML";
 
 type EditorProps = {
   starterCode?: string;
@@ -22,10 +30,50 @@ type EditorProps = {
   validationRules?: string[];
 };
 
+function Evaluador({
+  respuestaUsuario,
+  reto,
+  onNext,
+}: {
+  respuestaUsuario: string;
+  reto: { title: string; expectedOutput: string };
+  onNext?: () => void;
+}) {
+  const esCorrecto = validarHTML(respuestaUsuario, reto.expectedOutput);
+
+  return (
+    <div>
+      <h2>{reto.title}</h2>
+      {esCorrecto ? (
+        <div>
+          <p style={{ color: "green" }}>✅ ¡Respuesta correcta!</p>
+          {onNext && (
+            <button
+              onClick={onNext}
+              style={{
+                marginTop: "10px",
+                padding: "10px",
+                backgroundColor: "blue",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+              }}
+            >
+              Avanzar al siguiente reto
+            </button>
+          )}
+        </div>
+      ) : (
+        <p style={{ color: "red" }}>❌ La estructura HTML no es correcta.</p>
+      )}
+    </div>
+  );
+}
+
 export default function Editor({
   starterCode,
   categoryFromChallenge,
-  expectedOutput,
+  expectedOutput: expectedOutputProp,
   validationRules,
 }: EditorProps) {
   const templates: Record<"html" | "css" | "javascript", string> = {
@@ -52,6 +100,9 @@ export default function Editor({
 
   const [resultMessage, setResultMessage] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [expectedOutput, setExpectedOutput] = useState<string | undefined>(
+    expectedOutputProp
+  );
 
   // Normalizar espacios y saltos de línea
   // Esto es para comparar el código del usuario con el resultado esperado
@@ -122,26 +173,18 @@ export default function Editor({
     event.preventDefault();
     if (!expectedOutput) return;
 
-    const normalizedUserCode = normalize(code);
-    const normalizedExpected = normalize(expectedOutput ?? "");
+    const esCorrecto = validarHTML(code, expectedOutput);
 
-    console.log("Código del usuario:", normalizedUserCode);
-    console.log("Código esperado:", normalizedExpected);
-    // Normalizar espacios y saltos de línea
-
-    const ok = validateCode(
-      normalizedUserCode,
-      validationRules,
-      normalizedExpected
+    console.log("Resultado de la validación:", esCorrecto);
+    // Renderiza el componente Evaluador basado en el resultado
+    const evaluador = (
+      <Evaluador
+        respuestaUsuario={code}
+        reto={{ title: "Validación HTML", expectedOutput }}
+      />
     );
 
-    if (normalizedUserCode === normalizedExpected) {
-      setIsCorrect(true);
-      setResultMessage("✅ ¡Código correcto!");
-    } else {
-      setIsCorrect(false);
-      setResultMessage("❌ El código no cumple con lo esperado.");
-    }
+    console.log(evaluador);
   }
   return (
     <div className="p-6 max-w-7xl mx-auto">
@@ -230,6 +273,71 @@ export default function Editor({
           Código cargado desde historial 📝
         </div>
       )}
+      {/* Renderiza el componente Evaluador directamente en el JSX principal */}
+      {expectedOutput && (
+        <Evaluador
+          respuestaUsuario={code}
+          reto={{ title: "Validación HTML", expectedOutput }}
+          onNext={async () => {
+            const nextChallenge = await obtenerSiguienteRetoFirebase(
+              expectedOutput
+            ); // Busca el siguiente reto en Firebase
+            if (nextChallenge) {
+              setCode(nextChallenge.code); // Actualiza el código del editor con el nuevo reto
+              setExpectedOutput(nextChallenge.expectedOutput); // Actualiza el resultado esperado
+            } else {
+              console.log("No hay más retos disponibles.");
+            }
+          }}
+        />
+      )}
     </div>
   );
 }
+
+// Función para obtener el siguiente reto desde Firebase
+async function obtenerSiguienteRetoFirebase(currentExpectedOutput: string) {
+  try {
+    const retosRef = collection(db, "challenges");
+    const q = query(
+      retosRef,
+      where("expectedOutput", "!=", currentExpectedOutput),
+      orderBy("expectedOutput"),
+      limit(1)
+    );
+    const snapshot = await getDocs(q);
+
+    if (!snapshot.empty) {
+      const retoDoc = snapshot.docs[0];
+      return retoDoc.data();
+    }
+
+    return null;
+  } catch (error) {
+    console.error("Error obteniendo el siguiente reto desde Firebase:", error);
+    return null;
+  }
+}
+
+// import Prism from "prismjs";
+
+function highlightCode(
+  code: string | undefined,
+  language: string | undefined
+): string {
+  if (!code || !language) {
+    console.warn(
+      "El texto o el lenguaje para resaltar están vacíos o no definidos."
+    );
+    return ""; // Devuelve un texto vacío si el código o el lenguaje no están definidos
+  }
+
+  return Prism.highlight(code, Prism.languages[language], language);
+}
+
+// Uso en el renderizado
+const code: string = ""; // Inicializa `code` como una cadena vacía
+const language: string = "html"; // Inicializa `language` con el valor predeterminado "html"
+
+// Usa las variables en la función highlightCode
+const highlightedCode = highlightCode(code, language);

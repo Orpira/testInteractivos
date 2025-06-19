@@ -29,7 +29,7 @@ export default function ChallengeEditorPage() {
       <h1 className="text-2xl font-bold mb-4">{challenge.title}</h1>
       <pre className="mb-4 text-gray-700">{challenge.instructions}</pre>
       <Editor
-        starterCode={challenge.initialCode ?? challenge.starterCode}
+        starterCode={challenge.initialCode || ""}
         categoryFromChallenge={challenge.category}
         expectedOutput={challenge.expectedOutput}
       />

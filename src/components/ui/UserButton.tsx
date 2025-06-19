@@ -12,7 +12,7 @@ export default function UserButton() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 text-black rounded-full border hover:shadow transition"
+        className="flex items-center gap-2 px-4 py-2 text-blue-800 rounded-full border hover:shadow transition"
       >
         {user.picture && (
           <img
