@@ -121,6 +121,13 @@ export default function Result() {
         {percentage < 50 &&
           "No te desanimes. Cada intento te acerca más al éxito."}
       </p>
+      {/* Mensaje para usuarios no autorizados */}
+      {!isAuthenticated && (
+        <p className="text-lg font-semibold text-red-600 mb-6">
+          Inicia sesión para que puedas consultar todos tus quiz realizados y
+          sumar puntos como usuario.
+        </p>
+      )}
 
       {hasSummary ? (
         <div className="mt-8 text-left">
