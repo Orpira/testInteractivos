@@ -21,10 +21,11 @@ export default function AuthModal({
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/40 pt-20 px-4">
       <div className="bg-white text-gray-800 rounded-lg shadow-xl p-6 w-full max-w-xs sm:max-w-sm md:max-w-md text-center sm:p-8">
         <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-          Bienvenido
+          Bienvenido a la sección de Retos
         </h3>
         <p className="mb-5 sm:mb-6 text-sm sm:text-base">
-          Para acceder a los retos, debes iniciar sesión.
+          Para acceder a Retos, debes iniciar sesión. <br />
+          Módulo aún en desarrollo, pronto disponible.!!!
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
           <button

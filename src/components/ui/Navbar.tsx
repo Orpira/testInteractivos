@@ -1,8 +1,9 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserButton from "./UserButton";
 import { ArrowRight } from "lucide-react";
+import AuthModal from "./AuthModal";
 
 /* ——— helpers ——— */
 const desktopLink =
@@ -15,8 +16,20 @@ const mobileDashboard = "text-slate-100 hover:text-indigo-300 transition";
 export default function Navbar() {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
   const [open, setOpen] = useState(false);
+  const [showAuthAlert, setShowAuthAlert] = useState(false);
+  const navigate = useNavigate();
 
   const close = () => setOpen(false);
+
+  type Lang = "HTML" | "CSS" | "JavaScript";
+
+  const handleCardClick = (category: Lang) => {
+    if (!isAuthenticated) {
+      setShowAuthAlert(true);
+      return;
+    }
+    navigate(`/editor/${category.toLowerCase()}/${category.toLowerCase()}-01`);
+  };
 
   return (
     /* ---------- NAV ---------- */
@@ -49,9 +62,27 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/contacto" className={desktopLink}>
-              Contactenos
+            <Link to="/quiz" className={desktopLink}>
+              Quizzes
             </Link>
+          </li>
+          <li>
+            {showAuthAlert && (
+              <AuthModal
+                open={showAuthAlert}
+                onLogin={() => {
+                  setShowAuthAlert(false);
+                  loginWithRedirect();
+                }}
+                onClose={() => setShowAuthAlert(false)}
+              />
+            )}
+            <button
+              onClick={() => handleCardClick("HTML")}
+              className={desktopLink}
+            >
+              Retos
+            </button>
           </li>
 
           {isAuthenticated && (
@@ -61,18 +92,13 @@ export default function Navbar() {
                   Dashboard
                 </Link>
               </li>
-              <li>
-                <Link to="/historial" className={desktopLink}>
-                  Historial
-                </Link>
-              </li>
-              <li>
-                <Link to="/ranking" className={desktopLink}>
-                  Ranking
-                </Link>
-              </li>
             </>
           )}
+          <li>
+            <Link to="/contacto" className={desktopLink}>
+              Contactenos
+            </Link>
+          </li>
         </ul>
 
         {/* ---------- CTA DESKTOP ---------- */}
@@ -148,27 +174,39 @@ export default function Navbar() {
             <Link to="/" onClick={close} className={mobileLink}>
               Inicio
             </Link>
+            <Link to="/quiz" onClick={close} className={mobileLink}>
+              Quizzes
+            </Link>
+            <li>
+              {showAuthAlert && (
+                <AuthModal
+                  open={showAuthAlert}
+                  onLogin={() => {
+                    setShowAuthAlert(false);
+                    loginWithRedirect();
+                  }}
+                  onClose={() => setShowAuthAlert(false)}
+                />
+              )}
+              <button
+                onClick={() => {
+                  handleCardClick("HTML");
+                  close();
+                }}
+                className={mobileDashboard}
+              >
+                Retos
+              </button>
+            </li>
+
+            {isAuthenticated && (
+              <Link to="/dashboard" onClick={close} className={mobileDashboard}>
+                Dashboard
+              </Link>
+            )}
             <Link to="/contacto" onClick={close} className={mobileLink}>
               Contactenos
             </Link>
-
-            {isAuthenticated && (
-              <>
-                <Link
-                  to="/dashboard"
-                  onClick={close}
-                  className={mobileDashboard}
-                >
-                  Dashboard
-                </Link>
-                <Link to="/historial" onClick={close} className={mobileLink}>
-                  Historial
-                </Link>
-                <Link to="/ranking" onClick={close} className={mobileLink}>
-                  Ranking
-                </Link>
-              </>
-            )}
 
             {/* CTA / User */}
             {isAuthenticated ? (

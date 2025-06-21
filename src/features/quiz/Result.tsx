@@ -124,8 +124,8 @@ export default function Result() {
       {/* Mensaje para usuarios no autorizados */}
       {!isAuthenticated && (
         <p className="text-lg font-semibold text-red-600 mb-6">
-          Inicia sesión para que puedas consultar todos tus quiz realizados y
-          sumar puntos como usuario.
+          Inicia sesión para que puedas sumar puntos como usuario y acceder a
+          "Dashboard" para ver y consultar todos tus quiz realizados.
         </p>
       )}
 
@@ -192,12 +192,6 @@ export default function Result() {
           className="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700"
         >
           Repetir Quiz
-        </button>
-        <button
-          onClick={() => navigate("/")}
-          className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-800"
-        >
-          Volver al inicio
         </button>
       </div>
       <div className="mt-4 text-center">

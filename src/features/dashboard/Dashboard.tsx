@@ -1,7 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useUserHistory } from "@/hooks/useUserHistory";
 import PerformanceChart from "./PerformanceChart"; // Placeholder para el gráfico
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { exportToCSV } from "../../utils/exportCSV"; // Asegúrate de tener esta función implementada
 import Achievements from "@/components/ui/Achievements"; // Componente no encontrado, import eliminado
 import { calculateAchievements } from "../../utils/achievements";
@@ -62,6 +62,22 @@ export default function Dashboard() {
         <p className="text-sm text-gray-500">{user?.email}</p>
       </div>
 
+      {/* Enlaces a Historial y Ranking */}
+      <div className="flex justify-center gap-4 mb-6">
+        <Link
+          to="/historial"
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+        >
+          Historial
+        </Link>
+        <Link
+          to="/ranking"
+          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+        >
+          Ranking
+        </Link>
+      </div>
+
       {/* Métricas principales */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         <Card title="Quiz Realizados" value={totalTests} color="indigo" />
@@ -81,6 +97,7 @@ export default function Dashboard() {
       {/* (Placeholder) Aquí irá el gráfico y resumen más adelante */}
       <h2 className="text-2xl font-bold mb-4">Rendimiento por Categoría</h2>
       <PerformanceChart data={chartData} />
+
       {/* Últimos 5 quiz */}
       <section className="bg-white rounded shadow p-4">
         <h3 className="text-lg font-semibold mb-2">🕒 Últimos 5 quiz</h3>
@@ -116,6 +133,7 @@ export default function Dashboard() {
           </tbody>
         </table>
       </section>
+
       {/* Ejemplo de logros, reemplaza esto con la lógica real si la tienes */}
       <Achievements achievements={userAchievements} />
       <button
@@ -128,12 +146,6 @@ export default function Dashboard() {
   );
 }
 
-type CardProps = {
-  title: string;
-  value: string | number;
-  color: string;
-};
-
 function Card({ title, value, color }: CardProps) {
   return (
     <div
@@ -144,3 +156,9 @@ function Card({ title, value, color }: CardProps) {
     </div>
   );
 }
+
+type CardProps = {
+  title: string;
+  value: string | number;
+  color: string;
+};

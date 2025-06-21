@@ -26,21 +26,28 @@ export default function Historial() {
   const [tests, setTests] = useState<Test[]>([]);
   const [tipo, setTipo] = useState<"test" | "codigo" | null>(null);
   const [testPage, setTestPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [categoria, setCategoria] = useState<string | null>(null);
+  const [expandedEnvio, setExpandedEnvio] = useState<number | null>(null);
   const testsPerPage = 5;
   const testTotalPages = Math.ceil(tests.length / testsPerPage);
   const navigate = useNavigate();
 
+  // Modificar el efecto para incluir la categoría en el filtro correctamente
   useEffect(() => {
     if (!user || !tipo) return;
     setLoading(true);
     if (tipo === "codigo") {
       const cargarEnvios = async () => {
         const ref = collection(db, "envios_codigo");
-        const q = query(
-          ref,
+        const constraints = [
           where("userId", "==", user.sub),
-          orderBy("timestamp", "desc")
-        );
+          orderBy("timestamp", "desc"),
+        ];
+        if (categoria) {
+          constraints.push(where("category", "==", categoria));
+        }
+        const q = query(ref, ...constraints);
         const snapshot = await getDocs(q);
         const data = snapshot.docs.map((doc) => doc.data() as Envio);
         setEnvios(data);
@@ -50,11 +57,14 @@ export default function Historial() {
     } else if (tipo === "test") {
       const cargarTests = async () => {
         const ref = collection(db, "resultados");
-        const q = query(
-          ref,
+        const constraints = [
           where("userId", "==", user.sub),
-          orderBy("timestamp", "desc")
-        );
+          orderBy("timestamp", "desc"),
+        ];
+        if (categoria) {
+          constraints.push(where("category", "==", categoria));
+        }
+        const q = query(ref, ...constraints);
         const snapshot = await getDocs(q);
         const data = snapshot.docs.map((doc) => doc.data() as Test);
         setTests(data);
@@ -62,7 +72,16 @@ export default function Historial() {
       };
       cargarTests();
     }
-  }, [user, tipo]);
+  }, [user, tipo, categoria]);
+
+  // Agregar filtro por categoría para historial de código
+  const filteredEnvios = selectedCategory
+    ? envios.filter((e) => e.language === selectedCategory)
+    : envios;
+
+  const filteredTests = selectedCategory
+    ? tests.filter((t) => t.category === selectedCategory)
+    : tests;
 
   if (!isAuthenticated) {
     return (
@@ -108,41 +127,101 @@ export default function Historial() {
             Cambiar tipo de historial
           </button>
         </div>
-        {loading ? (
-          <p className="text-center">Cargando...</p>
-        ) : tipo === "codigo" ? (
-          envios.length === 0 ? (
+        {tipo === "test" && (
+          <div className="mb-6">
+            <label
+              htmlFor="category"
+              className="block text-sm font-medium mb-2"
+            >
+              Filtrar por categoría:
+            </label>
+            <select
+              id="category"
+              className="w-full p-2 border rounded"
+              value={selectedCategory || ""}
+              onChange={(e) => setSelectedCategory(e.target.value || null)}
+            >
+              <option value="">Todas las categorías</option>
+              {[...new Set(tests.map((t) => t.category))].map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+        {tipo === "codigo" && (
+          <div className="mb-6">
+            <label
+              htmlFor="language"
+              className="block text-sm font-medium mb-2"
+            >
+              Filtrar por lenguaje:
+            </label>
+            <select
+              id="language"
+              className="w-full p-2 border rounded"
+              value={selectedCategory || ""}
+              onChange={(e) => setSelectedCategory(e.target.value || null)}
+            >
+              <option value="">Todos los lenguajes</option>
+              {[...new Set(envios.map((e) => e.language))].map((language) => (
+                <option key={language} value={language}>
+                  {language.toUpperCase()}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+        {tipo === "codigo" ? (
+          filteredEnvios.length === 0 ? (
             <p className="text-center">Aún no has guardado ningún código.</p>
           ) : (
             <ul className="space-y-4">
-              {envios.map((e, i) => (
-                <li key={i} className="border p-4 rounded bg-gray-50">
-                  <p className="text-sm text-gray-500 mb-1">
-                    {new Date(e.timestamp).toLocaleString()} —{" "}
-                    {e.language?.toUpperCase()}
-                  </p>
-                  <pre className="bg-white p-2 rounded text-sm overflow-auto max-h-40">
-                    {e.code}
-                  </pre>
-                  <div className="mt-2 text-right">
-                    <a
-                      href={`/editor?language=${
-                        e.language
-                      }&code=${encodeURIComponent(e.code)}`}
-                      className="text-blue-600 underline text-sm hover:text-blue-800"
+              {filteredEnvios
+                .slice((testPage - 1) * testsPerPage, testPage * testsPerPage)
+                .map((e, i) => (
+                  <li key={i} className="border p-4 rounded bg-gray-50">
+                    <div
+                      className="cursor-pointer flex justify-between items-center"
+                      onClick={() =>
+                        setExpandedEnvio(expandedEnvio === i ? null : i)
+                      }
                     >
-                      Abrir en editor
-                    </a>
-                  </div>
-                </li>
-              ))}
+                      <p className="text-sm text-gray-500">
+                        {new Date(e.timestamp).toLocaleString()} —{" "}
+                        {e.language?.toUpperCase()}
+                      </p>
+                      <span className="text-blue-600 underline text-sm hover:text-blue-800">
+                        {expandedEnvio === i ? "Cerrar" : "Abrir"}
+                      </span>
+                    </div>
+                    {expandedEnvio === i && (
+                      <div className="mt-2">
+                        <pre className="bg-white p-2 rounded text-sm overflow-auto max-h-40">
+                          {e.code}
+                        </pre>
+                        <div className="mt-2 text-right">
+                          <a
+                            href={`/editor?language=${
+                              e.language
+                            }&code=${encodeURIComponent(e.code)}`}
+                            className="text-blue-600 underline text-sm hover:text-blue-800"
+                          >
+                            Abrir en editor
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                  </li>
+                ))}
             </ul>
           )
-        ) : tests.length === 0 ? (
+        ) : filteredTests.length === 0 ? (
           <p className="text-center">Aún no has guardado ningún test.</p>
         ) : (
           <ul className="space-y-4">
-            {tests
+            {filteredTests
               .slice((testPage - 1) * testsPerPage, testPage * testsPerPage)
               .map((t, i) => (
                 <li key={i} className="border p-4 rounded bg-gray-50">
@@ -185,15 +264,39 @@ export default function Historial() {
             </button>
           </div>
         )}
+        {/* Paginación para historial de código */}
+        {tipo === "codigo" && filteredEnvios.length > testsPerPage && (
+          <div className="flex justify-center gap-2 mt-4">
+            <button
+              className="px-3 py-1 rounded bg-gray-200 text-gray-700 font-bold disabled:opacity-50"
+              onClick={() => setTestPage((p) => Math.max(1, p - 1))}
+              disabled={testPage === 1}
+            >
+              Anterior
+            </button>
+            <span className="px-2 py-1 font-semibold">
+              Página {testPage} de{" "}
+              {Math.ceil(filteredEnvios.length / testsPerPage)}
+            </span>
+            <button
+              className="px-3 py-1 rounded bg-gray-200 text-gray-700 font-bold disabled:opacity-50"
+              onClick={() =>
+                setTestPage((p) =>
+                  Math.min(
+                    Math.ceil(filteredEnvios.length / testsPerPage),
+                    p + 1
+                  )
+                )
+              }
+              disabled={
+                testPage === Math.ceil(filteredEnvios.length / testsPerPage)
+              }
+            >
+              Siguiente
+            </button>
+          </div>
+        )}
       </section>
-      <div className="flex justify-center mt-6">
-        <button
-          onClick={() => navigate("/")}
-          className="mt-4 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
-        >
-          Volver al inicio
-        </button>
-      </div>
     </>
   );
 }

@@ -1,10 +1,10 @@
-# 🧠 Test Interactivos – Plataforma de Cuestionarios Interactivos
+# 🧠 WebWiz Quiz – Plataforma de Cuestionarios Interactivos
 
 https://test-frontend-b6721.web.app/
 
-Aplicación web educativa e interactiva para evaluar conocimientos en **HTML, CSS y JavaScript**, con autenticación OAuth, editor de código, ranking, formulario de contacto y pruebas automatizadas.
+Este proyecto es una plataforma interactiva de retos y quizzes de programación orientada a HTML, CSS y JavaScript. Permite a los usuarios practicar, validar y compartir soluciones en tiempo real, así como realizar quizzes para medir su progreso. El enfoque es educativo y está pensado para bootcamps y autoaprendizaje.
 
-Desarrollada con tecnologías modernas: React, Vite, Tailwind, Zustand, Axios, Firebase, Auth0 y más.
+Desarrollada con tecnologías: React, Vite, Tailwind, Zustand, Axios, Firebase, Auth0 y más.
 
 ---
 
@@ -18,7 +18,7 @@ Desarrollada con tecnologías modernas: React, Vite, Tailwind, Zustand, Axios, F
 - ✅ Formulario de contacto usando `formsubmit.co`
 - ✅ Página de agradecimiento tras el envío del formulario
 - ✅ Separación de rutas públicas y privadas
-- ✅ Testing unitario, E2E y CI automatizado
+- ✅ Testing unitario
 - ✅ Google Analytics integrado
 
 ---
@@ -32,30 +32,28 @@ Desarrollada con tecnologías modernas: React, Vite, Tailwind, Zustand, Axios, F
 | Gestión de estado profesional (Zustand + Axios)           | ✅     |
 | Estilos aislados con Tailwind                             | ✅     |
 | Testing profesional (Testing Library, Playwright, Vitest) | ✅     |
-| Uso de API externa (OpenTDB con Axios)                    | ✅     |
+| Uso de API externa (quizapi.io con Axios)                 | ✅     |
 | Formulario web con `formsubmit.co`                        | ✅     |
-| Pruebas unitarias y E2E                                   | ✅     |
+| Pruebas unitarias                                         | ✅     |
 | Rutas públicas/privadas con OAuth (Auth0)                 | ✅     |
-| CI con GitHub Actions                                     | ✅     |
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología          | Uso                                              |
-| ------------------- | ------------------------------------------------ |
-| **React + Vite**    | SPA rápida y modular                             |
-| **TypeScript**      | Tipado estático                                  |
-| **Tailwind CSS**    | Estilos utilitarios modernos y responsivos       |
-| **Zustand**         | Manejo global de estado                          |
-| **Axios**           | Consumo de API externa                           |
-| **Firebase**        | Backend: Firestore, Auth, Realtime, Hosting      |
-| **Auth0**           | Autenticación OAuth2 segura                      |
-| **formsubmit.co**   | Envío de formularios sin backend propio          |
-| **Vitest**          | Testing unitario                                 |
-| **Playwright**      | Testing end-to-end (E2E)                         |
-| **Testing Library** | Testing unitario de componentes                  |
-| **GitHub Actions**  | Integración continua (CI) para tests automáticos |
+| Tecnología          | Uso                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------- |
+| **React + Vite**    | SPA rápida y modular                                                                |
+| **TypeScript**      | Tipado estático                                                                     |
+| **Tailwind CSS**    | Estilos utilitarios modernos y responsivos                                          |
+| **Zustand**         | Manejo global de estado                                                             |
+| **Axios**           | Consumo de API externa                                                              |
+| **Firebase**        | Backend: Firestore, Auth, Realtime, Hosting                                         |
+| **Auth0**           | Autenticación OAuth2 segura                                                         |
+| **formsubmit.co**   | Envío de formularios sin backend propio                                             |
+| **Vitest**          | Testing unitario                                                                    |
+| **Playwright**      | Testing end-to-end (E2E)                                                            |
+| **Testing Library** | Testing unitario de componentes - Documentación en este documento [README_TESTS.md] |
 
 ---
 
@@ -91,8 +89,8 @@ Desarrollada con tecnologías modernas: React, Vite, Tailwind, Zustand, Axios, F
 ## 📦 Instalación y ejecución
 
 ```bash
-git clone https://github.com/tu-usuario/quiz-app.git
-cd quiz-app
+git clone https://github.com/tu-usuario/testInteractivos.git
+cd testInteractivos
 npm install
 npm run dev
 ```
@@ -215,22 +213,21 @@ git commit -m "feat: agrega validación con commitlint"
 
 Esta guía sigue la convención **Conventional Commits**, con algunos prefijos prácticos adicionales como `wip` para trabajo en progreso.
 
-| Prefijo     | Significado                                   | Cuándo usarlo                                                      | Ejemplo                                                 |
-| ----------- | --------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
-| `feat:`     | **Feature** – Nueva funcionalidad             | Al agregar una nueva funcionalidad al sistema                      | `feat: añade formulario de contacto`                    |
-| `fix:`      | **Bugfix** – Corrección de errores            | Al corregir un comportamiento que no funcionaba como se esperaba   | `fix: corrige validación de email en login`             |
-| `docs:`     | **Documentación**                             | Cambios en README, comentarios, documentación técnica              | `docs: añade guía de instalación en README`             |
-| `style:`    | **Estilo** – Sin afectar el comportamiento    | Cambios en espacios, indentación, formato                          | `style: reformatea el archivo App.js`                   |
-| `refactor:` | **Reestructuración interna**                  | Cambios en código sin alterar comportamiento ni corregir bugs      | `refactor: simplifica la lógica de navegación`          |
-| `test:`     | **Pruebas** – Añade o ajusta tests            | Agregar, eliminar o actualizar pruebas automáticas                 | `test: añade pruebas para componente Header`            |
-| `ci:`       | **Integración continua**                      | Cambios en archivos o scripts de CI (GitHub Actions, Travis, etc.) | `ci: configura deploy automático en GitHub Actions`     |
-| `build:`    | **Build system** – Dependencias y empaquetado | Cambios en `package.json`, Webpack, Vite, etc.                     | `build: actualiza versión de Tailwind`                  |
-| `chore:`    | **Tareas varias** – Mantenimiento             | Tareas que no modifican el código fuente directamente              | `chore: limpia archivos temporales`                     |
-| `wip:`      | **Work In Progress** – Trabajo en progreso    | Commits que **no están terminados** pero se quieren guardar        | `wip: comienza componente de registro, sin estilos aún` |
+| Prefijo     | Significado                                   | Cuándo usarlo                                                      | Ejemplo                                             |
+| ----------- | --------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------- |
+| `feat:`     | **Feature** – Nueva funcionalidad             | Al agregar una nueva funcionalidad al sistema                      | `feat: añade formulario de contacto`                |
+| `fix:`      | **Bugfix** – Corrección de errores            | Al corregir un comportamiento que no funcionaba como se esperaba   | `fix: corrige validación de email en login`         |
+| `docs:`     | **Documentación**                             | Cambios en README, comentarios, documentación técnica              | `docs: añade guía de instalación en README`         |
+| `style:`    | **Estilo** – Sin afectar el comportamiento    | Cambios en espacios, indentación, formato                          | `style: reformatea el archivo App.js`               |
+| `refactor:` | **Reestructuración interna**                  | Cambios en código sin alterar comportamiento ni corregir bugs      | `refactor: simplifica la lógica de navegación`      |
+| `test:`     | **Pruebas** – Añade o ajusta tests            | Agregar, eliminar o actualizar pruebas automáticas                 | `test: añade pruebas para componente Header`        |
+| `ci:`       | **Integración continua**                      | Cambios en archivos o scripts de CI (GitHub Actions, Travis, etc.) | `ci: configura deploy automático en GitHub Actions` |
+| `build:`    | **Build system** – Dependencias y empaquetado | Cambios en `package.json`, Webpack, Vite, etc.                     | `build: actualiza versión de Tailwind`              |
+| `chore:`    | **Tareas varias** – Mantenimiento             | Tareas que no modifican el código fuente directamente              | `chore: limpia archivos temporales`                 |
+|             |
 
 ## 🧠 Recomendaciones
 
-- Usa `wip:` para avances no terminados y **haz squash** antes de mergear a `main`.
 - Usa mensajes en **imperativo**: `añade`, `corrige`, `refactoriza`.
 - Evita mensajes genéricos como `cambios`, `update`, `avance`.
 
@@ -249,7 +246,7 @@ Puedes extender esta configuración con herramientas como lint-staged, prettier,
 - [Axios](https://axios-http.com/)
 - [Firebase](https://firebase.google.com/)
 - [Auth0](https://auth0.com/docs/quickstart/spa/react)
-- [OpenTDB API](https://opentdb.com/api_config.php)
+- [Quizapi API](https://quizapi.io)
 - [Testing Library](https://testing-library.com/)
 - [Playwright](https://playwright.dev/)
 

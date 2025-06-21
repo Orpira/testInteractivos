@@ -240,13 +240,13 @@ export default function Editor({
             <h3 className="text-xl font-semibold dark:text-slate-100">
               Vista Previa
             </h3>
-            <button
+            {/* <button
               onClick={handleValidate}
               className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
               // Mantenemos el tamaño actual para "Verificar solución"
             >
               Verificar solución
-            </button>
+            </button> */}
           </div>
           <iframe
             title="preview"
@@ -272,7 +272,7 @@ export default function Editor({
       </div>
       {/* Sección de Botones Inferiores */}
       <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
-        {isAuthenticated && (
+        {/* {isAuthenticated && (
           <button
             onClick={handleSave}
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition w-full sm:w-auto"
@@ -281,13 +281,14 @@ export default function Editor({
           >
             Guardar código
           </button>
-        )}
-        <button
+        )} Botón "Guardar código" comentado, puedes descomentar si es necesario*/}{" "}
+        {/* Botón "Volver al inicio" */}
+        {/*  <button
           onClick={() => navigate("/")} // Asumo que quieres mantener el botón de volver
           className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition w-full sm:w-auto"
         >
           Volver al inicio
-        </button>
+        </button> */}
       </div>
       {showNotice && (
         <div className="fixed top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded shadow-md z-50 animate-fade-in">

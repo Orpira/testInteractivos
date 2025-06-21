@@ -23,7 +23,7 @@ export default function QuizRunner() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  const count = Number(searchParams.get("count")) || 10;
+  const count = Number(searchParams.get("count")) || 5;
 
   // Ensure category is a string
   if (!category) {

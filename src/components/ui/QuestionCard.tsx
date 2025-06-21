@@ -121,7 +121,7 @@ export const QuestionCard = ({
               </div>
               {/* Texto de la opción */}
               <span
-                className={`flex-1 flex items-center px-6 text-2xl md:text-2xl font-semibold text-blue-800 skew-x-[20deg]`}
+                className={`flex-1 flex items-center px-6 text-sm md:text-lg font-inter font-bold text-blue-900 not-italic`}
               >
                 {option}
               </span>

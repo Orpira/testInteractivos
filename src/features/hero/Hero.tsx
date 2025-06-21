@@ -40,15 +40,14 @@ export default function Hero() {
         }}
       >
         <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-2 text-white text-center">
-          Quizzes y retos interactivos
-          <h3 className="text-center">
-            <strong>
-              <span style={{ color: "orange" }}>HTML, </span>
-              <span style={{ color: "cyan" }}>CSS,</span>
-              <span style={{ color: "yellow" }}>JavaScript.</span>
-            </strong>
-          </h3>
+          Quizzes y retos interactivos <br />
+          <strong>
+            <span style={{ color: "orange" }}>HTML, </span>
+            <span style={{ color: "cyan" }}>CSS,</span>
+            <span style={{ color: "yellow" }}>JavaScript.</span>
+          </strong>
         </h2>
+
         <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-6xl">
           <p className="text-lg sm:text-xl md:text-3xl font-bold mb-2 text-white text-center sm:text-left">
             WebWiz Quiz <br />
