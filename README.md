@@ -6,6 +6,8 @@ Este proyecto es una plataforma interactiva de retos y quizzes de programación 
 
 Desarrollada con tecnologías: React, Vite, Tailwind, Zustand, Axios, Firebase, Auth0 y más.
 
+Documentación del proyecto: (./documentacion/FLUJO_APLICACION.md)
+
 ---
 
 ## 🚀 Funcionalidades principales

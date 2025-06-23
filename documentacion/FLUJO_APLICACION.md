@@ -10,7 +10,7 @@
 
 - El usuario selecciona una categoría (HTML, CSS, JavaScript o API externa) y la cantidad de preguntas.
 - Si elige una categoría local, las preguntas se obtienen de Firebase Firestore.
-- Si elige "API (OpenTDB)", las preguntas se obtienen de la API externa usando Axios y se adaptan al formato interno.
+- Si elige "API (quizapi.io)", las preguntas se obtienen de la API externa usando Axios y se adaptan al formato interno.
 - El estado del quiz (pregunta actual, score, selección, feedback) se gestiona globalmente con Zustand.
 
 ## 3. Proceso de preguntas
@@ -24,7 +24,7 @@
 - El usuario ve su resultado y puede acceder al ranking general.
 - El ranking se obtiene en tiempo real desde Firestore y se muestra en una tabla ordenada.
 
-## 5. Editor de código
+## 5. Editor de código (En desarrollo)
 
 - El usuario puede acceder al editor de código (HTML, CSS, JS) si está autenticado.
 - Puede guardar sus envíos, que quedan asociados a su cuenta y pueden verse en el historial.
@@ -36,14 +36,13 @@
 
 ## 7. Seguridad y rutas
 
-- Las rutas sensibles (editor, historial) están protegidas y requieren autenticación (Auth0).
+- Las rutas sensibles (editor, dashboard) están protegidas y requieren autenticación (Auth0).
 - El resto de la app es accesible sin login.
 
 ## 8. Testing y CI
 
 - Pruebas unitarias con Testing Library y Vitest.
-- Pruebas E2E con Playwright.
-- CI automatizado con GitHub Actions.
+- CI automatizado con Firebase.
 
 ## 9. Despliegue
 
