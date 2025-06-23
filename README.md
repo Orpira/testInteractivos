@@ -41,19 +41,19 @@ Desarrollada con tecnologías: React, Vite, Tailwind, Zustand, Axios, Firebase, 
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología          | Uso                                                                                 |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| **React + Vite**    | SPA rápida y modular                                                                |
-| **TypeScript**      | Tipado estático                                                                     |
-| **Tailwind CSS**    | Estilos utilitarios modernos y responsivos                                          |
-| **Zustand**         | Manejo global de estado                                                             |
-| **Axios**           | Consumo de API externa                                                              |
-| **Firebase**        | Backend: Firestore, Auth, Realtime, Hosting                                         |
-| **Auth0**           | Autenticación OAuth2 segura                                                         |
-| **formsubmit.co**   | Envío de formularios sin backend propio                                             |
-| **Vitest**          | Testing unitario                                                                    |
-| **Playwright**      | Testing end-to-end (E2E)                                                            |
-| **Testing Library** | Testing unitario de componentes - Documentación en este documento [README_TESTS.md] |
+| Tecnología          | Uso                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| **React + Vite**    | SPA rápida y modular                                                                  |
+| **TypeScript**      | Tipado estático                                                                       |
+| **Tailwind CSS**    | Estilos utilitarios modernos y responsivos                                            |
+| **Zustand**         | Manejo global de estado                                                               |
+| **Axios**           | Consumo de API externa                                                                |
+| **Firebase**        | Backend: Firestore, Auth, Realtime, Hosting                                           |
+| **Auth0**           | Autenticación OAuth2 segura                                                           |
+| **formsubmit.co**   | Envío de formularios sin backend propio                                               |
+| **Vitest**          | Testing unitario                                                                      |
+| **Playwright**      | Testing end-to-end (E2E)                                                              |
+| **Testing Library** | Testing unitario de componentes - Documentación en este documento [./README_TESTS.md] |
 
 ---
 
@@ -209,33 +209,9 @@ npx --no -- commitlint --edit "$1"
 git commit -m "feat: agrega validación con commitlint"
 ```
 
-# 📘 Guía de Convenciones para Mensajes de Commits
+## Estado del proyecto
 
-Esta guía sigue la convención **Conventional Commits**, con algunos prefijos prácticos adicionales como `wip` para trabajo en progreso.
-
-| Prefijo     | Significado                                   | Cuándo usarlo                                                      | Ejemplo                                             |
-| ----------- | --------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------- |
-| `feat:`     | **Feature** – Nueva funcionalidad             | Al agregar una nueva funcionalidad al sistema                      | `feat: añade formulario de contacto`                |
-| `fix:`      | **Bugfix** – Corrección de errores            | Al corregir un comportamiento que no funcionaba como se esperaba   | `fix: corrige validación de email en login`         |
-| `docs:`     | **Documentación**                             | Cambios en README, comentarios, documentación técnica              | `docs: añade guía de instalación en README`         |
-| `style:`    | **Estilo** – Sin afectar el comportamiento    | Cambios en espacios, indentación, formato                          | `style: reformatea el archivo App.js`               |
-| `refactor:` | **Reestructuración interna**                  | Cambios en código sin alterar comportamiento ni corregir bugs      | `refactor: simplifica la lógica de navegación`      |
-| `test:`     | **Pruebas** – Añade o ajusta tests            | Agregar, eliminar o actualizar pruebas automáticas                 | `test: añade pruebas para componente Header`        |
-| `ci:`       | **Integración continua**                      | Cambios en archivos o scripts de CI (GitHub Actions, Travis, etc.) | `ci: configura deploy automático en GitHub Actions` |
-| `build:`    | **Build system** – Dependencias y empaquetado | Cambios en `package.json`, Webpack, Vite, etc.                     | `build: actualiza versión de Tailwind`              |
-| `chore:`    | **Tareas varias** – Mantenimiento             | Tareas que no modifican el código fuente directamente              | `chore: limpia archivos temporales`                 |
-|             |
-
-## 🧠 Recomendaciones
-
-- Usa mensajes en **imperativo**: `añade`, `corrige`, `refactoriza`.
-- Evita mensajes genéricos como `cambios`, `update`, `avance`.
-
----
-
-Puedes extender esta configuración con herramientas como lint-staged, prettier, ESLint, etc.
-
----
+🚧 En desarrollo
 
 ## 🔗 Recursos útiles
 
