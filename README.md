@@ -41,19 +41,19 @@ Desarrollada con tecnologías: React, Vite, Tailwind, Zustand, Axios, Firebase, 
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología          | Uso                                                                                   |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| **React + Vite**    | SPA rápida y modular                                                                  |
-| **TypeScript**      | Tipado estático                                                                       |
-| **Tailwind CSS**    | Estilos utilitarios modernos y responsivos                                            |
-| **Zustand**         | Manejo global de estado                                                               |
-| **Axios**           | Consumo de API externa                                                                |
-| **Firebase**        | Backend: Firestore, Auth, Realtime, Hosting                                           |
-| **Auth0**           | Autenticación OAuth2 segura                                                           |
-| **formsubmit.co**   | Envío de formularios sin backend propio                                               |
-| **Vitest**          | Testing unitario                                                                      |
-| **Playwright**      | Testing end-to-end (E2E)                                                              |
-| **Testing Library** | Testing unitario de componentes - Documentación en este documento [./README_TESTS.md] |
+| Tecnología          | Uso                                                                                                         |
+| ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **React + Vite**    | SPA rápida y modular                                                                                        |
+| **TypeScript**      | Tipado estático                                                                                             |
+| **Tailwind CSS**    | Estilos utilitarios modernos y responsivos                                                                  |
+| **Zustand**         | Manejo global de estado                                                                                     |
+| **Axios**           | Consumo de API externa                                                                                      |
+| **Firebase**        | Backend: Firestore, Auth, Realtime, Hosting                                                                 |
+| **Auth0**           | Autenticación OAuth2 segura                                                                                 |
+| **formsubmit.co**   | Envío de formularios sin backend propio                                                                     |
+| **Vitest**          | Testing unitario                                                                                            |
+| **Playwright**      | Testing end-to-end (E2E)                                                                                    |
+| **Testing Library** | Testing unitario de componentes - Documentación en este documento [README_TESTS.md](./docs/README_TESTS.md) |
 
 ---
 
